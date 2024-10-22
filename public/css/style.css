@@ -5,9 +5,19 @@
     src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 
 }
+@font-face {
+    font-family: 'Theseasons';
+    font-style: black;
+    font-display: black;
+    src: url('../fonts/Theseasons-reg.ttf') format('truetype');
+
+}
 
 *{
     font-family:'Poppins-Regular' ;
+}
+body{
+    position: relative;
 }
 body, html {
     margin: 0;
@@ -15,6 +25,7 @@ body, html {
     margin: 0px;
     width: 100%;
     overflow-x: hidden !important;
+    background-color: #fff;
 
 }
 
@@ -29,6 +40,7 @@ a{
     margin: 0;
     width: 100%;
     position: fixed;
+    transition: all 0.3s ease-in-out;
     z-index: 111;
 
 }
@@ -37,13 +49,17 @@ a{
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
-    padding: 1rem 0
+    padding: 0.5rem 0;
+    align-items: center;
 
 }
 .logo img{
-    width:128px;
-    height:48px;
+    width: 206px;
+    height: 67px;
     filter: brightness(4.5);
+    object-fit: cover;
+    position: relative;
+    left: -33px;
 
 }
 .right-list.hidden{
@@ -60,8 +76,10 @@ a{
     padding-top: 38px;
 }
 .right-list.hidden .logo-first img{
-    width: 8rem;
-    margin:0 auto
+    width: 227px;
+    margin: 0 auto;
+    height: 94px;
+    object-fit: cover
 
 }
 .right-list.hidden .logo-first{
@@ -75,9 +93,9 @@ a{
     padding: 0;
 }
 .link{
-    padding: 1rem 0;
-    color:white;
-    font-size: 20px;
+    padding: 0.6rem 0;
+    color: white;
+    font-size: 18px;
 }
 .link-img img{
     width: 140px;
@@ -142,7 +160,7 @@ a{
 }
 .search-realestate{
     position: absolute;
-    top: 50%;
+    top: 60%;
     /* left: 13%; */
     font-size: 46px;
     color: white;
@@ -176,7 +194,8 @@ a{
 .dropdown .bedroom-option{
     position: relative;
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
+  
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -188,7 +207,11 @@ a{
 .dropdown .rent-option img,
 .dropdown .type-option img,
 .dropdown .bedroom-option img{
-    width: 15px;
+    width: 11px;
+}
+.group-options.property-group div{
+    width:100%
+
 }
 .input-search input{
     outline: none;
@@ -198,17 +221,16 @@ a{
     background: #fff;
     height: 44px;
     display: flex;
-    padding: 0.2rem;
 }
 .submit{
     color: #fff;
-    background-color: rgba(157, 134, 92, 0.7);
+    background-color: #927c75;
     cursor: pointer;
     outline: none;
     border: none;
     width: 97px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+    /* border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px; */
     cursor: pointer;
 }
 .abs.abs-rent,
@@ -216,11 +238,14 @@ a{
 .abs-bedroom,
 .abs-price{
     position: absolute;
+    z-index: 111;
     width: fit-content;
     background: white;
     padding: 1rem;
-    top: 4rem;
+    top: 3rem;
     border-radius: 8px;
+    border-top-left-radius:0;
+    border-top-right-radius: 0;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .abs.abs-rent .flex.col,
@@ -252,7 +277,8 @@ a{
     border: none;
     justify-content: flex-start;
     gap: 2rem;
-    height: 76px;
+    height: fit-content;
+    padding: 0;
    
 }
 .abs-price .group-options div{
@@ -262,24 +288,27 @@ a{
     padding: 0;
     justify-content: flex-start;
     font-weight: 400;
+    gap:0.4rem;
     flex-direction: column;
     align-items: flex-start;
-    width:100px
+    width:fit-content
 
 }
 .abs-price .group-options div input{
     display: block;
-    padding: 0.5rem;
+   height: 40px;
     width:100%
 }
 .abs.abs-type .group-options .option,
 .abs-bedroom .group-options .option{
     border: 1px solid #000;
     cursor: pointer;
+    padding: 0.2rem 0;
 }
 .abs.abs-type .group-options .option.active,
 .abs-bedroom .group-options .option.active{
-    background-color: rgba(157, 134, 92, 0.8);
+    background-color: #927c75;
+    border:none
 }
 .group-options{
     border: 1px solid #000;
@@ -295,7 +324,7 @@ a{
 .group-options div{
     display: flex;
     color: #000;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     align-items: center;
     width: 44%;
@@ -312,7 +341,11 @@ a{
     display: none;
 }
 .group-options div.active{
-    background-color: rgba(157, 134, 92, 0.8);
+    background-color: #927c75;
+}
+.about-section .content .text-content.col-flex a:hover{
+    background-color: #222;
+    color:#fff
 }
 .group-options input{
 display: none;
@@ -334,7 +367,7 @@ display: none;
 .reset_done .done{
     border-radius: 8px;
     color:white;
-    background-color: #9d865c;
+    background-color: #927c75;
     padding: 0.6rem 1rem;
 }
 .about-section{
@@ -346,7 +379,19 @@ display: none;
     margin: 0 auto;
     display: flex;
     gap: 3rem;
+   
+    
 }
+.about-section .content .text-content{
+    background-image: url('/images/MEERAB\ Properties\ LLC\ logo_Page_5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    backdrop-filter: blur(5px);
+
+}
+
 .about-section .content .text-content.col-flex{
     display: flex;
     flex-direction: column;
@@ -356,6 +401,7 @@ display: none;
 }
 .about-section .content .text-content.col-flex .title{
     font-size: 36px;
+    font-family: 'Theseasons';
     font-weight: 600;
 }
 .about-section .content .text-content.col-flex .bold{
@@ -371,8 +417,10 @@ display: none;
 .about-section .content .text-content.col-flex a{
     width: 120px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #222;
+    transition: all 0.3s ease-in-out;
     padding: 0.6rem 0.3rem;
+    color:#222
 }
 .about-section .content .img-container img{
     width:100%
@@ -387,9 +435,10 @@ display: none;
 .listining-section .title {
     font-size: 36px;
     font-weight: 600;
-    margin: 3rem 0;
-    width:100%;
+    margin: 3rem auto;
+    width:90%;
     text-align: center;
+    font-family: 'Theseasons';
 }
 
 
@@ -431,6 +480,7 @@ display: none;
     font-weight: 600;
     width:100%;
     text-align: center;
+    font-family: 'Theseasons';
 }
 .services .content .buttons{
     display: flex;
@@ -439,14 +489,16 @@ display: none;
     gap:2rem
 }
 .services .content .buttons a{
-    border:1px solid #000;
-    padding: 0.3em 0.5rem;
+    border:1px solid #222;
+    padding: 0.5em 1.5rem;
     font-weight: 600;
+    font-size: 13px;
+    color:#222;
     transition: all 0.3s ease-in-out;
 }
 .services .content .buttons a:hover{
     color:white;
-    background-color: rgba(157, 134, 92, 0.8);
+    background-color: #222;
 }
 .services .content .grid-container{
     display: grid;
@@ -500,7 +552,6 @@ display: none;
 .explore_recent{
     width:100%;
     margin:2rem 0;
-    background-color: #f7f7f7;
     padding: 2rem 0;
 }
 .team_section{
@@ -529,8 +580,14 @@ display: none;
 .team_section .content .title{
     font-size: 36px;
     font-weight: 600;
-    width:100%;
+    width:90%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Theseasons';
+}
+.font-title{
+    font-family: 'Theseasons';
 }
 .team_section hr{
     width: 217px;
@@ -581,9 +638,13 @@ font-size: 14px;
     text-transform: capitalize;
     border: none !important;
     font-size: 15px;
+    color:#222
 }
 .swiper-pagination-bullet-active{
-    background-color: #9d865c !important;
+    background-color: #927c75 !important;
+}
+.right-list.hidden .col-list a.link-with-img:hover{
+    background-color: transparent !important;
 }
 .team_swiper img{
     width:270px
@@ -592,6 +653,7 @@ font-size: 14px;
     border:1px solid #5A5A5A !important;
     padding: 12px 24px;
     transition: all 0.3s ease-in-out;
+    color:#222;
     width: 200px;
     margin: 0 auto;
     text-align: center;
@@ -601,7 +663,7 @@ font-size: 14px;
 
 .read-more:hover{
     color:white;
-    background-color: #5A5A5A
+    background-color: #222
 }
 .blogs_section{
     width:95%;
@@ -644,6 +706,7 @@ font-size: 14px;
 .blogs_section .content .grid-container .col img{
     width: 95%;
     border-radius: 8px;
+    object-fit: cover;
 }
 .blogs_section .content .grid-container .img-container{
     display: flex;
@@ -679,7 +742,7 @@ font-size: 14px;
     width:100%;
     padding: 12px 0;
     color:white;
-    background-color: #9d865c;
+    background-color: #927c75;
     text-align: center;
     cursor: pointer;
 }
@@ -711,7 +774,7 @@ font-size: 14px;
 
 }
 .blogs_section .content .grid-container .col.third .overlay .desc{
-    font-size: 15px;
+    font-size: 14px;
     width:90%;
     margin: 4rem auto 0;
 }
@@ -724,14 +787,20 @@ font-size: 14px;
     margin: 0 auto;
 }
 .footer .content .logo img{
-    width: 170px;
-    height: fit-content;
-    filter: none
+    width: 210px;
+    height: 76px;
+    filter: none;
+    object-fit: cover;
+    filter: brightness(4.5);
+}
+.right-list.hidden .logo-first img{
+
+    filter: brightness(4.5);
 }
 .footer .content .grid-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap:1.2rem;
+    gap:1rem;
     padding-bottom: 2rem;
 }
 .footer .content .grid-container .col{
@@ -749,25 +818,34 @@ font-size: 14px;
 }
 .footer .content .grid-container .col .flex-col{
     margin-top: 2rem;
-    color: #ddd;
+    color: #bdbcbc;
     font-size: 13px;
 }
+.footer .content .grid-container .col .flex-col a{
+    color: #bdbcbc;
+    font-weight: 600;
+}
 .footer .content .grid-container .col .flex-col .price{
-    color: #9d865c;
+    color: #927c75;
     font-weight: 600;
     font-size: 12px;
     padding-top: 10px;
 }
 .footer .content .grid-container .col .row img{
-    width:130px
+    width:118px;
+    object-fit: cover;
 }
 .footer .content .grid-container .desc{
-    color: #ddd;
+    color: #bdbcbc;
     font-size: 13px;
-    line-height: 24px;
+    line-height: 26px;
+    width:90%
 }
 #arrow-footer{
-    width:19px
+    width: 19px;
+    position: relative;
+    top: 0.5rem;
+    left: 0.5rem;
 
 }
 .list-footer {
@@ -777,12 +855,14 @@ font-size: 14px;
 .list-footer li{
     display: flex;
     align-items: center;
-    color: #ddd;
+    color: #bdbcbc;
     gap: 0.6rem;
     padding-bottom: 1rem;
+    font-size: 13px;
+    font-weight: 600;
 }
 .list-footer li svg{
-    width: 10px;
+    width: 8px;
 }
 .list-footer.contact li svg {
     width: 20px;
@@ -792,18 +872,20 @@ font-size: 14px;
 }
 .footer .subscribe{
     display: flex;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 6px
 }
 .footer .subscribe input{
     border: none;
     outline: none;
     padding: 0.7rem;
+    border: 1px solid #ddd;
 }
 .footer .subscribe input.email{
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    width: 210px;
+    width: 135px;
+    
 }
 .footer .flex-row.social-icons{
     justify-content: flex-start;
@@ -817,9 +899,14 @@ font-size: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #bdbcbc;
     position: relative;
     padding-top: 1rem;
+    color: #bdbcbc;
+    font-weight: 600;
+}
+.terms.flex a{
+    color: #bdbcbc;
+    font-weight: 600;
 }
 .terms.flex::before{
     position: absolute;
@@ -837,3 +924,236 @@ font-size: 14px;
     justify-content: flex-start;
     gap:2rem
 }
+.footer .content .grid-container .col form{
+    padding-top: 2rem;
+}
+.video-mobile{
+    display: none;
+}
+.input-search .select2-container {
+    width: 100% !important;
+}
+
+.input-search .select2-selection--single .select2-selection__rendered {
+    font-size: 12px;
+}
+
+
+
+.input-search .select2-results__option {
+    font-size: 12px; 
+}
+.select2-container--default .select2-selection--single{
+    border:none !important
+}
+.select2-container--default .select2-selection--multiple{
+    background-color: transparent !important;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    border: none !important;
+    border-radius: 4px;
+    cursor: pointer;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    position: relative;
+    display: flex;
+    max-height: 47px !important;
+    max-width: 350px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered::-webkit-scrollbar {
+    height: 3px; /* Adjust scrollbar height */
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered::-webkit-scrollbar-thumb {
+    background-color: #222; /* Scrollbar color */
+    border-radius: 5px; /* Rounded scrollbar */
+}
+
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    color:#fff;
+    padding: 0 !important;
+    width:22px !important;
+    position: relative;
+    
+}
+.select2-container--default .select2-selection--multiple .select2-selection__clear{
+    display: none;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove span{
+    font-size: 17px !important;
+    line-height: 20px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    display: flex;
+   
+    list-style: none;
+    padding: 0;
+    margin-top: 3px !important;
+    margin-bottom: 0 !important;
+    /* width:100% */
+    overflow: auto !important;
+    overflow-y: hidden !important;
+    cursor: auto;
+
+}
+
+
+
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  
+    list-style: none;
+    padding: 0;
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
+   
+}
+.select2-container--open .select2-dropdown {
+
+    top:2px
+}
+.select2-container--default .select2-selection--multiple.select2-selection--clearable {
+    padding: 0 0 0 50px !important;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+    background-color: #927c75 !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice:hover{
+    opacity: 0.8;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    display: inline-block;
+    cursor: pointer;
+    width: fit-content !important;
+    /* max-width: 128px; */
+    margin-right: 2px;
+    font-size: 12px !important;
+    margin-top: 2px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: #927c75;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0;
+    min-width: 60px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    cursor: default;
+    padding-left: 2px;
+    padding-right: 5px;
+    max-width: 80px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    width: 100px;
+    color:#fff
+}
+.select2-container--default .select2-search--inline .select2-search__field{
+   
+    margin-left: 3rem;
+    font-size: 15px !important;
+    line-height: 21px;
+}
+.search-realestate span{
+    font-weight: 400 !important;
+    font-size: 15px !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__clear span{
+    font-size: 20px !important;
+    position: relative;
+    bottom: 0.2rem;
+}
+
+.input-search .select2-search--dropdown .select2-search__field {
+    font-size: 12px;
+}
+.icon-fixed{
+    position: fixed;
+    display: block;
+    bottom:1rem;
+    right:1rem;
+    z-index: 11;
+}
+.icon-fixed .flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap:1rem;
+    align-items: end;
+}
+.icon-fixed .flex-col .flex-row{
+    display: flex;
+    gap:0.3rem
+}
+.icon-fixed .flex-col .flex-row a{
+    background-color: #927c75;
+    padding: 0.6rem;
+    display: flex;
+}
+.icon-fixed .flex-col .flex-row a svg{
+    width:25px
+}
+.icon-fixed .whatsapp-fixed{
+    background-color: #927c75;
+    padding: 0.2rem 0.6rem;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 20px;
+}
+.over-text-hide{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.team_swiper .swiper-slide .read-more:hover{
+    background-color: transparent;
+}
+
+.right-list.hidden .col-list a{
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.right-list.hidden .col-list a:hover{
+    background-color: #ddd;
+    
+}
+.right-list.hidden .col-list a:hover li{
+    color:#927c75
+}
+
+/* .smoke {
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    background: #927c75;
+    backdrop-filter: opacity(0.4);
+    border-radius: 50%; 
+    pointer-events: none;
+    animation: rise 2s forwards; 
+}
+
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1); 
+        opacity: 0.4; 
+    }
+    100% {
+        transform: translateY(-100px) scale(3.5); 
+        opacity: 0; 
+    }
+} */

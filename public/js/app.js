@@ -1,3 +1,4 @@
+
 $(document).on('click', function(event) {
     const $sidebar = $('.right-list');
     const $svgIcon = $('.icon-list svg');
@@ -19,21 +20,6 @@ $('.icon-list svg').on('click', function(event) {
         $sidebar.css('right', '0');
     }
 });
- // Array of city names
-//  const cityNames = ['New York', 'Los Angeles', 'Miami', 'Dubai', 'Paris'];
-//  let cityIndex = 0;
-
-//  function changeCity() {
-//     const $citySpan = $('#city-name');
-//     $citySpan.hide(200, function() {
-//         $citySpan.text(cityNames[cityIndex]);
-//         $citySpan.slideDown(300);
-//     });
-//     cityIndex = (cityIndex + 1) % cityNames.length;
-// }
-
-// setInterval(changeCity, 3000);
-
 function updateHiddenInputAndActiveClass(groupName, hiddenInputId) {
    
     $('.group-options.' + groupName + ' input[type="radio"]').each(function() {
@@ -75,7 +61,7 @@ $('.reset').click(function() {
     $container.find('.group-options .option').removeClass('active');
     $container.find('input[type="radio"]').prop('checked', false);
     var hiddenInputId = $container.find('input[type="hidden"]').attr('id');
-    $('#' + hiddenInputId).val(''); // Ensure hidden input is cleared
+    $('#' + hiddenInputId).val(''); 
 });
 
 const $items = $('.items');
@@ -137,3 +123,49 @@ function initializeSwipers(selector) {
 
     }
   });
+  function bgHeader(){
+    var header = $('.header');
+    var scrollTop = $(window).scrollTop();
+    
+    if (scrollTop > 50) {
+    header.css('background-color', '#222'); 
+    } else {
+    header.css('background-color', 'transparent'); 
+    }
+  }
+  bgHeader();
+  $(window).scroll(function() {
+    bgHeader();
+  });
+  $(document).ready(function() {
+    $('#search-select').select2({
+        placeholder: "Select options...",
+        allowClear: true,
+        
+    });
+    $('.input-search').click(function(){
+        $('.abs').hide()
+    });
+    
+  
+});
+$('.to-top').click(function(e) {
+    e.preventDefault(); 
+    $('html, body').animate({
+        scrollTop: 0
+    }, 800); 
+});
+
+
+// $(document).mousemove(function(event) {
+//     var smoke = $('<div class="smoke"></div>');
+//     smoke.css({
+//         left: event.pageX - 10 + 'px',
+//         top: event.pageY - 10 + 'px'
+//     });
+//     $('body').append(smoke);
+
+//     setTimeout(function() {
+//         smoke.remove();
+//     }, 2000); 
+// });

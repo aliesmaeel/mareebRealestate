@@ -3,49 +3,56 @@
         <div class="grid-container">
             <div class="col">
                 <a class="img-container logo">
-                    <img src="https://savoirproperties.com/images/savoir.png">
+                    <img src="/images/logo.png">
                 </a>
                 <div class="desc">
                   Savoir Properties is committed to delivering a high level 
                   of expertise, customer service, and attention to detail to the marketing and sales of luxury real estate and rental properties.
+                    <a href="#">
+                        <svg id="arrow-footer"class="svg-inline--fa fa-arrow-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                            <path fill="#bdbcbc" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
+                            </path>
+                        </svg>
+                    </a>
                 </div>
-                <a>
-                    <svg id="arrow-footer"class="svg-inline--fa fa-arrow-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
-                        <path fill="#ddd" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
-                        </path>
-                    </svg>
-                </a>
+                
             </div>
             <div class="col">
                 <div class="title">LATEST LISTINGS</div>
                 <div class="flex-col">
-                    <div class="row">
-                        <img src="https://images.goyzer.com/uf/5023/unit/3000/GCS00694-Edit.jpg?group=5023">
-                        <div>
-                            <div>Stunning Palm Views | Upgraded...</div>
-                            <div class="price">AED 38,000,000</div>
+                    <a href="#">
+                        <div class="row">
+                                <img src="https://images.goyzer.com/uf/5023/unit/3000/GCS00694-Edit.jpg?group=5023">
+                            <div>
+                                <div class="over-text-hide">Stunning Palm Views | Upgraded</div>
+                                <div class="price">AED 38,000,000</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <img src="https://images.goyzer.com/uf/5023/unit/2715/GCS07033.jpg?group=5023">
-                        <div>
-                            <div>Club Villa | Vacant | Near Club...</div>
-                            <div class="price">AED 38,000,000</div>
+                    </a>
+                    <a href="#">
+                        <div class="row">
+                                <img src="https://images.goyzer.com/uf/5023/unit/2715/GCS07033.jpg?group=5023">
+                            <div>
+                                <div class="over-text-hide">Club Villa | Vacant | Near Club</div>
+                                <div class="price">AED 38,000,000</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <img src="https://images.goyzer.com/uf/5023/unit/2971/GCS08878-Edit.jpg?group=5023">
-                        <div>
-                            <div>Stunning Palm Views | Upgraded...</div>
-                            <div class="price">AED 38,000,000</div>
+                    </a>
+                    <a href="#">
+                        <div class="row">
+                                <img src="https://images.goyzer.com/uf/5023/unit/2971/GCS08878-Edit.jpg?group=5023">
+                            <div>
+                                <div class="over-text-hide">Stunning Palm Views | Upgraded</div>
+                                <div class="price">AED 38,000,000</div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="col">
                 <div class="title">USEFUL LINKS</div>
                 <ul class="list-footer">
-                    <a>
+                    <a href="#">
                         <li>
                             <svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                 <path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
@@ -54,7 +61,7 @@
                             <div>Real Estate Advisory</div>
                        </li>
                     </a>
-                    <a>
+                    <a href="#">
                         <li>
                             <svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                 <path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
@@ -63,7 +70,7 @@
                             <div>Real Estate Advisory</div>
                        </li>
                     </a>
-                    <a>
+                    <a href="#">
                         <li>
                             <svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                 <path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
@@ -72,7 +79,7 @@
                             <div>Real Estate Advisory</div>
                        </li>
                     </a>
-                    <a>
+                    <a href="#">
                         <li>
                             <svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                 <path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
@@ -81,7 +88,7 @@
                             <div>Real Estate Advisory</div>
                        </li>
                     </a>
-                    <a>
+                    <a href="#">
                         <li>
                             <svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                 <path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
@@ -90,7 +97,7 @@
                             <div>Real Estate Advisory</div>
                        </li>
                     </a>
-                    <a>
+                    <a href="#">
                         <li>
                             <svg class="svg-inline--fa fa-chevron-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                 <path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
@@ -175,10 +182,10 @@
         <div class="terms flex">
             <div>© 2024 | Savoir Prive Properties</div>
             <div class="flex-start">
-                <a>
+                <a href="#">
                     <div >Privacy Policy</div>
                 </a>
-                <a>
+                <a href="#">
                     <div >Privacy Policy</div>
                 </a>
             </div>

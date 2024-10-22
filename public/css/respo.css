@@ -1,0 +1,148 @@
+@media(max-width:1199px) and (min-width:992px){
+    .abs.abs-price{
+        right:0
+    }
+    .search-realestate{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .footer .content .grid-container .desc{
+        width:98%
+    }
+    .services .content .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:991px) and (min-width:768px){
+    .abs.abs-type .group-options div, .abs-bedroom .group-options div {
+        width: 98%;
+    }
+    .services .content .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs_section .content .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media(max-width:991px){
+    
+    .abs-price .group-options {
+        padding: 0;
+        margin: 10px 0;
+    }
+    .group-options.interest-group div,
+    .group-options.property-group div{
+        margin: 0.3rem 0.3rem;
+    }
+    .abs.abs-type .group-options, .abs-bedroom .group-options{
+        width: 100%;
+    }
+    .group-options {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+    .select2-container--default .select2-selection--multiple{
+        max-width: 100%;
+    }
+    .footer .content .grid-container{
+        display: block;
+    }
+    .footer .content .grid-container .col:first-child{
+        display: block;
+    }
+    .footer .content .grid-container .col {
+        margin-top: 2rem;
+    }
+    .about-section .content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about-section .content .text-content.col-flex,
+    .about-section .content .img-container{
+        width:100%
+    }
+    .about-section .content .img-container{
+        order: -1;
+    }
+    .terms.flex{
+        flex-direction: column;
+        gap:1rem
+    }
+    .search-realestate form{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .abs.abs-rent, .abs.abs-type, .abs-bedroom, .abs-price{
+        width:calc(100% - 2rem);
+        top:48px
+    }
+    .dropdown .rent-option, .dropdown .type-option, .dropdown .bedroom-option{
+        height:48px
+    }
+    .search-realestate .submit{
+        grid-column: 2 span;
+        padding: 1rem;
+        width:100%
+    }
+    .input-search{
+        grid-column: 2 span;
+
+    }
+}
+@media(max-width:599px){
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+        max-width: 250px !important;
+    } 
+    .abs.abs-price .group-options div{
+        margin: 0 0 1rem 0;
+    }
+}
+@media(max-width:767px){
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+        max-width: 400px;
+    }
+    .search-realestate form{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .group-options div{
+        font-size: 14px;
+    }
+    .search-realestate{
+        top:44%;
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .search-realestate .submit{
+        grid-column: 1 span;
+        
+    }
+    .input-search{
+        grid-column: 1 span;
+
+    }
+    .abs.abs-type .group-options div, .abs-bedroom .group-options div{
+        width:97%
+    }
+    .services .content .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blogs_section .content .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .services .content .buttons{
+        flex-wrap: wrap;
+    }
+  
+    .blogs_section .content .grid-container .col{
+        height:580px
+    }
+    .video-desktop{
+        display: none;
+    }
+    .video-mobile{
+        display: block;
+    }
+}
