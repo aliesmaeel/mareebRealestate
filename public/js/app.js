@@ -128,7 +128,7 @@ function initializeSwipers(selector) {
     var scrollTop = $(window).scrollTop();
     
     if (scrollTop > 50) {
-    header.css('background-color', '#222'); 
+    header.css('background-color', 'rgb(61 46 42)'); 
     } else {
     header.css('background-color', 'transparent'); 
     }

@@ -41,7 +41,7 @@ a{
     width: 100%;
     position: fixed;
     transition: all 0.3s ease-in-out;
-    z-index: 111;
+    z-index: 11111;
 
 }
 .header .content{
@@ -65,7 +65,7 @@ a{
 .right-list.hidden{
     position: fixed;
     z-index: 1111111;
-    background: #222;
+    background: rgb(61 46 42);
     height: 100%;
     width: 300px;
     top: 0;
@@ -118,7 +118,7 @@ a{
     flex-wrap: wrap;
 }
 .flex-row.social-icons a{
-    background-color: #313131;
+    background-color: #927c75;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -344,7 +344,7 @@ a{
     background-color: #927c75;
 }
 .about-section .content .text-content.col-flex a:hover{
-    background-color: #222;
+    background-color: rgb(61 46 42);
     color:#fff
 }
 .group-options input{
@@ -498,7 +498,7 @@ display: none;
 }
 .services .content .buttons a:hover{
     color:white;
-    background-color: #222;
+    background-color: rgb(61 46 42);
 }
 .services .content .grid-container{
     display: grid;
@@ -535,7 +535,7 @@ display: none;
     width: 20px;
 }
 .pro_footer{
-    background-color: #000;
+    background-color: rgb(61 46 42);
     color:white;
     display: flex;
     gap:1rem;
@@ -663,7 +663,7 @@ font-size: 14px;
 
 .read-more:hover{
     color:white;
-    background-color: #222
+    background-color: rgb(61 46 42)
 }
 .blogs_section{
     width:95%;
@@ -779,7 +779,7 @@ font-size: 14px;
     margin: 4rem auto 0;
 }
 .footer{
-    background-color: #222;
+    background-color: rgb(61 46 42);
     padding: 5rem 0 2rem
 }
 .footer .content{
