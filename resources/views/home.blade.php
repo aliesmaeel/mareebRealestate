@@ -9,6 +9,7 @@
 
 {{-- main page --}}
 @section('content')
+
 <div class="container home-page">
     <div style="position:relative;height: 100vh;">
         <video autoplay muted playsinline loop class="video-banner video-desktop">
@@ -25,7 +26,7 @@
                     <svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="" style="position: absolute; left: 10px; width: 16px; height: 16px;">
                         <path fill="#212529" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
                     </svg>
-                
+
                     <select id="search-select" multiple="multiple"name="states[]" style="width: 100%; padding-left: 30px;">
                         <option value="option1">option 1</option>
                         <option value="option1">option 2</option>
@@ -39,7 +40,7 @@
                         <option value="option1">option 9</option>
                     </select>
                 </div>
-             
+
                 {{-- rent --}}
                 <div class="dropdown">
                     <div class="rent-option options-selected">
@@ -82,14 +83,14 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 {{-- type --}}
                 <div class="dropdown">
                     <div class="type-option options-selected">
                         <div>Type</div>
                         <img src="/images/arrow.png">
-                       
+
                     </div>
                     <div class="abs abs-type">
                         <div class="flex col">
@@ -131,14 +132,14 @@
                             </div>
                         </div>
                     </div>
-                  
+
                 </div>
                  {{-- bedroom --}}
                  <div class="dropdown">
                     <div class="bedroom-option options-selected">
                         <div>Bedrooms</div>
                         <img src="/images/arrow.png">
-                       
+
                     </div>
                     <div class="abs abs-bedroom">
                         <div class="flex col">
@@ -212,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                  
+
                 </div>
                 {{-- price --}}
                 <div class="dropdown">
@@ -232,30 +233,31 @@
                                     <div>Max</div>
                                     <input type="text" placeholder="min-price">
                                 </div>
-                                
+
                             </div>
-                           
+
                             <div class="reset_done">
                                 <div class="reset">Reset</div>
                                 <div class="done">Done</div>
                             </div>
                         </div>
                     </div>
-                  
+
                 </div>
-              
+
                 <input type="submit" value="Submit" class="submit">
             </form>
         </div>
     </div>
     {{-- about --}}
+    <div id="particles-js">
     <div class="about-section">
         <div class="content" data-aos="fade-up" >
             <div class="text-content col-flex" >
-                <div class="title">ABOUT SAVOIR</div>
+                <div class="title">ABOUT Meerab</div>
                 <div class="bold">WE’RE LOCAL, WE’RE GLOBAL</div>
                 <div class="desc">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Consequuntur minus molestiae aperiam amet eos non, culpa aspernatur ea aliquid accusamus fugit
                      quidem obcaecati animi est officia voluptatum alias, beatae ipsam.
                  </div>
@@ -273,7 +275,7 @@
         <div class="content" data-aos="fade-up" >
             <div class="title"> LISTING SYNDICATION AND AFFILIATED WEBSITES</div>
             <div class="items">
-                
+
                 @include('components.item')
             </div>
         </div>
@@ -330,11 +332,11 @@
             <div class="title">OUR TEAM</div>
             <hr>
             <div class="desc">
-              
+
                 More than your average real estate agents, our certified community
                 specialists are experts in their respective areas with an in-depth
                 knowledge of the Dubai real estate market.
-            
+
             </div>
             <!-- Swiper -->
             <div class="team_swiper ">
@@ -399,7 +401,7 @@
                             Key Real Estate Trends Shaping the Market in Dubai a city renowned for its opulence and rapid development continues to capture the imagination of investors and homebuyers from around the
                         </div>
                         <a class="read" href="#">Read More</a>
-                        
+
                     </div>
                     <div class="col box">
                         <div class="img-container">
@@ -414,7 +416,7 @@
                             Dubai Green Spine The World rsquo s Greenest Highway Dubai a city synonymous with innovation and grandeur is poised to achieve a new milestone in urban sustainability with the Dubai
                         </div>
                         <a class="read" href="#">Read More</a>
-                        
+
                     </div>
                     <div class="col third">
                         <a class="img-container" href="#">
@@ -436,9 +438,11 @@
             </div>
         </div>
     </div>
+    </div>
     @include('components.icons_right')
 
 </div>
+
 
 @endsection
 

@@ -6,7 +6,7 @@
                     <img src="/images/logo.png">
                 </a>
                 <div class="desc">
-                  Savoir Properties is committed to delivering a high level 
+                  Meerab Properties is committed to delivering a high level
                   of expertise, customer service, and attention to detail to the marketing and sales of luxury real estate and rental properties.
                     <a href="#">
                         <svg id="arrow-footer"class="svg-inline--fa fa-arrow-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
@@ -15,7 +15,7 @@
                         </svg>
                     </a>
                 </div>
-                
+
             </div>
             <div class="col">
                 <div class="title">LATEST LISTINGS</div>
@@ -127,10 +127,10 @@
                                 </path>
                             </svg>
 
-                            <div>info@savoirproperties.com</div>
+                            <div>info@Meerab.com</div>
                        </li>
                     </a>
-                   
+
                 </ul>
                 <div class="title">Subscribe Now</div>
                 <form>
@@ -138,12 +138,12 @@
                         <input type="email" placeholder="email" class="email">
                         <input type="submit" value="Submit" class="submit">
                     </div>
-                   
+
                     <div class="flex-row social-icons">
                         <a href="#" target="_blank">
                             <svg class="svg-inline--fa fa-facebook-f" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                 <path fill="#bdbcbc" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-                            </svg>        
+                            </svg>
                         </a>
                         <a href="#" target="_blank">
                             <svg class="svg-inline--fa fa-snapchat" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="snapchat" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
@@ -174,13 +174,13 @@
                             </svg>
                         </a>
                     </div>
-                   
+
                 </form>
             </div>
-           
+
         </div>
         <div class="terms flex">
-            <div>© 2024 | Savoir Prive Properties</div>
+            <div>© 2024 | Meerab Properties</div>
             <div class="flex-start">
                 <a href="#">
                     <div >Privacy Policy</div>

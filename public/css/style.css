@@ -65,7 +65,7 @@ a{
 .right-list.hidden{
     position: fixed;
     z-index: 1111111;
-    background: rgb(61 46 42);
+    background: rgb(47 30 26);
     height: 100%;
     width: 300px;
     top: 0;
@@ -101,7 +101,7 @@ a{
     width: 140px;
     margin-bottom: 1.3rem;
 }
-.icon-list svg{ 
+.icon-list svg{
     width: 18px;
     border: 1px solid white;
     padding: 0.3rem;
@@ -195,7 +195,7 @@ a{
     position: relative;
     color: #000;
     font-size: 14px;
-  
+
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -279,7 +279,7 @@ a{
     gap: 2rem;
     height: fit-content;
     padding: 0;
-   
+
 }
 .abs-price .group-options div{
     padding: 0;
@@ -319,7 +319,7 @@ a{
     justify-content: space-between;
     width: 300px;
     padding: 0 0.3rem;
-    
+
 }
 .group-options div{
     display: flex;
@@ -344,7 +344,7 @@ a{
     background-color: #927c75;
 }
 .about-section .content .text-content.col-flex a:hover{
-    background-color: rgb(61 46 42);
+    background-color: rgb(47 30 26);
     color:#fff
 }
 .group-options input{
@@ -379,8 +379,8 @@ display: none;
     margin: 0 auto;
     display: flex;
     gap: 3rem;
-   
-    
+
+
 }
 .about-section .content .text-content{
     background-image: url('/images/MEERAB\ Properties\ LLC\ logo_Page_5.png');
@@ -426,8 +426,8 @@ display: none;
     width:100%
 }
 .listining-section {
-    overflow: hidden; 
-    width: 90%; 
+    overflow: hidden;
+    width: 90%;
     margin: 4rem auto 3rem;
 }
 
@@ -443,9 +443,9 @@ display: none;
 
 
 .listining-section .items {
-    display: flex; 
-    white-space: nowrap; 
-    position: relative; 
+    display: flex;
+    white-space: nowrap;
+    position: relative;
     gap:3rem;
     padding: 1rem 0;
 }
@@ -498,7 +498,7 @@ display: none;
 }
 .services .content .buttons a:hover{
     color:white;
-    background-color: rgb(61 46 42);
+    background-color: rgb(47 30 26);
 }
 .services .content .grid-container{
     display: grid;
@@ -535,7 +535,7 @@ display: none;
     width: 20px;
 }
 .pro_footer{
-    background-color: rgb(61 46 42);
+    background-color: rgb(47 30 26);
     color:white;
     display: flex;
     gap:1rem;
@@ -557,7 +557,7 @@ display: none;
 .team_section{
     width:100%;
     margin:2rem 0;
-   
+
     padding: 2rem 0;
 }
 .explore_recent .content,
@@ -568,7 +568,7 @@ display: none;
     flex-direction: column;
     gap:2rem;
     justify-content: center;
-   
+
 
 }
 .explore_recent .content .desc,
@@ -594,7 +594,7 @@ display: none;
     margin: 0 auto;
     height: 1px;
     background-color: #000;
-   
+
 }
 
 .explore_recent .content img{
@@ -663,7 +663,7 @@ font-size: 14px;
 
 .read-more:hover{
     color:white;
-    background-color: rgb(61 46 42)
+    background-color: rgb(47 30 26)
 }
 .blogs_section{
     width:95%;
@@ -685,7 +685,7 @@ font-size: 14px;
     font-size: 36px;
     font-weight: 600;
     width:100%;
-   
+
 }
 .blogs_section .content .desc{
     font-size: 15px;
@@ -725,8 +725,8 @@ font-size: 14px;
     line-height: 32px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3; 
-    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
 .blogs_section .box-desc.none-ellipsis{
@@ -779,7 +779,7 @@ font-size: 14px;
     margin: 4rem auto 0;
 }
 .footer{
-    background-color: rgb(61 46 42);
+    background-color: rgb(47 30 26);
     padding: 5rem 0 2rem
 }
 .footer .content{
@@ -873,7 +873,8 @@ font-size: 14px;
 .footer .subscribe{
     display: flex;
     /* border: 1px solid #ddd; */
-    border-radius: 6px
+    border-radius: 6px;
+    margin-bottom: 2px;
 }
 .footer .subscribe input{
     border: none;
@@ -885,7 +886,7 @@ font-size: 14px;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     width: 135px;
-    
+
 }
 .footer .flex-row.social-icons{
     justify-content: flex-start;
@@ -941,7 +942,7 @@ font-size: 14px;
 
 
 .input-search .select2-results__option {
-    font-size: 12px; 
+    font-size: 12px;
 }
 .select2-container--default .select2-selection--single{
     border:none !important
@@ -976,7 +977,7 @@ font-size: 14px;
     padding: 0 !important;
     width:22px !important;
     position: relative;
-    
+
 }
 .select2-container--default .select2-selection--multiple .select2-selection__clear{
     display: none;
@@ -987,7 +988,7 @@ font-size: 14px;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__rendered {
     display: flex;
-   
+
     list-style: none;
     padding: 0;
     margin-top: 3px !important;
@@ -1003,12 +1004,12 @@ font-size: 14px;
 
 
 .select2-container .select2-selection--multiple .select2-selection__rendered {
-  
+
     list-style: none;
     padding: 0;
     margin-top: 2px !important;
     margin-bottom: 0 !important;
-   
+
 }
 .select2-container--open .select2-dropdown {
 
@@ -1048,14 +1049,14 @@ font-size: 14px;
     padding-left: 2px;
     padding-right: 5px;
     max-width: 80px;
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     width: 100px;
     color:#fff
 }
 .select2-container--default .select2-search--inline .select2-search__field{
-   
+
     margin-left: 3rem;
     font-size: 15px !important;
     line-height: 21px;
@@ -1129,7 +1130,7 @@ font-size: 14px;
 }
 .right-list.hidden .col-list a:hover{
     background-color: #ddd;
-    
+
 }
 .right-list.hidden .col-list a:hover li{
     color:#927c75
@@ -1137,23 +1138,23 @@ font-size: 14px;
 
 /* .smoke {
     position: absolute;
-    width: 20px; 
+    width: 20px;
     height: 20px;
     background: #927c75;
     backdrop-filter: opacity(0.4);
-    border-radius: 50%; 
+    border-radius: 50%;
     pointer-events: none;
-    animation: rise 2s forwards; 
+    animation: rise 2s forwards;
 }
 
 
 @keyframes rise {
     0% {
-        transform: translateY(0) scale(1); 
-        opacity: 0.4; 
+        transform: translateY(0) scale(1);
+        opacity: 0.4;
     }
     100% {
-        transform: translateY(-100px) scale(3.5); 
-        opacity: 0; 
+        transform: translateY(-100px) scale(3.5);
+        opacity: 0;
     }
 } */
