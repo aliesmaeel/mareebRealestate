@@ -46,44 +46,31 @@ jobs:
           echo "SESSION_DRIVER=database" >> .env
           echo "SESSION_LIFETIME=120" >> .env
           echo "SESSION_ENCRYPT=false" >> .env
-          echo "SESSION_PATH=/" >> .env
-          echo "SESSION_DOMAIN=null" >> .env
-          echo "BROADCAST_CONNECTION=log" >> .env
           echo "FILESYSTEM_DISK=local" >> .env
           echo "QUEUE_CONNECTION=database" >> .env
           echo "CACHE_STORE=database" >> .env
-          echo "CACHE_PREFIX=" >> .env
-          echo "MEMCACHED_HOST=127.0.0.1" >> .env
-          echo "REDIS_CLIENT=phpredis" >> .env
-          echo "REDIS_HOST=127.0.0.1" >> .env
-          echo "REDIS_PASSWORD=null" >> .env
-          echo "REDIS_PORT=6379" >> .env
-          echo "MAIL_MAILER=log" >> .env
-          echo "MAIL_HOST=127.0.0.1" >> .env
-          echo "MAIL_PORT=2525" >> .env
-          echo "MAIL_USERNAME=null" >> .env
-          echo "MAIL_PASSWORD=null" >> .env
-          echo "MAIL_ENCRYPTION=null" >> .env
-          echo "MAIL_FROM_ADDRESS=hello@example.com" >> .env
-          echo "MAIL_FROM_NAME=\"${APP_NAME}\"" >> .env
           echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> .env
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> .env
           echo "AWS_DEFAULT_REGION=us-east-1" >> .env
           echo "AWS_BUCKET=${{ secrets.AWS_BUCKET }}" >> .env
           echo "AWS_USE_PATH_STYLE_ENDPOINT=false" >> .env
-          echo "VITE_APP_NAME=\"${APP_NAME}\"" >> .env
 
-      - name: Create storage/framework directories
-        run: mkdir -p storage/framework/{cache,sessions,views}
+      - name:  Create storage/framework directories
+        run:   mkdir -p storage/framework/{cache,sessions,views}
 
-      - name: Set permissions
-        run: chmod -R 775 storage bootstrap/cache
+      - name: Set permissions for storage and bootstrap/cache
+        run: |
+          sudo chmod -R 775 storage
+          sudo chmod -R 775 bootstrap/cache
+          sudo chown -R www-data:www-data storage
+          sudo chown -R www-data:www-data bootstrap/cache
 
       - name: Pre-compile Blade Templates
         run: php artisan view:cache
 
-      - name: Clear and Cache Laravel Configuration
-        run: php artisan optimize:clear
+      - name: Cache Configuration
+        run: php artisan config:cache
+
 
 
       - name: Create Zip deployment package
