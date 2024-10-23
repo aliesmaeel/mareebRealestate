@@ -79,6 +79,9 @@ jobs:
       - name: Set permissions
         run: chmod -R 775 storage bootstrap/cache
 
+      - name: Set permissions
+        run: chmod -R 775 storage storage
+
       - name: Pre-compile Blade Templates
         run: php artisan view:cache
 
