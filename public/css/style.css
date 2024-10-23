@@ -370,6 +370,13 @@ display: none;
     background-color: #927c75;
     padding: 0.6rem 1rem;
 }
+.reset_done .done,
+.reset_done .reset{
+    cursor: pointer;
+}
+.group-options.interest-group div, .group-options.property-group div{
+    cursor: pointer;
+}
 .about-section{
     width: 100%;
     margin: 8rem 0 3rem;
