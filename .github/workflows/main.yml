@@ -79,14 +79,12 @@ jobs:
       - name: Set permissions
         run: chmod -R 775 storage bootstrap/cache
 
-      - name: Set permissions
-        run: chmod -R 775 storage storage
-
       - name: Pre-compile Blade Templates
         run: php artisan view:cache
 
       - name: Clear and Cache Laravel Configuration
-        run: php artisan config:cache
+        run: php artisan optimize:clear
+
 
       - name: Create Zip deployment package
         run: zip -r deploy.zip ./
