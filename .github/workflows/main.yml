@@ -73,6 +73,11 @@ jobs:
           echo "AWS_USE_PATH_STYLE_ENDPOINT=false" >> .env
           echo "VITE_APP_NAME=\"${APP_NAME}\"" >> .env
 
+      - name: Set permissions
+        run: |
+            sudo chown -R ec2-user:ec2-user  storage bootstrap/cache
+            sudo chmod -R 775 storage bootstrap/cache
+
       - name: Clear and Cache Laravel Configuration
         run: php artisan config:cache
 
