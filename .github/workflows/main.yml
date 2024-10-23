@@ -74,9 +74,8 @@ jobs:
           echo "VITE_APP_NAME=\"${APP_NAME}\"" >> .env
 
       - name: Set permissions
-        run: |
-            sudo chown -R ec2-user:ec2-user  storage bootstrap/cache
-            sudo chmod -R 775 storage bootstrap/cache
+        run: sudo chmod -R o+w bootstrap/cache/
+        run: sudo chmod -R o+w storage/
 
       - name: Clear and Cache Laravel Configuration
         run: php artisan config:cache
