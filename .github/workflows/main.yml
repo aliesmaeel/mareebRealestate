@@ -73,11 +73,17 @@ jobs:
           echo "AWS_USE_PATH_STYLE_ENDPOINT=false" >> .env
           echo "VITE_APP_NAME=\"${APP_NAME}\"" >> .env
 
-      - name: Set permissions
-        run:  sudo chmod -R o+w bootstrap/cache/
-
       - name: Create storage/framework directories
         run: mkdir -p storage/framework/{cache,sessions,views}
+
+      - name: Set permissions
+        run: chmod -R 775 storage bootstrap/cache
+
+      - name: Pre-compile Blade Templates
+        run: php artisan view:cache
+
+      - name: Clear Cache (Optional)
+        run: php artisan cache:clear
 
       - name: Clear and Cache Laravel Configuration
         run: php artisan config:cache
