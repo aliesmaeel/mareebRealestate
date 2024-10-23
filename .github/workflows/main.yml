@@ -64,6 +64,8 @@ jobs:
         run: |
           chmod -R 775 storage
           chmod -R 775 bootstrap/cache
+          chown -R $USER:$USER storage
+          chown -R $USER:$USER bootstrap/cache
 
       - name: Pre-compile Blade Templates
         run: php artisan view:cache
