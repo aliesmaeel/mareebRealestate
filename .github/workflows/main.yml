@@ -55,7 +55,7 @@ jobs:
           echo "AWS_BUCKET=${{ secrets.AWS_BUCKET }}" >> .env
           echo "AWS_USE_PATH_STYLE_ENDPOINT=false" >> .env
 
-      - name: Create storage/framework and logs directories
+      - name: Create necessary directories
         run: |
           mkdir -p storage/framework/{cache,sessions,views}
           mkdir -p storage/logs
