@@ -37,12 +37,6 @@ jobs:
           echo "APP_FALLBACK_LOCALE=en" >> .env
           echo "APP_FAKER_LOCALE=en_US" >> .env
           echo "APP_MAINTENANCE_DRIVER=file" >> .env
-          echo "PHP_CLI_SERVER_WORKERS=4" >> .env
-          echo "BCRYPT_ROUNDS=12" >> .env
-          echo "LOG_CHANNEL=stack" >> .env
-          echo "LOG_STACK=single" >> .env
-          echo "LOG_DEPRECATIONS_CHANNEL=null" >> .env
-          echo "LOG_LEVEL=debug" >> .env
           echo "SESSION_DRIVER=database" >> .env
           echo "SESSION_LIFETIME=120" >> .env
           echo "SESSION_ENCRYPT=false" >> .env
@@ -64,8 +58,6 @@ jobs:
         run: |
           chmod -R 775 storage
           chmod -R 775 bootstrap/cache
-          chown -R $USER:$USER storage
-          chown -R $USER:$USER bootstrap/cache
 
       - name: Pre-compile Blade Templates
         run: php artisan view:cache
