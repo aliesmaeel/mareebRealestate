@@ -76,9 +76,8 @@ jobs:
       - name: Set permissions
         run:  sudo chmod -R o+w bootstrap/cache/
 
-      - name: Set permissions2
-        run:  sudo chmod -R o+w storage/
-
+      - name: Create storage/framework directories
+        run: mkdir -p storage/framework/{cache,sessions,views}
 
       - name: Clear and Cache Laravel Configuration
         run: php artisan config:cache
