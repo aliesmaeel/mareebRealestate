@@ -1,4 +1,4 @@
-name : laravel-deployment
+name: laravel-deployment
 on:
   push:
     branches: [master]
@@ -7,10 +7,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Create Zip deployment package
-        run : zip -r deploy.zip ./
 
-      - name : Deploy to Elastic Beanstalk
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0' # or your desired PHP version
+          extensions: mbstring, xml, curl, zip, etc.
+
+      - name: Install Composer Dependencies
+        run: |
+          curl -sS https://getcomposer.org/installer | php
+          php composer.phar install --no-dev
+
+      - name: Create .env file
+        run: |
+          echo "DB_CONNECTION=mysql" >> .env
+          echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> .env
+          echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+          # Add other environment variables as needed
+
+      - name: Create Zip deployment package
+        run: zip -r deploy.zip ./
+
+      - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v18
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
@@ -19,6 +41,5 @@ jobs:
           environment_name: Meerab-env
           existing_bucket_name: elasticbeanstalk-us-east-1-975049940648
           region: us-east-1
-          version_label: ${{github.sha}}
+          version_label: ${{ github.sha }}
           deployment_package: deploy.zip
-
