@@ -73,6 +73,9 @@ jobs:
           echo "AWS_USE_PATH_STYLE_ENDPOINT=false" >> .env
           echo "VITE_APP_NAME=\"${APP_NAME}\"" >> .env
 
+      - name: Clear and Cache Laravel Configuration
+        run: php artisan config:cache
+
       - name: Create Zip deployment package
         run: zip -r deploy.zip ./
 
