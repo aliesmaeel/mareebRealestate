@@ -82,9 +82,6 @@ jobs:
       - name: Pre-compile Blade Templates
         run: php artisan view:cache
 
-      - name: Clear Cache (Optional)
-        run: php artisan cache:clear
-
       - name: Clear and Cache Laravel Configuration
         run: php artisan config:cache
 
