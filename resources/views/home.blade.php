@@ -320,6 +320,12 @@
                     <div class="swiper-slide">
                         <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -341,6 +347,30 @@
             <!-- Swiper -->
             <div class="team_swiper ">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
+                        <div class="name">Eva Bogotlieva</div>
+                        <div class="position"> Property Advisor</div>
+                        <a class="read-more" href="#">view profile</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
+                        <div class="name">Eva Bogotlieva</div>
+                        <div class="position"> Property Advisor</div>
+                        <a class="read-more" href="#">view profile</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
+                        <div class="name">Eva Bogotlieva</div>
+                        <div class="position"> Property Advisor</div>
+                        <a class="read-more" href="#">view profile</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
+                        <div class="name">Eva Bogotlieva</div>
+                        <div class="position"> Property Advisor</div>
+                        <a class="read-more" href="#">view profile</a>
+                    </div>
                     <div class="swiper-slide">
                         <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
                         <div class="name">Eva Bogotlieva</div>

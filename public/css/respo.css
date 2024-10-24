@@ -1,4 +1,7 @@
 @media(max-width:1199px) and (min-width:992px){
+    .container.team .content .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
     .abs.abs-price{
         right:0
     }
@@ -14,6 +17,9 @@
     }
 }
 @media(max-width:991px) and (min-width:768px){
+    .container.team .content .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
     .abs.abs-type .group-options div, .abs-bedroom .group-options div {
         width: 98%;
     }
@@ -24,6 +30,11 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
+}
+@media(max-width:767px) and (min-width:600px){
+    .container.team .content .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media(max-width:991px){
     .container.contact-us .content{
@@ -99,6 +110,9 @@
     }
 }
 @media(max-width:599px){
+    .container.team .content .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
     .select2-container--default .select2-selection--multiple .select2-selection__rendered{
         max-width: 250px !important;
     } 

@@ -622,6 +622,7 @@ display: none;
 .team_swiper{
     overflow: hidden;
     position: relative;
+    left: -8px;
 }
 .explore_recent_swiper .swiper-pagination,
 .team_swiper .swiper-pagination{
@@ -637,7 +638,7 @@ display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:0.2rem
+    gap:0.2rem;
 }
 .team_swiper .swiper-slide .name{
     font-size: 17px;
@@ -1392,4 +1393,100 @@ color:#222
 }
 .input-field.submit input:hover{
     left:10px
+}
+.container.team{
+    margin-top: 89px;
+    width:100%;
+    background: #f9f7f3;
+}
+.container.team .content{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+.container.team .content .title{
+    text-transform: uppercase;
+    color:#000000;
+    font-size: 35px;
+    font-family: 'Theseasons';
+    margin: 0rem 0 3rem;
+}
+.container.team .content .grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+    row-gap: 0;
+}
+.container.team .content .grid-container .col{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+   
+
+}
+.container.team .content .grid-container .img-container{
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+
+}
+.container.team .content .grid-container .img-container img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.container.team .content .grid-container .name{
+    font-size: 20px;
+    color: #000;
+    width: 90%;
+    text-align: center;
+    height: 66px;
+}
+.container.team .content .grid-container .overlay{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(61,46,42,0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease;
+}
+.container.team .content .grid-container .overlay div {
+    position: relative;
+    z-index: 2; 
+    cursor: pointer;
+}
+
+.container.team .content .grid-container .overlay a {
+    color: rgba(61,46,42);
+    background-color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.container.team .content .grid-container .overlay a:hover {
+    /* opacity: 0.9; */
+}
+
+.container.team .content .grid-container .img-container:hover .overlay {
+    left: 0; 
 }
