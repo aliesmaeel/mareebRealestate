@@ -126,7 +126,11 @@ function initializeSwipers(selector) {
   function bgHeader(){
     var header = $('.header');
     var scrollTop = $(window).scrollTop();
-    
+    var currentPage = window.location.pathname;
+    if (currentPage.includes('contact-us')) {
+        // If you're on the Contact Us page, set the background to red
+        header.css('background-color', 'rgb(61 46 42)');
+    } else
     if (scrollTop > 50) {
     header.css('background-color', 'rgb(61 46 42)'); 
     } else {
@@ -169,3 +173,55 @@ $('.to-top').click(function(e) {
 //         smoke.remove();
 //     }, 2000); 
 // });
+
+function checkInput(input) {
+    const span = input.nextElementSibling;
+    if (input.value.trim() !== "") {
+        span.style.display = "none";
+    } else {
+        span.style.display = "block";
+    }
+}
+$('.phone_number').on('input', function() {
+    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+});
+
+// countries code
+$('.city_code').on('click', function() {
+    $('.dropdown_phone').toggle();
+});
+$('.dropdown_phone .code').on('click', function() {
+    $(this).addClass('active').siblings().removeClass('active');
+    var flagSrc = $(this).data('flag'); 
+    var phoneCode = $(this).data('code'); 
+    $('#selected-flag').attr('src', flagSrc);
+    $('#country-code-input').val(phoneCode);
+    $('.dropdown_phone').hide();
+});
+// country name (location)
+$('.city_name').on('click', function() {
+    $('.dropdown_country').toggle();
+});
+$('.dropdown_country .city').on('click', function() {
+    $(this).addClass('active').siblings().removeClass('active');
+    var flagSrc = $(this).data('flag'); 
+    var country_name = $(this).data('city'); 
+    $('#selected-flag-country').attr('src', flagSrc);
+    $('#location-input').val(country_name);
+    $('.dropdown_country').hide();
+});
+
+
+
+$(document).on('click', function(e) {
+    if (!$(e.target).closest('.cities').length) {
+        $('.dropdown_phone').hide();
+    }
+    if (!$(e.target).closest('.countries').length) {
+        $('.dropdown_country').hide();
+    }
+});
+
+
+
+  

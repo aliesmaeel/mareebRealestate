@@ -26,6 +26,13 @@
     
 }
 @media(max-width:991px){
+    .container.contact-us .content{
+        flex-wrap: wrap;
+    }
+    .container.contact-us .content .col{
+        width:100%;
+        margin:0 auto
+    }
     
     .abs-price .group-options {
         padding: 0;
@@ -100,6 +107,14 @@
     }
 }
 @media(max-width:767px){
+    .container.contact-us .content .col .desc,
+    .container.contact-us .content .col .info{
+        font-size: 19px;
+        text-align: center;
+    }
+    .input-field{
+        width:80%
+    }
     .select2-container--default .select2-selection--multiple .select2-selection__rendered{
         max-width: 400px;
     }

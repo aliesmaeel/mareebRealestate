@@ -12,6 +12,13 @@
     src: url('../fonts/Theseasons-reg.ttf') format('truetype');
 
 }
+@font-face {
+    font-family: 'Roboto';
+    font-style: black;
+    font-display: black;
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+
+}
 
 *{
     font-family:'Poppins-Regular' ;
@@ -42,6 +49,7 @@ a{
     position: fixed;
     transition: all 0.3s ease-in-out;
     z-index: 11111;
+  
 
 }
 .header .content{
@@ -1165,3 +1173,220 @@ font-size: 14px;
         opacity: 0;
     }
 } */
+.container.contact-us .content{
+    margin-top: 90px;
+    display: flex;
+    background-color: #F0ECE5;
+    width: 100%;
+}
+.container.contact-us .content .col{
+    width: 50%;
+}
+.container.contact-us .content .col:first-child{
+    background-image: url(https://savoirproperties.com/images/contact-us.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+
+    
+}
+.container.contact-us .content .col:first-child::before{
+    background-color: #58595B;
+    opacity: 0.6;
+    position: absolute;
+    content: '';
+    width:100%;
+    height: 100%;
+}
+.container.contact-us .content .col .title{
+    color: #F0ECE5;
+    font-size: 34px;
+    padding: 0.5rem 0;
+    font-family: 'Theseasons';
+    position: relative;
+}
+.container.contact-us .content .col .desc{
+    color: #F0ECE5;
+    font-size: 22px;
+    text-align: center;
+    width:90%;
+    margin: 0 auto;
+    line-height: 2;
+    padding: 0.5rem 0;
+    position: relative;
+}
+.container.contact-us .content .col .info{
+    color: #F0ECE5;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+    position: relative;
+}
+.container.contact-us .content .col .info a{
+    text-decoration: underline;
+    color: #F0ECE5;
+}
+.container.contact-us .content .col .info.social{
+    flex-direction: column;
+}
+.container.contact-us .content .col form{
+    width:90%;
+    margin:0 auto
+}
+.container.contact-us .content .col form .desc-form{
+    color:#58595B;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 2rem;
+    font-family: "Roboto", sans-serif !important;;
+
+}
+.container.contact-us .content .col form .desc-form .bold{
+    font-weight: 600;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif !important;;
+   
+}
+.input-field{
+    padding: 0.7rem;
+    border: 1px solid rgb(47 30 26);
+    width: 70%;
+    margin: 0 auto 1rem;
+    display: flex;
+}
+.input-field input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.input-field span{
+    color:red
+}
+.input-field.cities,
+.input-field.countries{
+    position: relative;
+}
+.city_code,
+.city_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(47,30,26,0.2);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    cursor: pointer;
+}
+.phone_number,
+.country_field{
+    position: relative;
+    left: 42px;
+    font-family: 'Theseasons';
+}
+.flag{
+    width: 15px;
+}
+.dropdown_phone,
+.dropdown_country{
+    position: absolute;
+    z-index: 1;
+    top: 41px;
+    background: white;
+    width: 100%;
+    left: 0;
+    overflow: auto;
+    padding: 0;
+    height: 150px;
+    display: none;
+
+}
+.dropdown_phone .code,
+.dropdown_country .city{
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    cursor: pointer;
+
+}
+.dropdown_phone .code:hover,
+.dropdown_phone .code.active,
+.dropdown_country .city:hover,
+.dropdown_country .city.active{
+    background: rgba(47,30,26,0.2);
+}
+
+.dropdown_phone .code span,
+.dropdown_country .code span{
+color:#222
+}
+
+#arrow{
+    width: 8px;
+}
+.letter-space{
+    letter-spacing: 3px;
+}
+.container.contact-us .content .col .info.social a{
+    text-decoration: none;
+}
+.container.contact-us .content .col .info.social svg{
+    cursor: pointer;
+    margin-right: 0.4rem;
+}
+.container.contact-us .content .col .info.social svg:hover path{
+    fill:#927c75
+}
+.input-field input[type='text'] + span{
+    position: relative;
+    left: -7rem;
+
+}
+.input-field textarea{
+    width: 100%;
+    height: 155px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.input-field input[type='email'] + span{
+    position: relative;
+    left: -4rem;
+
+}
+.input-field.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.input-field.submit input{
+    font-weight: 600;
+    color: white;
+    letter-spacing: 3px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    left: 0;
+    
+}
+.input-field.submit input:hover{
+    left:10px
+}
