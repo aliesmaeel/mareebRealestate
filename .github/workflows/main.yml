@@ -12,12 +12,12 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          extensions: mbstring, xml, curl, zip, etc.
+          extensions: mbstring, xml, curl, zip
 
       - name: Install Composer Dependencies
         run: |
           curl -sS https://getcomposer.org/installer | php
-          php composer.phar install --no-dev
+          php composer.phar install --no-dev --prefer-dist --optimize-autoloader
 
       - name: Create .env file
         run: |
@@ -33,26 +33,14 @@ jobs:
           echo "APP_DEBUG=true" >> .env
           echo "APP_TIMEZONE=UTC" >> .env
           echo "APP_URL=http://localhost" >> .env
-          echo "APP_LOCALE=en" >> .env
-          echo "APP_FALLBACK_LOCALE=en" >> .env
-          echo "APP_FAKER_LOCALE=en_US" >> .env
-          echo "APP_MAINTENANCE_DRIVER=file" >> .env
           echo "SESSION_DRIVER=database" >> .env
-          echo "SESSION_LIFETIME=120" >> .env
-          echo "SESSION_ENCRYPT=false" >> .env
           echo "FILESYSTEM_DISK=local" >> .env
-          echo "QUEUE_CONNECTION=database" >> .env
           echo "CACHE_STORE=database" >> .env
+          echo "QUEUE_CONNECTION=database" >> .env
           echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> .env
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> .env
           echo "AWS_DEFAULT_REGION=us-east-1" >> .env
           echo "AWS_BUCKET=${{ secrets.AWS_BUCKET }}" >> .env
-          echo "AWS_USE_PATH_STYLE_ENDPOINT=false" >> .env
-
-      - name: Create necessary directories
-        run: |
-          mkdir -p storage/framework/{cache,sessions,views}
-          mkdir -p storage/logs
 
       - name: Set permissions for storage and bootstrap/cache
         run: |
