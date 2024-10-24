@@ -1292,6 +1292,9 @@ font-size: 14px;
     width: 45px;
     cursor: pointer;
 }
+.gist{
+    display: none;
+}
 .phone_number,
 .country_field{
     position: relative;
