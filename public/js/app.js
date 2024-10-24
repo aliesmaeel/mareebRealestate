@@ -128,7 +128,6 @@ function initializeSwipers(selector) {
     var scrollTop = $(window).scrollTop();
     var currentPage = window.location.pathname;
     if (currentPage.includes('contact-us')) {
-        // If you're on the Contact Us page, set the background to red
         header.css('background-color', 'rgb(61 46 42)');
     } else
     if (scrollTop > 50) {
@@ -182,46 +181,94 @@ function checkInput(input) {
         span.style.display = "block";
     }
 }
-$('.phone_number').on('input', function() {
-    $(this).val($(this).val().replace(/[^0-9]/g, ''));
-});
 
-// countries code
-$('.city_code').on('click', function() {
-    $('.dropdown_phone').toggle();
-});
-$('.dropdown_phone .code').on('click', function() {
-    $(this).addClass('active').siblings().removeClass('active');
-    var flagSrc = $(this).data('flag'); 
-    var phoneCode = $(this).data('code'); 
-    $('#selected-flag').attr('src', flagSrc);
-    $('#country-code-input').val(phoneCode);
-    $('.dropdown_phone').hide();
-});
-// country name (location)
-$('.city_name').on('click', function() {
-    $('.dropdown_country').toggle();
-});
-$('.dropdown_country .city').on('click', function() {
-    $(this).addClass('active').siblings().removeClass('active');
-    var flagSrc = $(this).data('flag'); 
-    var country_name = $(this).data('city'); 
-    $('#selected-flag-country').attr('src', flagSrc);
-    $('#location-input').val(country_name);
-    $('.dropdown_country').hide();
-});
+$.get('/all_countries', function(data) {
+    const phoneDropdown = $('.dropdown_phone');
+    const countryDropdown = $('.dropdown_country');
 
+    // Define Emirates code and flag
+    const emiratesCode = '+971'; 
+    const emiratesFlagUrl = 'https://flagcdn.com/w320/ae.png'; 
 
+    // Populate phone dropdown
+    data.forEach(country => {
+        const countryDialCode = country.dial_code || ''; 
+        const countryCode = country.code; 
+        const flagUrl = `https://flagcdn.com/w320/${countryCode.toLowerCase()}.png`; 
+        const countryName = country.name; 
 
-$(document).on('click', function(e) {
-    if (!$(e.target).closest('.cities').length) {
+        // Append to phone dropdown
+        phoneDropdown.append(`
+            <div class="code" data-flag="${flagUrl}" data-code="${countryDialCode}"> 
+                <img src="${flagUrl}" class="flag" alt="${countryName} Flag" style="width: 20px; height: 15px;">
+                <div class="name-city">${countryName}<span> ${countryDialCode}</span></div>
+            </div>
+        `);
+
+        // Append to country dropdown
+        countryDropdown.append(`
+            <div class="city" data-flag="${flagUrl}" data-city="${countryName.replace(/\s+/g, '_')}">
+                <img src="${flagUrl}" class="flag" alt="${countryName} Flag" style="width: 20px; height: 15px;">
+                <div class="name-city">${countryName}</div>
+            </div>
+        `);
+    });
+
+    $('.phone_number').on('input', function() {
+        $(this).val($(this).val().replace(/[^0-9]/g, ''));
+    });
+
+    $('.city_code').on('click', function() {
+        $('.dropdown_phone').toggle();
+    });
+
+    $('.dropdown_phone .code').on('click', function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        var flagSrc = $(this).data('flag');
+        var phoneCode = $(this).data('code'); 
+
+        if ($(this).find('.name-city').text().includes('Emirates')) {
+            flagSrc = emiratesFlagUrl;
+            phoneCode = emiratesCode;
+        }
+
+        $('#selected-flag').attr('src', flagSrc);
+        $('#country-code-input').val(phoneCode); 
         $('.dropdown_phone').hide();
-    }
-    if (!$(e.target).closest('.countries').length) {
+    });
+
+    $('.city_name').on('click', function() {
+        $('.dropdown_country').toggle();
+    });
+    
+    $('.dropdown_country .city').on('click', function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        var flagSrc = $(this).data('flag');
+        var countryName = $(this).data('city').replace(/_/g, ' ');
+
+        if (countryName.includes('Emirates')) {
+            flagSrc = emiratesFlagUrl;
+            $('#location-input').val('Emirates');
+        } else {
+            $('#location-input').val(countryName);
+        }
+
+        $('.country_field').val(countryName); 
+        $('#selected-flag-country').attr('src', flagSrc);
         $('.dropdown_country').hide();
-    }
+    });
+
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.cities').length) {
+            $('.dropdown_phone').hide();
+        }
+        if (!$(e.target).closest('.countries').length) {
+            $('.dropdown_country').hide();
+        }
+    });
+
+    $('.contact-us form').on('submit', function(e) {
+        var countryCode = $('#country-code-input').val().replace('%2B', '+');
+        console.log('Country Code:', countryCode); 
+    });
 });
-
-
-
-  

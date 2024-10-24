@@ -69,54 +69,24 @@
                 </div>
                 <div class="input-field cities">
                     <div class="city_code">
-                        <img src="/images/arabic_flag.svg" class="flag" id="selected-flag">
+                        <img src="/images/arabic_flag.png" class="flag" id="selected-flag">
                         <img src="/images/arrow.png" id="arrow">
                     </div>
                     <input class="phone_number" type="text" name="phone_number" placeholder="Phone number">
                     <input type="hidden" name="country_code" id="country-code-input" value="00971">
                     <div class="dropdown_phone">
-                        <div class="code active" data-flag="/images/arabic_flag.svg" data-code="00971">
-                            <img src="/images/arabic_flag.svg" class="flag">
-                            <div class="name-city">United Arab Emirates<span> +971</span></div>
-                        </div>
-                        <div class="code" data-flag="/images/flag1.svg" data-code="00966">
-                            <img src="/images/flag1.svg" class="flag">
-                            <div class="name-city">Saudi Arabia<span> +966</span></div>
-                        </div>
-                        <div class="code" data-flag="/images/arabic_flag.svg" data-code="00971">
-                            <img src="/images/arabic_flag.svg" class="flag">
-                            <div class="name-city">Emirates<span> +971</span></div>
-                        </div>
-                        <div class="code" data-flag="/images/flag1.svg" data-code="00965">
-                            <img src="/images/flag1.svg" class="flag">
-                            <div class="name-city">Kuwait<span> +965</span></div>
-                        </div>
+                        <!-- Phone codes will be populated here dynamically -->
                     </div>
                 </div>
                 <div class="input-field countries">
                     <div class="city_name">
-                        <img src="/images/arabic_flag.svg" class="flag" id="selected-flag-country">
+                        <img src="/images/arabic_flag.png" class="flag" id="selected-flag-country"> 
                         <img src="/images/arrow.png" id="arrow">
                     </div>
-                    <input class="country_field" type="text" name="country_field" placeholder="location">
-                    <input type="hidden" name="country" id="location-input" value="Emirates">
+                    <input class="country_field" type="text" name="country_field" placeholder="Location">
+                    <input type="hidden" name="country" id="location-input" value="Emirates"> 
                     <div class="dropdown_country">
-                        <div class="city active" data-flag="/images/arabic_flag.svg" data-city="United_Arab_Emirates">
-                            <img src="/images/arabic_flag.svg" class="flag">
-                            <div class="name-city">United Arab Emirates</div>
-                        </div>
-                        <div class="city" data-flag="/images/flag1.svg" data-city="Saudi_Arabia">
-                            <img src="/images/flag1.svg" class="flag">
-                            <div class="name-city">Saudi Arabia</div>
-                        </div>
-                        <div class="city" data-flag="/images/arabic_flag.svg" data-city="Emirates">
-                            <img src="/images/arabic_flag.svg" class="flag">
-                            <div class="name-city">Emirates</div>
-                        </div>
-                        <div class="city" data-flag="/images/flag1.svg" data-city="Kuwait">
-                            <img src="/images/flag1.svg" class="flag">
-                            <div class="name-city">Kuwait</div>
-                        </div>
+                        <!-- Countries will be populated here dynamically -->
                     </div>
                 </div>
                 <div class="input-field submit">
