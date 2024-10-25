@@ -32,7 +32,7 @@ jobs:
           echo "APP_KEY=base64:NU1pJarnf0hY+H0in+gmCzR1jK1f5vaU1pKwUNMIijU=" >> .env
           echo "APP_DEBUG=true" >> .env
           echo "APP_TIMEZONE=UTC" >> .env
-          echo "APP_URL=http://localhost" >> .env
+          echo "APP_URL=http://meerab-env.eba-et3zdiji.us-east-1.elasticbeanstalk.com" >> .env
           echo "APP_LOCALE=en" >> .env
           echo "APP_FALLBACK_LOCALE=en" >> .env
           echo "APP_FAKER_LOCALE=en_US" >> .env
