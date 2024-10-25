@@ -273,7 +273,7 @@
     {{-- listing-syndicattion --}}
     <div class="listining-section">
         <div class="content" data-aos="fade-up" >
-            <div class="title"> LISTING SYNDICATION AND AFFILIATED WEBSITES</div>
+            <div class="title">Sister Companies</div>
             <div class="items">
 
                 @include('components.item')
@@ -297,7 +297,7 @@
     {{-- explore_recent --}}
     <div class="explore_recent">
         <div class="content" data-aos="fade-up" >
-            <div class="title">EXPLORE RECENT OFF PLAN PROJECTS</div>
+            <div class="title">What We Do</div>
             <div class="desc">
                 Discover a plethora of off-plan projects in Dubai & Worldwide with the best
                 payment plan.

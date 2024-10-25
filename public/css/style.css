@@ -49,7 +49,7 @@ a{
     position: fixed;
     transition: all 0.3s ease-in-out;
     z-index: 11111;
-  
+
 
 }
 .header .content{
@@ -404,7 +404,8 @@ display: none;
     background-position: center;
     position: relative;
     backdrop-filter: blur(5px);
-
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
 }
 
 .about-section .content .text-content.col-flex{
@@ -1177,7 +1178,7 @@ font-size: 14px;
 .container.contact-us .content{
     margin-top: 90px;
     display: flex;
-    background-color: #F0ECE5;
+    background-color: #f9f7f3;
     width: 100%;
 }
 .container.contact-us .content .col{
@@ -1196,7 +1197,7 @@ font-size: 14px;
     gap:1rem;
     position: relative;
 
-    
+
 }
 .container.contact-us .content .col:first-child::before{
     background-color: #58595B;
@@ -1258,7 +1259,7 @@ font-size: 14px;
     font-weight: 600;
     font-size: 16px;
     font-family: "Roboto", sans-serif !important;;
-   
+
 }
 .input-field{
     padding: 0.7rem;
@@ -1389,7 +1390,7 @@ color:#222
     transition: all 0.3s ease-in-out;
     position: relative;
     left: 0;
-    
+
 }
 .input-field.submit input:hover{
     left:10px
@@ -1429,7 +1430,7 @@ color:#222
     justify-content: center;
     align-items: center;
     gap: 1rem;
-   
+
 
 }
 .container.team .content .grid-container .img-container{
@@ -1443,7 +1444,7 @@ color:#222
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
 }
 .container.team .content .grid-container .name{
     font-size: 20px;
@@ -1458,7 +1459,7 @@ color:#222
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(61,46,42,0.3); 
+    background-color: rgba(61,46,42,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1466,7 +1467,7 @@ color:#222
 }
 .container.team .content .grid-container .overlay div {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     cursor: pointer;
 }
 
@@ -1488,5 +1489,5 @@ color:#222
 }
 
 .container.team .content .grid-container .img-container:hover .overlay {
-    left: 0; 
+    left: 0;
 }

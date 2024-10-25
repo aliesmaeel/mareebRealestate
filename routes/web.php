@@ -14,5 +14,4 @@ Route::get('/our-team', function () {
     return view('our_team');
 });
 
-Route::get('/fetch-countries', [CountryController::class, 'fetchAndSaveCountries']);
 Route::get('/all_countries', [CountryController::class, 'getCountries']);
