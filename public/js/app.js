@@ -131,10 +131,7 @@ function initializeSwipers(selector) {
         header.css('background-color', 'rgb(61 46 42)');
     } else
     if (currentPage.includes('our-team')) {
-        header.css('background-color', '#F0ECE5');
-        $('.logo img').css('filter', 'brightness(0)');
-        $('.icon-list path').css('fill', 'rgb(61 46 42)');
-        $('.icon-list svg').css('border', '1px solid rgb(61 46 42)')
+        header.css('background-color', 'rgb(61 46 42)');
     } else
     if (scrollTop > 50) {
     header.css('background-color', 'rgb(61 46 42)'); 
