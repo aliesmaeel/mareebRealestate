@@ -68,7 +68,11 @@ a{
     object-fit: cover;
     position: relative;
     left: -33px;
+    cursor: pointer;
 
+}
+.icon-list{
+    cursor: pointer;
 }
 .right-list.hidden{
     position: fixed;
@@ -1285,7 +1289,6 @@ font-size: 14px;
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
-    background: rgba(47,30,26,0.2);
     height: 100%;
     position: absolute;
     top: 0;;

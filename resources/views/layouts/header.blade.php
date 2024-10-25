@@ -1,7 +1,7 @@
 <div class="header">
     <div class="content">
         <div class="logo">
-            <a>
+            <a href="/">
                 <img src="/images/logo.png" alt="img-logo">
             </a>
         </div>
@@ -19,11 +19,11 @@
             <img src="/images/logo.png">
         </div>
         <ul class="col-list">
-            <a href="#">
-                <li class="link">About</li>
+            <a href="/contact-us">
+                <li class="link">Contact Us</li>
             </a>
-            <a href="#">
-                <li class="link">About</li>
+            <a href="/our-team">
+                <li class="link">Our Team</li>
             </a>
             <a href="#">
                 <li class="link">About</li>
