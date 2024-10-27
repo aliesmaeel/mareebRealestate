@@ -25,7 +25,10 @@
             <a href="/our-team">
                 <li class="link">Our Team</li>
             </a>
-            <a href="#">
+            <a href="/about-us">
+                <li class="link">About</li>
+            </a>
+            {{-- <a href="#">
                 <li class="link">About</li>
             </a>
             <a href="#">
@@ -33,10 +36,7 @@
             </a>
             <a href="#">
                 <li class="link">About</li>
-            </a>
-            <a href="#">
-                <li class="link">About</li>
-            </a>
+            </a> --}}
             <a class="link-with-img">
                 <li class="link-img">
                     <img src="https://savoirproperties.com/images/logo2.png">
