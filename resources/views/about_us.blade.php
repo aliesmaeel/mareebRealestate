@@ -43,10 +43,10 @@
         <div class="scroll-container">
             <div class="desc_section sticky-component">
                 <div class="flex-container">
-                    <div class="col text fixedsticky" >
+                    <div class="col text fixedsticky" data-aos="fade-right">
                         <div class="title">Our Core Values</div>
                     </div>
-                    <div class="sticky-content">
+                    <div class="sticky-content" data-aos="fade-lrft">
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>1.</span>
@@ -99,7 +99,7 @@
                 </div>
                 {{-- second --}}
                 <div class="flex-container">
-                    <div class="col text order-1 fixedsticky">
+                    <div class="col text order-1 fixedsticky" data-aos="fade-left">
                         <div class="title ">
                             
                         <q > To be successful in real estate, you must always and consistently
@@ -110,7 +110,7 @@
 
                         </div>
                     </div>
-                    <div class="sticky-content second">
+                    <div class="sticky-content second" data-aos="fade-right">
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>3.</span>
