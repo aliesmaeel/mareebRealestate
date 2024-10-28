@@ -1575,7 +1575,7 @@ color:#222
    
 }
 .container.about_us .content .first_section{
-    /* position: relative; */
+    position: relative;
     z-index: 11;
     padding: 0rem 0 4rem;
 }
