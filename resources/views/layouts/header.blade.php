@@ -2,7 +2,7 @@
     <div class="content">
         <div class="logo">
             <a href="/">
-                <img src="/images/logo.png" alt="img-logo">
+                <img src="{{asset('/images/logo.png')}}" alt="img-logo">
             </a>
         </div>
         <div class="icon-list">
@@ -16,7 +16,7 @@
 <div class="right-list hidden">
     <div class="flex-col">
         <div class="logo-first">
-            <img src="/images/logo.png">
+            <img src="{{asset('/images/logo.png')}}">
         </div>
         <ul class="col-list">
             <a href="/contact-us">
@@ -39,12 +39,12 @@
             </a> --}}
             <a class="link-with-img">
                 <li class="link-img">
-                    <img src="https://savoirproperties.com/images/logo2.png">
+                    <img src="{{asset('images/logo.png')}}">
                 </li>
             </a>
             <a class="link-with-img">
                 <li class="link-img">
-                    <img src="https://savoirproperties.com/images/logo3.webp">
+                    <img src="{{asset('images/logo2.png')}}">
                 </li>
             </a>
         </ul>

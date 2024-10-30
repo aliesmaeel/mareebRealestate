@@ -285,9 +285,9 @@
         <div class="content" data-aos="fade-up" >
             <div class="title">Services</div>
             <div class="buttons">
-                <a href="#">FOR SALE</a>
-                <a href="#">FOR RENT</a>
-                <a href="#">OFF PLAN</a>
+                <a href="#">Labor Camps </a>
+                <a href="#">Residential Buildings</a>
+                <a href="#">Commercial Floors</a>
             </div>
             <div class="grid-container">
                 @include('components.service')

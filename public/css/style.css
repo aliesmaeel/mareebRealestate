@@ -33,7 +33,7 @@
 body{
     position: relative;
     /* overflow-x: hidden !important; */
-    
+
 }
 html{
     /* overflow-x: clip !important; */
@@ -415,7 +415,7 @@ display: none;
 
 }
 .about-section .content .text-content{
-    background-image: url('/images/logo-2.png');
+    background-image: url('/images/logo2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1516,8 +1516,8 @@ color:#222
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem;
-   
-    
+
+
 }
 .container.about_us{
     position: relative;
@@ -1538,7 +1538,7 @@ color:#222
     width: 90%;
     height: 100%;
     object-fit: cover;
-   
+
 
 }
 .container.about_us .content .first_section .grid-container .img-container img{
@@ -1565,14 +1565,14 @@ color:#222
     font-size: 18px;
     letter-spacing: 2px;
     line-height: 1.5;
-    
+
 }
 .container.about_us .content .first_section .grid-container .col.col-2{
     grid-column: span 2;
     font-size: 18px;
     letter-spacing: 2px;
     line-height: 1.5;
-   
+
 }
 .container.about_us .content .first_section{
     position: relative;
@@ -1586,7 +1586,7 @@ color:#222
     position: relative;
 }
 .container.about_us .content .first_section::before{
-    background-image: url('/images/logo-2.png');
+    background-image: url('/images/logo2.png');
     background-color: rgba(255, 255, 255, 0.6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1605,13 +1605,13 @@ color:#222
     width: 45%;
     position: sticky;
     display: flex;
-    top: 11rem; 
+    top: 11rem;
     z-index: 22;
     align-self: flex-start;
     flex:0 0  auto;
-   
-  
-    
+
+
+
 }
 
 .desc_section.sticky-component .col.text .title {
@@ -1630,9 +1630,9 @@ color:#222
 
 }
 .sticky-content{
-    width:80%; 
+    width:80%;
     flex:0 0 auto;
- 
+
     max-width: 50%;
     /* overflow-y: auto; */
 }
@@ -1663,7 +1663,7 @@ color:#222
     align-items: center;
     width: 50%;
     max-width: 450px;
-    
+
 }
 
 .desc_section.sticky-component .col.text.order-1 .title{
