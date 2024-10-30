@@ -133,6 +133,9 @@ function initializeSwipers(selector) {
     if (currentPage.includes('our-team')) {
         header.css('background-color', 'rgb(61 46 42)');
     } else
+    if (currentPage.includes('about-us')) {
+        header.css('background-color', 'rgb(61 46 42)');
+    } else
     if (scrollTop > 50) {
     header.css('background-color', 'rgb(61 46 42)'); 
     } else {
@@ -275,3 +278,14 @@ $.get('/all_countries', function(data) {
         console.log('Country Code:', countryCode); 
     });
 });
+const about_swiper = new Swiper('.about_swiper', {
+    slidesPerView: 'auto',
+    autoplay: {
+      delay: 2000, 
+    },
+    freeMode: true,
+    effect: 'fade',
+    speed: 1000,
+   
+  });
+//   $( '.fixedsticky' ).fixedsticky();
