@@ -1,4 +1,8 @@
 @media(max-width:1199px) and (min-width:992px){
+    .desc_section.sticky-component .col.text.order-1 {
+        max-width: 386px;
+        padding: 1.5rem 0rem;
+    }
     .container.team .content .grid-container{
         grid-template-columns: repeat(3, 1fr);
     }
@@ -14,9 +18,24 @@
     }
     .services .content .grid-container{
         grid-template-columns: repeat(2, 1fr);
+
     }
 }
 @media(max-width:991px) and (min-width:768px){
+    .desc_section.sticky-component .col.text.order-1{
+        max-width: 600px;
+        width:600px;
+        padding: 3rem 0rem;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+   
+    .about_form .flex-col{
+        width: 74%;
+    }
+   
     .container.team .content .grid-container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -32,11 +51,54 @@
     
 }
 @media(max-width:767px) and (min-width:600px){
+    /* .desc_section.sticky-component .col.text.order-1{
+       
+        padding: 3.5rem 0;
+    } */
+    .about_form .flex-col{
+        width: 80%;
+    }
     .container.team .content .grid-container{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 @media(max-width:991px){
+   
+    html,
+    body{
+        overflow-x: hidden !important;
+    }
+    .about_form,
+    .desc_section.sticky-component .flex-container {
+        flex-direction: column;
+    }
+    .desc_section.sticky-component .col.text{
+        width:100%
+    }
+    .sticky-content {
+        
+        width:100%;
+        max-width: 100%;
+    }
+   
+    .container.about_us .content .first_section::before{
+        top: 13%;
+        left: 15%;
+
+    }
+    .container.about_us .content .first_section .grid-container{
+       display: flex;
+       flex-direction: column;
+    }
+    .container.about_us .content .first_section .grid-container .col.parent_img{
+        order: 1;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .container.about_us .content .first_section .grid-container .img-container{
+        width:100%
+    }
     .container.contact-us .content{
         flex-wrap: wrap;
     }
@@ -110,6 +172,19 @@
     }
 }
 @media(max-width:599px){
+    /* .desc_section.sticky-component .col.text.order-1{
+       
+        padding: 0;
+    } */
+    .about_form .flex-col{
+        width: 100%;
+    }
+    .about_form .form-contact{
+        display: block;
+    }
+    .container.about_us .content .first_section .grid-container .col.parent_img{
+        width:100%
+    }
     .container.team .content .grid-container{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -121,6 +196,15 @@
     }
 }
 @media(max-width:767px){
+    .desc_section.sticky-component .col.text.order-1 {
+        width: 100%;
+        max-width: 100%;
+        /* padding: 3.5rem 0; */
+        height: 18rem;
+    }
+    .desc_section.sticky-component .col.text{
+        position: static;
+    }
     .container.contact-us .content .col .desc,
     .container.contact-us .content .col .info{
         font-size: 19px;

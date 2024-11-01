@@ -11,9 +11,9 @@ $(document).on('click', function(event) {
 });
 
 $('.icon-list svg').on('click', function(event) {
-    event.stopPropagation();  
+    event.stopPropagation();
     const $sidebar = $('.right-list');
-    
+
     if ($sidebar.css('right') === '0px') {
         $sidebar.css('right', '-30rem');
     } else {
@@ -21,7 +21,7 @@ $('.icon-list svg').on('click', function(event) {
     }
 });
 function updateHiddenInputAndActiveClass(groupName, hiddenInputId) {
-   
+
     $('.group-options.' + groupName + ' input[type="radio"]').each(function() {
         if ($(this).prop('checked')) {
             $(this).closest('.option').addClass('active');
@@ -30,7 +30,7 @@ function updateHiddenInputAndActiveClass(groupName, hiddenInputId) {
 
     $('.group-options.' + groupName + ' .option .custom-radio').click(function() {
         var selectedValue = $(this).data('value');
-        $('#' + hiddenInputId).val(selectedValue); 
+        $('#' + hiddenInputId).val(selectedValue);
         $('.group-options.' + groupName + ' .option').removeClass('active');
         $(this).closest('.option').addClass('active');
         $(this).find('input[type="radio"]').prop('checked', true);
@@ -52,7 +52,7 @@ $('.options-selected').click(function() {
 
 $('.done').click(function() {
     $(this).closest('.abs').slideUp(200);
-    $(this).closest('.abs').prev('.options-selected').removeClass('active'); 
+    $(this).closest('.abs').prev('.options-selected').removeClass('active');
 });
 
 $('.reset').click(function() {
@@ -61,23 +61,23 @@ $('.reset').click(function() {
     $container.find('.group-options .option').removeClass('active');
     $container.find('input[type="radio"]').prop('checked', false);
     var hiddenInputId = $container.find('input[type="hidden"]').attr('id');
-    $('#' + hiddenInputId).val(''); 
+    $('#' + hiddenInputId).val('');
 });
 
 const $items = $('.items');
-const itemWidth = $items.children().first().outerWidth(true); 
+const itemWidth = $items.children().first().outerWidth(true);
 const totalItems = $items.children().length;
 $items.append($items.html());
 $items.css({ left: 0 });
 function animateItems() {
     $items.animate(
-        { left: -itemWidth * totalItems }, 
+        { left: -itemWidth * totalItems },
         {
             duration: 40000,
             easing: 'linear',
             complete: function() {
                 $items.css({ left: 0 });
-                animateItems(); 
+                animateItems();
             }
         }
     );
@@ -90,11 +90,11 @@ function initializeSwipers(selector) {
     document.querySelectorAll(selector).forEach((swiperContainer) => {
       new Swiper(swiperContainer, {
         slidesPerView: 'auto',
-        // autoplay: {
-        //   delay: 2000, 
-        //   disableOnInteraction: false,
-        // },
-        freeMode: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+
         effect: 'slide',
         speed: 500,
         pagination: {
@@ -104,17 +104,17 @@ function initializeSwipers(selector) {
       });
     });
   }
-  
- 
+
+
   initializeSwipers('.explore_recent_swiper');
   initializeSwipers('.team_swiper');
 
   document.querySelectorAll('.box-desc').forEach(function (desc) {
     const maxChars = 186;
     let text = desc.textContent.trim();
-  
-    console.log(text.length);  
-  
+
+    console.log(text.length);
+
     if (text.length < maxChars) {
       desc.classList.add('none-ellipsis');
       if (desc.nextElementSibling) {
@@ -133,10 +133,13 @@ function initializeSwipers(selector) {
     if (currentPage.includes('our-team')) {
         header.css('background-color', 'rgb(61 46 42)');
     } else
+    if (currentPage.includes('about-us')) {
+        header.css('background-color', 'rgb(61 46 42)');
+    } else
     if (scrollTop > 50) {
-    header.css('background-color', 'rgb(61 46 42)'); 
+    header.css('background-color', 'rgb(61 46 42)');
     } else {
-    header.css('background-color', 'transparent'); 
+    header.css('background-color', 'transparent');
     }
   }
   bgHeader();
@@ -147,19 +150,19 @@ function initializeSwipers(selector) {
     $('#search-select').select2({
         placeholder: "Select options...",
         allowClear: true,
-        
+
     });
     $('.input-search').click(function(){
         $('.abs').hide()
     });
-    
-  
+
+
 });
 $('.to-top').click(function(e) {
-    e.preventDefault(); 
+    e.preventDefault();
     $('html, body').animate({
         scrollTop: 0
-    }, 800); 
+    }, 800);
 });
 
 
@@ -173,7 +176,7 @@ $('.to-top').click(function(e) {
 
 //     setTimeout(function() {
 //         smoke.remove();
-//     }, 2000); 
+//     }, 2000);
 // });
 
 function checkInput(input) {
@@ -190,19 +193,19 @@ $.get('/all_countries', function(data) {
     const countryDropdown = $('.dropdown_country');
 
     // Define Emirates code and flag
-    const emiratesCode = '+971'; 
-    const emiratesFlagUrl = 'https://flagcdn.com/w320/ae.png'; 
+    const emiratesCode = '+971';
+    const emiratesFlagUrl = 'https://flagcdn.com/w320/ae.png';
 
     // Populate phone dropdown
     data.forEach(country => {
-        const countryDialCode = country.dial_code || ''; 
-        const countryCode = country.code; 
-        const flagUrl = `https://flagcdn.com/w320/${countryCode.toLowerCase()}.png`; 
-        const countryName = country.name; 
+        const countryDialCode = country.dial_code || '';
+        const countryCode = country.code;
+        const flagUrl = `https://flagcdn.com/w320/${countryCode.toLowerCase()}.png`;
+        const countryName = country.name;
 
         // Append to phone dropdown
         phoneDropdown.append(`
-            <div class="code" data-flag="${flagUrl}" data-code="${countryDialCode}"> 
+            <div class="code" data-flag="${flagUrl}" data-code="${countryDialCode}">
                 <img src="${flagUrl}" class="flag" alt="${countryName} Flag" style="width: 20px; height: 15px;">
                 <div class="name-city">${countryName}<span> ${countryDialCode}</span></div>
             </div>
@@ -228,7 +231,7 @@ $.get('/all_countries', function(data) {
     $('.dropdown_phone .code').on('click', function() {
         $(this).addClass('active').siblings().removeClass('active');
         var flagSrc = $(this).data('flag');
-        var phoneCode = $(this).data('code'); 
+        var phoneCode = $(this).data('code');
 
         if ($(this).find('.name-city').text().includes('Emirates')) {
             flagSrc = emiratesFlagUrl;
@@ -236,14 +239,14 @@ $.get('/all_countries', function(data) {
         }
 
         $('#selected-flag').attr('src', flagSrc);
-        $('#country-code-input').val(phoneCode); 
+        $('#country-code-input').val(phoneCode);
         $('.dropdown_phone').hide();
     });
 
     $('.city_name').on('click', function() {
         $('.dropdown_country').toggle();
     });
-    
+
     $('.dropdown_country .city').on('click', function() {
         $(this).addClass('active').siblings().removeClass('active');
         var flagSrc = $(this).data('flag');
@@ -256,7 +259,7 @@ $.get('/all_countries', function(data) {
             $('#location-input').val(countryName);
         }
 
-        $('.country_field').val(countryName); 
+        $('.country_field').val(countryName);
         $('#selected-flag-country').attr('src', flagSrc);
         $('.dropdown_country').hide();
     });
@@ -272,6 +275,17 @@ $.get('/all_countries', function(data) {
 
     $('.contact-us form').on('submit', function(e) {
         var countryCode = $('#country-code-input').val().replace('%2B', '+');
-        console.log('Country Code:', countryCode); 
+        console.log('Country Code:', countryCode);
     });
 });
+const about_swiper = new Swiper('.about_swiper', {
+    slidesPerView: 'auto',
+    autoplay: {
+      delay: 2000,
+    },
+    freeMode: true,
+    effect: 'fade',
+    speed: 1000,
+
+  });
+//   $( '.fixedsticky' ).fixedsticky();

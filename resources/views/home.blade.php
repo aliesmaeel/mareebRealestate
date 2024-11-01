@@ -255,18 +255,16 @@
         <div class="content" data-aos="fade-up" >
             <div class="text-content col-flex" >
                 <div class="title">ABOUT Meerab</div>
-                <div class="bold">WE’RE LOCAL, WE’RE GLOBAL</div>
+
                 <div class="desc">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Consequuntur minus molestiae aperiam amet eos non, culpa aspernatur ea aliquid accusamus fugit
-                     quidem obcaecati animi est officia voluptatum alias, beatae ipsam.
+                   {!! $home->about_section_text !!}
                  </div>
                  <a href="#">
                     Read More
                  </a>
             </div>
             <div class="img-container">
-                <img src="https://savoirproperties.com/images/IMG_1882.jpeg">
+                <img src="{{asset('/storage').'/'.$home->about_section_image}}">
             </div>
         </div>
     </div>
@@ -275,7 +273,6 @@
         <div class="content" data-aos="fade-up" >
             <div class="title">Sister Companies</div>
             <div class="items">
-
                 @include('components.item')
             </div>
         </div>
@@ -285,9 +282,9 @@
         <div class="content" data-aos="fade-up" >
             <div class="title">Services</div>
             <div class="buttons">
-                <a href="#">FOR SALE</a>
-                <a href="#">FOR RENT</a>
-                <a href="#">OFF PLAN</a>
+                <a href="#">Labor Camps </a>
+                <a href="#">Residential Buildings</a>
+                <a href="#">Commercial Floors</a>
             </div>
             <div class="grid-container">
                 @include('components.service')
@@ -297,35 +294,26 @@
     {{-- explore_recent --}}
     <div class="explore_recent">
         <div class="content" data-aos="fade-up" >
-            <div class="title">What We Do</div>
+            <div class="title">Our Services</div>
             <div class="desc">
-                Discover a plethora of off-plan projects in Dubai & Worldwide with the best
-                payment plan.
+                {{$home->what_we_do_section_text}}
             </div>
             <!-- Swiper -->
             <div class="explore_recent_swiper ">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/offplan/XCNXnvIXBqlO6veGcOMc0pC9UdTH2H68eq6GSoM2.jpg">
-                    </div>
+                    @foreach($services as $service)
+                        <div class="swiper-slide" >
+                            <div class="our-services-container"
+                                 style="background-image: url({{asset('/storage/'.$service->image)}});"
+                            >{{$service->name}}</div>
+                            <div class="description">
+                                {!! $service->description !!}
+                            </div>
+
+                        </div>
+
+                    @endforeach
+
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -338,69 +326,18 @@
             <div class="title">OUR TEAM</div>
             <hr>
             <div class="desc">
-
-                More than your average real estate agents, our certified community
-                specialists are experts in their respective areas with an in-depth
-                knowledge of the Dubai real estate market.
-
+                {{$home->our_team_section_text}}
             </div>
             <!-- Swiper -->
             <div class="team_swiper ">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/5BThdm523Bpik5cpaGxd8ja5v9ws6mT7cETgd1F2.jpg">
-                        <div class="name">Eva Bogotlieva</div>
-                        <div class="position"> Property Advisor</div>
-                        <a class="read-more" href="#">view profile</a>
-                    </div>
+                    @foreach($teams as $team)
+                        <div class="swiper-slide">
+                            <img src="{{asset('/storage/'.$team->image)}}">
+                            <div class="name">{{$team->name}}</div>
+                            <a class="read-more" href="#">view profile</a>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -413,8 +350,7 @@
         <div class="content" data-aos="fade-up" >
             <div class="title font-title">Blogs</div>
             <div class="desc">
-                   Stay up to date with our latest blogs to know all about real estate trends
-                    worldwide
+                {{$home->blogs_section_text}}
             </div>
             <div class="boxes">
                 <div class="grid-container ">
