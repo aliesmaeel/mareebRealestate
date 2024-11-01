@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('home_pages', function (Blueprint $table) {
             $table->id();
             $table->string('name',55);
-            $table->string('video_section_web',255);
-            $table->string('video_section_mobile',255);
+            $table->string('video_section_web',255)->nullable();
+            $table->string('video_section_mobile',255)->nullable();
             $table->text('about_section_text');
             $table->string('about_section_image',255);
             $table->text('what_we_do_section_text');
