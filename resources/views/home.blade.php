@@ -309,18 +309,15 @@
                             <div class="description">
                                 {!! $service->description !!}
                             </div>
-
                         </div>
-
                     @endforeach
-
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
             <a class="read-more" href="#">Recent Off Plan Project</a>
         </div>
     </div>
-    {{-- team section --}}
+    {{-- team section -------}}
     <div class="team_section">
         <div class="content" data-aos="fade-up" >
             <div class="title">OUR TEAM</div>
