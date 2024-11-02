@@ -12,4 +12,10 @@ class Footer extends Model
         'links' => 'json',
     ];
 
+    public function scopeActive($query)
+    {
+        return $query->where('active',true);
+    }
+
+
 }
