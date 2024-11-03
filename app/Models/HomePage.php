@@ -17,4 +17,10 @@ protected $fillable= [
 'blogs_section_text',
 'active'
 ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('active',true);
+    }
+
 }

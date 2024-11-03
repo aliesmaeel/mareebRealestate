@@ -1,11 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomePageController::class,'index']);
 
 Route::get('/contact-us', function () {
     return view('contact_us');

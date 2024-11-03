@@ -29,12 +29,9 @@ class HomePageResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name'),
-                Forms\Components\FileUpload::make('video_section_web')
-                    ->required()
-                    ,
-                Forms\Components\FileUpload::make('video_section_mobile')
-                    ->required()
-                    ,
+                Forms\Components\FileUpload::make('video_section_web'),
+                Forms\Components\FileUpload::make('video_section_mobile'),
+
                 Forms\Components\RichEditor::make('about_section_text')->required(),
 
                 Forms\Components\FileUpload::make('about_section_image')
@@ -51,10 +48,10 @@ class HomePageResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\Toggle::make('active')
                     ->required()->rules([
-                        fn (): \Closure => function (string $attribute, $value, Closure $fail) {
-                            if (HomePage::where('active',$value)->first()) {
-                                $fail('Only One Page Could Be active , To Active This
-                                HomePage Please Go And Deactivate Any Other HomePage');
+                        fn (): \Closure => function (string $attribute, $value, Closure $fail) use ($form) {
+
+                            if ($value && HomePage::where('active', true)->where('id', '!=', $form->model->id?? '')->exists()) {
+                                $fail('Only one page can be active at a time. To activate this HomePage, please deactivate any other active HomePage.');
                             }
                         }
                     ])
