@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Footer extends Model
 {
-    protected $fillable=['image','text','links','copy_write','active'];
+    protected $fillable=['image','text','links','copy_write','active','created_at'];
 
     protected $casts = [
+
         'links' => 'json',
     ];
 
