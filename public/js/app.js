@@ -132,17 +132,20 @@ function initializeSwipers(selector) {
 
     if (currentPage === '/') {
         header.css('background-color', 'transparent');
-    } else {
+        
+        if (scrollTop > 50) {
+        header.css('background-color', 'rgb(61 46 42)');
+        } else {
+        header.css('background-color', 'transparent');
+
+        }
+    } 
+    else {
         header.css('background-color', 'rgb(61, 46, 42)');
-
-    if (scrollTop > 50) {
-    header.css('background-color', 'rgb(61 46 42)');
-    } else {
-    header.css('background-color', 'transparent');
-
     }
+    
   }
-}
+
 
   bgHeader();
   $(window).scroll(function() {
@@ -317,16 +320,17 @@ $(".first.toggle").on("click", function() {
     $(this).find('img').toggleClass('rotate')
 });
 
-
-
 const allImages = $('.flex_banner .rest');
 const showMoreContainer = $('.show-more');
 
 const showImages = () => {
     const windowWidth = $(window).width();
-    const visibleImagesCount = windowWidth > 767 ? 3 : 1;
-    allImages.hide();
-    allImages.slice(0, visibleImagesCount).show();
+    const visibleImagesCount = windowWidth > 767 ? 4 : 2;
+    allImages.hide().removeClass('first'); 
+    const visibleImages = allImages.slice(0, visibleImagesCount);
+    visibleImages.show();
+    visibleImages.first().addClass('first');
+
     if (allImages.length > visibleImagesCount) {
         showMoreContainer.show();
     } else {
@@ -337,11 +341,12 @@ const showImages = () => {
 showImages();
 $(window).resize(showImages);
 
-showMoreContainer.find('.overlay').on('click', function () {
+const openSwiperFromImage = (startIndex) => {
     $('.swiper-popup').fadeIn('300');
     const swiperWrapper = $('.swiper-popup .swiper-wrapper');
     swiperWrapper.empty();
-    allImages.filter(':hidden').each(function () {
+
+    allImages.each(function () {
         const src = $(this).find('img').attr('src');
         swiperWrapper.append(`
             <div class="swiper-slide">
@@ -349,19 +354,33 @@ showMoreContainer.find('.overlay').on('click', function () {
             </div>
         `);
     });
+
     new Swiper('.swiper-container-popup', {
+        initialSlide: startIndex,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+       
         slidesPerView: 1,
         freeMode: true,
         effect: 'slide',
         speed: 500,
     });
+};
+
+allImages.on('click', function () {
+    const startIndex = allImages.index(this);
+    openSwiperFromImage(startIndex);
+});
+
+showMoreContainer.find('.overlay').on('click', function () {
+    const firstHiddenIndex = allImages.filter(':hidden').first().index();
+    if (firstHiddenIndex !== -1) {
+        openSwiperFromImage(firstHiddenIndex);
+    }
 });
 
 $('.close-btn').on('click', function () {
     $('.swiper-popup').fadeOut();
 });
-

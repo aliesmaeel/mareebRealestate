@@ -27,26 +27,26 @@
 <div class="show_property container">
     <div style="position:relative; height: 100vh;">
         <div class="flex_banner">
-            <div class="first">
+            <div class=" rest">
                 <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
             </div>
             <div class="rest">  
                 <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
             </div>
             <div class="rest">  
-                <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
+                <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
             </div>
             <div class="rest">  
                 <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
             </div>
             <div class="rest">  
-                <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
+                <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
             </div>
             <div class="rest">  
                 <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
             </div>
             <div class="rest">  
-                <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
+                <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
             </div>
             <div class="rest">  
                 <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
@@ -262,6 +262,6 @@
 
 
 {{-- footer --}}
-@section('footer')
+{{-- @section('footer')
     @include('layouts.footer')
-@endsection
+@endsection --}}
