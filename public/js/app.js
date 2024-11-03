@@ -109,6 +109,7 @@ function initializeSwipers(selector) {
   initializeSwipers('.explore_recent_swiper');
   initializeSwipers('.team_swiper');
 
+
   document.querySelectorAll('.box-desc').forEach(function (desc) {
     const maxChars = 186;
     let text = desc.textContent.trim();
@@ -127,25 +128,30 @@ function initializeSwipers(selector) {
     var header = $('.header');
     var scrollTop = $(window).scrollTop();
     var currentPage = window.location.pathname;
-    if (currentPage.includes('contact-us')) {
+
+
+    if (currentPage === '/') {
+        header.css('background-color', 'transparent');
+        
+        if (scrollTop > 50) {
         header.css('background-color', 'rgb(61 46 42)');
-    } else
-    if (currentPage.includes('our-team')) {
-        header.css('background-color', 'rgb(61 46 42)');
-    } else
-    if (currentPage.includes('about-us')) {
-        header.css('background-color', 'rgb(61 46 42)');
-    } else
-    if (scrollTop > 50) {
-    header.css('background-color', 'rgb(61 46 42)');
-    } else {
-    header.css('background-color', 'transparent');
+        } else {
+        header.css('background-color', 'transparent');
+
+        }
+    } 
+    else {
+        header.css('background-color', 'rgb(61, 46, 42)');
     }
+    
   }
+
+
   bgHeader();
   $(window).scroll(function() {
     bgHeader();
   });
+
   $(document).ready(function() {
     $('#search-select').select2({
         placeholder: "Select options...",
@@ -188,7 +194,7 @@ function checkInput(input) {
     }
 }
 
-$.get('/all_countries', function(data) {
+$.get('/all-countries', function(data) {
     const phoneDropdown = $('.dropdown_phone');
     const countryDropdown = $('.dropdown_country');
 
@@ -288,4 +294,93 @@ const about_swiper = new Swiper('.about_swiper', {
     speed: 1000,
 
   });
-//   $( '.fixedsticky' ).fixedsticky();
+
+  const available_property_swiper = new Swiper('.available_property_swiper', {
+    slidesPerView: '1',
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    allowTouchMove: false,
+    spaceBetween: 30,
+    centeredSlides: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    freeMode: true,
+    effect: 'slide',
+    speed: 300,
+
+  });
+
+
+$(".first.toggle").on("click", function() {
+    $(this).next(".second").toggleClass("show");
+    $(this).find('img').toggleClass('rotate')
+});
+
+const allImages = $('.flex_banner .rest');
+const showMoreContainer = $('.show-more');
+
+const showImages = () => {
+    const windowWidth = $(window).width();
+    const visibleImagesCount = windowWidth > 767 ? 4 : 2;
+    allImages.hide().removeClass('first'); 
+    const visibleImages = allImages.slice(0, visibleImagesCount);
+    visibleImages.show();
+    visibleImages.first().addClass('first');
+
+    if (allImages.length > visibleImagesCount) {
+        showMoreContainer.show();
+    } else {
+        showMoreContainer.hide();
+    }
+};
+
+showImages();
+$(window).resize(showImages);
+
+const openSwiperFromImage = (startIndex) => {
+    $('.swiper-popup').fadeIn('300');
+    const swiperWrapper = $('.swiper-popup .swiper-wrapper');
+    swiperWrapper.empty();
+
+    allImages.each(function () {
+        const src = $(this).find('img').attr('src');
+        swiperWrapper.append(`
+            <div class="swiper-slide">
+                <img src="${src}" style="width:100%">
+            </div>
+        `);
+    });
+
+    new Swiper('.swiper-container-popup', {
+        initialSlide: startIndex,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+       
+        slidesPerView: 1,
+        freeMode: true,
+        effect: 'slide',
+        speed: 500,
+    });
+};
+
+allImages.on('click', function () {
+    const startIndex = allImages.index(this);
+    openSwiperFromImage(startIndex);
+});
+
+showMoreContainer.find('.overlay').on('click', function () {
+    const firstHiddenIndex = allImages.filter(':hidden').first().index();
+    if (firstHiddenIndex !== -1) {
+        openSwiperFromImage(firstHiddenIndex);
+    }
+});
+
+$('.close-btn').on('click', function () {
+    $('.swiper-popup').fadeOut();
+});
