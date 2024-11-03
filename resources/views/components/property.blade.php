@@ -1,5 +1,5 @@
 <div class="card">
-    <a href="{{route('Property')}}" class="available_property_swiper">
+    <a href="{{route('property.show')}}" class="available_property_swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img src="https://images.goyzer.com/uf/5023/unit/2648/1.jpg?group=5023">
@@ -13,12 +13,12 @@
             <div class="swiper-slide">
                 <img src="https://images.goyzer.com/uf/5023/unit/2648/1.jpg?group=5023">
             </div>
-           
+
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </a>
-    <a href="{{route('Property')}}">
+    <a href="{{route('property.show')}}">
         <div class="name_property">Available Now | Kitchen Appliances | Good Location</div>
     </a>
     <div class="price_property">AED 720,000</div>

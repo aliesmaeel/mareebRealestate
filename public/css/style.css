@@ -1324,7 +1324,7 @@ font-size: 14px;
 .country_field{
     position: relative;
     left: 42px;
-    font-family: 'Theseasons';
+
 }
 .flag{
     width: 15px;
@@ -1933,7 +1933,7 @@ height:100px
 }
 .available_property_swiper .swiper-button-next:after,
 .available_property_swiper .swiper-rtl .swiper-button-prev:after,
-.available_property_swiper .swiper-button-prev:after, 
+.available_property_swiper .swiper-button-prev:after,
 .available_property_swiper .swiper-rtl .swiper-button-next:after{
     color: white;
     font-size: 33px;
@@ -1955,7 +1955,7 @@ height:100px
 }
 .property-page{
     width:100%;
-    margin:6rem 0 0 
+    margin:6rem 0 0
 
 }
 .property-page .content{
@@ -1969,7 +1969,7 @@ height:100px
     font-size: 36px;
     font-weight: 600;
     width:90%;
-   
+
     /* padding: 1rem ; */
 
 }
@@ -2038,7 +2038,7 @@ height:100px
     align-items: center;
     font-weight: 600;
     color:#927c75;
-    
+
 
 } */
 .property-page .content .col.boxes .box.address .first,
@@ -2051,7 +2051,7 @@ height:100px
     color: #927c75;
     padding: 0.8rem;
     cursor: pointer;
-   
+
 }
 
 .property-page .content .col.boxes .box.address .second.show {
@@ -2059,11 +2059,11 @@ height:100px
     padding: 0.8rem;
 }
 .property-page .content .col.boxes .box.details .second.show{
-    max-height: 400px; 
+    max-height: 400px;
     padding: 0.8rem;
 }
 .property-page .content .col.boxes .box.map .second.show{
-    max-height: 500px; 
+    max-height: 500px;
     padding: 0.8rem;
 }
 
@@ -2076,7 +2076,7 @@ height:100px
     transition: max-height 0.5s ease, padding 0.5s ease;
 }
 .property-page .content .col.boxes .box.details .second{
-    
+
     flex-wrap: wrap;
     row-gap: 3rem;
     column-gap: 0;
@@ -2094,7 +2094,7 @@ height:100px
 .property-page .content .col.boxes .box.details .first img.rotate,
 .property-page .content .col.boxes .box.map .first img.rotate{
     transform: rotate(180deg);
-   
+
 }
 .property-page .content .col.boxes .box.address .second,
 .property-page .content .col.boxes .box.details .second{
@@ -2103,7 +2103,7 @@ height:100px
     gap: 3rem;
     align-items: center;
     font-weight: 600;
-    
+
 }
 #primary{
     max-width: 100%;
@@ -2254,8 +2254,8 @@ height:100px
     max-width: 90%;
     padding: 3rem;
     max-height: 100%;
-  
-   
+
+
 }
 .close-btn {
     position: absolute;
@@ -2281,7 +2281,7 @@ height:100px
 .popup-content .swiper-rtl .swiper-button-next:after{
     color: #927c75;
     font-weight: bold;
-   
+
 }
 
 /* General styles for container and image */

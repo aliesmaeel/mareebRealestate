@@ -108,7 +108,7 @@ function initializeSwipers(selector) {
 
   initializeSwipers('.explore_recent_swiper');
   initializeSwipers('.team_swiper');
-  
+
 
   document.querySelectorAll('.box-desc').forEach(function (desc) {
     const maxChars = 186;
@@ -148,7 +148,7 @@ function initializeSwipers(selector) {
   $(window).scroll(function() {
     bgHeader();
   });
-  
+
   $(document).ready(function() {
     $('#search-select').select2({
         placeholder: "Select options...",
@@ -191,7 +191,7 @@ function checkInput(input) {
     }
 }
 
-$.get('/all_countries', function(data) {
+$.get('/all-countries', function(data) {
     const phoneDropdown = $('.dropdown_phone');
     const countryDropdown = $('.dropdown_country');
 
@@ -308,7 +308,7 @@ const about_swiper = new Swiper('.about_swiper', {
     freeMode: true,
     effect: 'slide',
     speed: 300,
-   
+
   });
 
 
@@ -317,10 +317,10 @@ $(".first.toggle").on("click", function() {
     $(this).find('img').toggleClass('rotate')
 });
 
-  
 
-const allImages = $('.flex_banner .rest'); 
-const showMoreContainer = $('.show-more'); 
+
+const allImages = $('.flex_banner .rest');
+const showMoreContainer = $('.show-more');
 
 const showImages = () => {
     const windowWidth = $(window).width();
@@ -338,7 +338,7 @@ showImages();
 $(window).resize(showImages);
 
 showMoreContainer.find('.overlay').on('click', function () {
-    $('.swiper-popup').fadeIn('300'); 
+    $('.swiper-popup').fadeIn('300');
     const swiperWrapper = $('.swiper-popup .swiper-wrapper');
     swiperWrapper.empty();
     allImages.filter(':hidden').each(function () {
