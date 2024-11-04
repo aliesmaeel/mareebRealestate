@@ -322,6 +322,7 @@ $(".first.toggle").on("click", function() {
 
 const allImages = $('.flex_banner .rest');
 const showMoreContainer = $('.show-more');
+let swiperInstance; 
 
 const showImages = () => {
     const windowWidth = $(window).width();
@@ -342,7 +343,7 @@ showImages();
 $(window).resize(showImages);
 
 const openSwiperFromImage = (startIndex) => {
-    $('.swiper-popup').fadeIn('300');
+    $('.swiper-popup').fadeIn(300);
     const swiperWrapper = $('.swiper-popup .swiper-wrapper');
     swiperWrapper.empty();
 
@@ -355,13 +356,17 @@ const openSwiperFromImage = (startIndex) => {
         `);
     });
 
-    new Swiper('.swiper-container-popup', {
+    if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+        swiperInstance = null; 
+    }
+
+    swiperInstance = new Swiper('.swiper-container-popup', {
         initialSlide: startIndex,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-       
         slidesPerView: 1,
         freeMode: true,
         effect: 'slide',
@@ -383,4 +388,8 @@ showMoreContainer.find('.overlay').on('click', function () {
 
 $('.close-btn').on('click', function () {
     $('.swiper-popup').fadeOut();
+    if (swiperInstance) {
+        swiperInstance.destroy(true, true); 
+        swiperInstance = null; 
+    }
 });
