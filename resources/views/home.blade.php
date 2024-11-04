@@ -88,7 +88,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <a class="read-more" href="#">Recent Off Plan Project</a>
+{{--            <a class="read-more" href="#">Recent Off Plan Project</a>--}}
         </div>
     </div>
     {{-- team section -------}}
