@@ -12,18 +12,9 @@
     <div class="content">
         <div class="title">OUR TEAM</div>
         <div class="grid-container">
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
-            @include('components.team')
+            @foreach($teams as $team)
+                @include('components.team')
+            @endforeach
         </div>
     </div>
 </div>
