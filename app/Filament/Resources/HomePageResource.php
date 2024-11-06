@@ -54,7 +54,7 @@ class HomePageResource extends Resource
                                 $fail('Only one page can be active at a time. To activate this HomePage, please deactivate any other active HomePage.');
                             }
                         }
-                    ])
+                    ])->default(0)
             ]);
     }
 

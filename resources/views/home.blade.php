@@ -68,7 +68,7 @@
     {{-- explore_recent --}}
     <div class="explore_recent">
         <div class="content" data-aos="fade-up" >
-            <div class="title">Our Services</div>
+            <div class="title">Properties We Manage</div>
             <div class="desc">
                 {{$home->what_we_do_section_text}}
             </div>

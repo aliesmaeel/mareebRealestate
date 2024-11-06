@@ -5,27 +5,18 @@
 @section('header')
     @include('layouts.header')
 @endsection
-
+<style>
+    .container.contact-us .content .col:first-child{
+        background-image: url({{asset('/storage/'.$contactus->image)}});
+    }
+</style>
 {{-- main page --}}
 @section('content')
-<div class="container contact-us">
+<div class="container contact-us contact-us-page">
     <div class="content">
         <div class="col">
-        
-            <div class="title">Get Started</div>
-            <div class="desc">
-                Take the first step towards achieving your real estate goals by talking to our team. Whether you are involved in residential or commercial transactions or
-                 considering relocation, we have the support and systems for your success.
-            </div>
-            <div class="info title">Reach out</div>
-            <div class="info">
-                <span>Tel: </span>
-                <a href="#">+971505074686</a>
-            </div>
-            <div class="info">
-                <span>Email: </span>
-                <a href="#">info@savoirproperties.com</a>
-            </div>
+
+         {!! $contactus->description_text !!}
             <div class="info social">
                 <div class="title letter-space">Follow us on social media</div>
                 <div>
@@ -51,13 +42,12 @@
             </div>
         </div>
         <div class="col">
-           
+
             @include('components.form')
         </div>
     </div>
 </div>
 @endsection
-
 
 {{-- footer --}}
 @section('footer')

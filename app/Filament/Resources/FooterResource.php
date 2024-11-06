@@ -51,7 +51,7 @@ class FooterResource extends Resource
                                  To activate this Footer, please deactivate any other active Footers.');
                             }
                         }
-                    ])
+                    ])->default(0)
             ]);
     }
 

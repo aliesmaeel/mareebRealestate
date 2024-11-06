@@ -10,5 +10,12 @@ class ContactPage extends Model
         'name',
         'image',
         'description_text',
+        'active',
     ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('active',true);
+    }
+
 }

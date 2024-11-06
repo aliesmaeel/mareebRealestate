@@ -1217,7 +1217,6 @@ font-size: 14px;
     width: 50%;
 }
 .container.contact-us .content .col:first-child{
-    background-image: url(https://savoirproperties.com/images/contact-us.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2340,4 +2339,17 @@ height:100px
     opacity: 1;
 }
 
-
+.contact-us-page h1,h2{
+    color: white;
+    font-size: 48px;
+    position: relative;
+}
+.contact-us-page p{
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.contact-us-page a{
+    text-decoration: none;
+    color: white;
+}

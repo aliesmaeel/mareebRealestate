@@ -36,13 +36,14 @@ class ContactPageResource extends Resource
                 Forms\Components\RichEditor::make('description_text')->required(),
                 Forms\Components\Toggle::make('active')
                     ->required()->rules([
-                        fn (): \Closure => function (string $attribute, $value, \Closure $fail) {
-                            if (ContactPage::where('active',$value)->first()) {
+                        fn (): \Closure => function (string $attribute, $value, \Closure $fail) use ($form) {
+                            if ($value && ContactPage::where('active', true)->where('id', '!=', $form->model->id?? '')->exists()) {
+
                                 $fail('Only One Page Could Be active , To Active This
                                 Contact Page Please Go And Deactivate Any Other Contact Page');
                             }
                         }
-                    ])
+                    ])->default(0)
 
             ]);
     }
@@ -53,8 +54,9 @@ class ContactPageResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('description_text')
-                    ->searchable(),
+                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ToggleColumn::make('active'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

@@ -33,7 +33,7 @@ class SocialMediaResource extends Resource
                     ->image()
                     ->required(),
                 Forms\Components\Toggle::make('active')
-                    ->required(),
+                    ->required()->default(0),
             ]);
     }
 
