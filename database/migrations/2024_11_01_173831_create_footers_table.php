@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->string('image',55)->nullable();
+            $table->string('image',90)->nullable();
             $table->text('text')->nullable();
             $table->text('links')->nullable();
             $table->string('copy_write',50)->nullable();
