@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('contact_pages', function (Blueprint $table) {
             $table->id();
             $table->string('name',55);
-            $table->text('image');
-            $table->string('description_text',255);
-            $table->boolean('active');
+            $table->string('image',255);
+            $table->text('description_text');
+            $table->boolean('active')->default(0);
             $table->timestamps();
         });
     }

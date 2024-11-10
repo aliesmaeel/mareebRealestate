@@ -19,8 +19,11 @@
             <img src="{{asset('/images/logo.png')}}">
         </div>
         <ul class="col-list">
+            <a href="/">
+                <li class="link">Home</li>
+            </a>
             <a href="/contact-us">
-                <li class="link">Contact Us</li>
+                <li class="link">Contact</li>
             </a>
             <a href="/our-team">
                 <li class="link">Our Team</li>

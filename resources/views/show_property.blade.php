@@ -14,9 +14,9 @@
             <div class="swiper-wrapper">
                 {{-- <div class="swiper-slide">
                     <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
-        
+
                 </div> --}}
-                
+
             </div>
             <!-- Swiper navigation buttons -->
             <div class="swiper-button-next"></div>
@@ -30,39 +30,39 @@
             <div class=" rest">
                 <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
             </div>
-            <div class="rest">  
+            <div class="rest">
                 <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
             </div>
-            <div class="rest">  
+            <div class="rest">
                 <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
             </div>
-            <div class="rest">  
+            <div class="rest">
                 <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
             </div>
-            <div class="rest">  
+            <div class="rest">
                 <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
             </div>
-            <div class="rest">  
+            <div class="rest">
                 <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
             </div>
-            <div class="rest">  
+            <div class="rest">
                 <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
             </div>
-            <div class="rest">  
+            <div class="rest">
                 <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
             </div>
             <div  class=" show-more">
                  <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
-            
+
                  <div class="overlay">
                     <div>Show More</div>
                  </div>
             </div>
-            
+
         </div>
     </div>
     <!-- Popup for Swiper -->
-  
+
     <div class="property-page">
         <div class="content">
             <div class="col boxes">
@@ -135,16 +135,16 @@
                         About Emaar Beachfront:
                     </div>
                     <div>
-                        Emaar Beachfront is a prestigious, gated community that offers a perfect blend of seaside living 
-                        with urban convenience. Residents enjoy private beach access, landscaped parks, and upscale dining and retail options just steps away. The building features state-of-the-art amenities, including an infinity pool, 
+                        Emaar Beachfront is a prestigious, gated community that offers a perfect blend of seaside living
+                        with urban convenience. Residents enjoy private beach access, landscaped parks, and upscale dining and retail options just steps away. The building features state-of-the-art amenities, including an infinity pool,
                         fully-equipped gym, and direct beach access, ensuring a five-star lifestyle right at home.
                     </div>
                     <div>
                         Location Highlights:
                     </div>
                     <div>
-                        Emaar Beachfront is a prestigious, gated community that offers a perfect blend of seaside living 
-                        with urban convenience. Residents enjoy private beach access, landscaped parks, and upscale dining and retail options just steps away. The building features state-of-the-art amenities, including an infinity pool, 
+                        Emaar Beachfront is a prestigious, gated community that offers a perfect blend of seaside living
+                        with urban convenience. Residents enjoy private beach access, landscaped parks, and upscale dining and retail options just steps away. The building features state-of-the-art amenities, including an infinity pool,
                         fully-equipped gym, and direct beach access, ensuring a five-star lifestyle right at home.
                     </div>
                 </div>
@@ -252,7 +252,7 @@
                         </div>
                      </div>
                   </a>
-                  
+
                 </div>
             </div>
         </div>
@@ -261,7 +261,7 @@
 @endsection
 
 
-{{-- footer --}}
-{{-- @section('footer')
+
+@section('footer')
     @include('layouts.footer')
-@endsection --}}
+@endsection

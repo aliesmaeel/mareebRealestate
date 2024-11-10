@@ -39,22 +39,7 @@
                     </div>
                     <input type="hidden" id="interestd_status">
                 </div>
-                <div class="title">Property status</div>
-                <div class="group-options property-group">
-                    <div class="option">
-                        <div class="custom-radio" data-value="All">All</div>
-                        <input type="radio" value="All" name="property_status" style="display: none;">
-                    </div>
-                    <div class="option">
-                        <div class="custom-radio" data-value="Ready">Ready</div>
-                        <input type="radio" value="Ready" name="property_status" style="display: none;">
-                    </div>
-                    <div class="active option">
-                        <div class="custom-radio" data-value="Off-plane">Off-plane</div>
-                        <input type="radio" value="Off-plane" name="property_status" style="display: none;">
-                    </div>
-                    <input type="hidden" id="property_status">
-                </div>
+
                 <div class="reset_done">
                     <div class="reset">Reset</div>
                     <div class="done">Done</div>
@@ -75,31 +60,35 @@
                 <div class="title">Property type</div>
                 <div class="group-options property-type">
                     <div class="option active">
-                        <div class="custom-radio" data-value="Flat">Flat</div>
+                        <div class="custom-radio" data-value="Flat">Labor Accommodation</div>
                         <input type="radio" value="Flat" name="property_type" style="display: none;">
                     </div>
                     <div class=" option">
-                        <div class="custom-radio" data-value="Bulk Units">Bulk Units</div>
+                        <div class="custom-radio" data-value="Bulk Units">Residential Apartments</div>
                         <input type="radio" value="Bulk Units" name="property_type" style="display: none;">
                     </div>
                     <div class=" option">
-                        <div class="custom-radio" data-value="Bulk Units">Bulk Units</div>
+                        <div class="custom-radio" data-value="Bulk Units">Commercial Office Spaces</div>
                         <input type="radio" value="Bulk Units" name="property_type" style="display: none;">
                     </div>
                     <div class=" option">
-                        <div class="custom-radio" data-value="Bulk Units">Bulk Units</div>
+                        <div class="custom-radio" data-value="Bulk Units">Showrooms</div>
                         <input type="radio" value="Bulk Units" name="property_type" style="display: none;">
                     </div>
                     <div class=" option">
-                        <div class="custom-radio" data-value="Bulk Units">Bulk Units</div>
+                        <div class="custom-radio" data-value="Bulk Units">Flat</div>
                         <input type="radio" value="Bulk Units" name="property_type" style="display: none;">
                     </div>
                     <div class=" option">
-                        <div class="custom-radio" data-value="Bulk Units">Bulk Units</div>
+                        <div class="custom-radio" data-value="Bulk Units">Bungalow</div>
                         <input type="radio" value="Bulk Units" name="property_type" style="display: none;">
                     </div>
                     <div class=" option">
-                        <div class="custom-radio" data-value="Bulk Units">Bulk Units</div>
+                        <div class="custom-radio" data-value="Bulk Units">Compound</div>
+                        <input type="radio" value="Bulk Units" name="property_type" style="display: none;">
+                    </div>
+                    <div class=" option">
+                        <div class="custom-radio" data-value="Bulk Units">Duplex</div>
                         <input type="radio" value="Bulk Units" name="property_type" style="display: none;">
                     </div>
                     <input type="hidden" id="property_type">
