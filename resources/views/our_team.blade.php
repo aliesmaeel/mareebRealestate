@@ -30,6 +30,6 @@
 @endsection
 
 {{-- footer --}}
-@section('footer')
+{{-- @section('footer')
     @include('layouts.footer')
-@endsection
+@endsection --}}

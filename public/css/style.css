@@ -2341,3 +2341,120 @@ height:100px
 }
 
 
+.container.team_profile{
+    margin-top: 100px;
+}
+.team_profile .content{
+    width:90%;
+    margin:0 auto;
+    padding: 3rem 0;
+}
+.team_profile .content .flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:3rem
+}
+.team_profile .content .flex-container a svg{
+    width:20px
+}
+.team_profile .content .flex-container .col.flex-col{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0 0;
+    gap: 1rem;
+    width: 60%;
+}
+.team_profile .content .flex-container .col.img-container{
+    max-width: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+.team_profile .content .flex-container .col.img-container img{
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.team_profile .content .flex-container .col.flex-col a{
+    display: flex;
+    align-items: center;
+    gap:0.6rem;
+    color:#fff
+}
+.team_profile .content .flex-container .name{
+    color:#927c75;
+    font-weight: 800;
+    font-size: 35px;
+}
+.team_profile .content .flex-container .col.flex-col a:first-child{
+    color: #222;
+    background: transparent;
+}
+.team_profile .content .flex-container .col.flex-col .flex.buttons a{
+    background-color: #927c75;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    border-radius: 7px;
+}
+.team_profile .content .flex-container .col.flex-col .flex.buttons{
+    display: flex;
+    gap:1.7rem;
+    align-items: center;
+    border-bottom: 1px solid #927c75;
+    padding-bottom: 2.9rem;
+}
+.team_profile .content .flex-container .bio-info{
+    padding-top: 1rem;
+    border-bottom: 1px solid #927c75;
+    padding-bottom: 2.9rem;
+}
+.team_profile .content .flex-container .bio-info .title{
+    font-weight: 800;
+    color:#927c75;
+    font-size: 28px;
+}
+.team_profile .content .flex-container .bio-info .desc{
+    color:#222;
+    line-height: 1.9;
+    
+}
+.team_profile .work_together{
+    background: rgb(47 30 26 / 0.1);
+
+}
+.team_profile .work_together .content{
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+
+}
+.team_profile .work_together .title{
+    font-size: 50px;
+    font-weight: 800;
+    color: rgb(47 30 26);
+}
+.team_profile .work_together .contact-btn-section{
+    display: flex;
+    align-items: center;
+    gap:1rem
+
+}
+.team_profile .work_together .contact-btn-section a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background:rgb(47 30 26 / 0.6);
+    padding: 0.8rem 2rem;
+    border-radius: 3px;
+    color:#fff;
+    font-weight: 600;
+
+}
+.team_profile .work_together .contact-btn-section a span{
+
+}
+.team_profile .work_together .contact-btn-section a svg{
+    height: 10px;
+
+}

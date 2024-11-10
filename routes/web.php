@@ -17,6 +17,9 @@ Route::get('/our-team', function () {
 Route::get('/about-us', function () {
     return view('about_us');
 });
+Route::get('/team-profile', function () {
+    return view('team-profile');
+});
 Route::get('/search-result',[PropertyController::class,'search']);
 Route::get('/show-property',[PropertyController::class,'index'])
     ->name('property.show');
