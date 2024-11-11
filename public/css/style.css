@@ -1435,7 +1435,7 @@ color:#222
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     padding-top: 3rem;
 }
 .container.team .content .title{
@@ -1443,7 +1443,7 @@ color:#222
     color:#000000;
     font-size: 35px;
     font-family: 'Montissart';
-    margin: 0rem 0 3rem;
+    margin: 0rem 1rem 3rem;
 }
 .container.team .content .grid-container{
     display: grid;
@@ -2480,7 +2480,7 @@ height:100px
 } */
 .browser-default.video-filter{
     width: 160px;
-    margin: 1rem 0 3rem;
+    margin: 1rem 1rem 3rem;
     border-radius: 5px;
     padding: 0.5rem;
     background-color: rgb(47 30 26 / 0.1);
