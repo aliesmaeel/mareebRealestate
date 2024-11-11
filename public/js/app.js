@@ -132,18 +132,18 @@ function initializeSwipers(selector) {
 
     if (currentPage === '/') {
         header.css('background-color', 'transparent');
-        
+
         if (scrollTop > 50) {
         header.css('background-color', 'rgb(61 46 42)');
         } else {
         header.css('background-color', 'transparent');
 
         }
-    } 
+    }
     else {
         header.css('background-color', 'rgb(61, 46, 42)');
     }
-    
+
   }
 
 
@@ -322,12 +322,12 @@ $(".first.toggle").on("click", function() {
 
 const allImages = $('.flex_banner .rest');
 const showMoreContainer = $('.show-more');
-let swiperInstance; 
+let swiperInstance;
 
 const showImages = () => {
     const windowWidth = $(window).width();
     const visibleImagesCount = windowWidth > 767 ? 4 : 2;
-    allImages.hide().removeClass('first'); 
+    allImages.hide().removeClass('first');
     const visibleImages = allImages.slice(0, visibleImagesCount);
     visibleImages.show();
     visibleImages.first().addClass('first');
@@ -358,7 +358,7 @@ const openSwiperFromImage = (startIndex) => {
 
     if (swiperInstance) {
         swiperInstance.destroy(true, true);
-        swiperInstance = null; 
+        swiperInstance = null;
     }
 
     swiperInstance = new Swiper('.swiper-container-popup', {
@@ -389,7 +389,27 @@ showMoreContainer.find('.overlay').on('click', function () {
 $('.close-btn').on('click', function () {
     $('.swiper-popup').fadeOut();
     if (swiperInstance) {
-        swiperInstance.destroy(true, true); 
-        swiperInstance = null; 
+        swiperInstance.destroy(true, true);
+        swiperInstance = null;
     }
+});
+
+var $grid_isotope = $('.js-filter-grid').isotope({
+    itemSelector: '.js-filter-grid-item',
+    layoutMode: 'fitRows',
+    transitionDuration: '0.6s' // Smooth transition
+});
+
+// Trigger the initial filter, ensuring all items are shown or the correct items are shown
+$grid_isotope.isotope({ filter: '*' });  // '*' will show all items initially
+
+// Filter items on select change
+$('#section-filter').on('change', function () {
+    var filterValue = $(this).val();
+    if(filterValue==='all'){
+        $grid_isotope.isotope({ filter: '*' });
+    }else{
+        $grid_isotope.isotope({ filter: '[data-section="' + filterValue + '"]' });
+    }
+
 });

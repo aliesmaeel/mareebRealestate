@@ -1435,7 +1435,7 @@ color:#222
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     padding-top: 3rem;
 }
 .container.team .content .title{
@@ -1443,14 +1443,17 @@ color:#222
     color:#000000;
     font-size: 35px;
     font-family: 'Montissart';
-    margin: 0rem 0 3rem;
+    margin: 0rem 1rem 3rem;
 }
 .container.team .content .grid-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    /* gap: 2rem; */
     margin-bottom: 4rem;
-    row-gap: 0;
+    /* row-gap: 0; */
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .container.team .content .grid-container .col{
     width: 100%;
@@ -1464,6 +1467,7 @@ color:#222
 }
 .container.team .content .grid-container .img-container{
     width: 250px;
+    height:200px;
     position: relative;
     overflow: hidden;
 
@@ -2339,6 +2343,126 @@ height:100px
     opacity: 1;
 }
 
+
+
+.container.team_profile{
+    margin-top: 100px;
+}
+.team_profile .content{
+    width:90%;
+    margin:0 auto;
+    padding: 3rem 0;
+}
+.team_profile .content .flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:3rem
+}
+.team_profile .content .flex-container a svg{
+    width:20px
+}
+.team_profile .content .flex-container .col.flex-col{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0 0;
+    gap: 1rem;
+    width: 60%;
+}
+.team_profile .content .flex-container .col.img-container{
+    max-width: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+.team_profile .content .flex-container .col.img-container img{
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.team_profile .content .flex-container .col.flex-col a{
+    display: flex;
+    align-items: center;
+    gap:0.6rem;
+    color:#fff
+}
+.team_profile .content .flex-container .name{
+    color:#927c75;
+    font-weight: 800;
+    font-size: 35px;
+}
+.team_profile .content .flex-container .col.flex-col a:first-child{
+    color: #222;
+    background: transparent;
+}
+.team_profile .content .flex-container .col.flex-col .flex.buttons a{
+    background-color: #927c75;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    border-radius: 7px;
+}
+.team_profile .content .flex-container .col.flex-col .flex.buttons{
+    display: flex;
+    gap:1.7rem;
+    align-items: center;
+    border-bottom: 1px solid #927c75;
+    padding-bottom: 2.9rem;
+}
+.team_profile .content .flex-container .bio-info{
+    padding-top: 1rem;
+    border-bottom: 1px solid #927c75;
+    padding-bottom: 2.9rem;
+}
+.team_profile .content .flex-container .bio-info .title{
+    font-weight: 800;
+    color:#927c75;
+    font-size: 28px;
+}
+.team_profile .content .flex-container .bio-info .desc{
+    color:#222;
+    line-height: 1.9;
+
+}
+.team_profile .work_together{
+    background: rgb(47 30 26 / 0.1);
+
+}
+.team_profile .work_together .content{
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+
+}
+.team_profile .work_together .title{
+    font-size: 50px;
+    font-weight: 800;
+    color: rgb(47 30 26);
+}
+.team_profile .work_together .contact-btn-section{
+    display: flex;
+    align-items: center;
+    gap:1rem
+
+}
+.team_profile .work_together .contact-btn-section a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background:rgb(47 30 26 / 0.6);
+    padding: 0.8rem 2rem;
+    border-radius: 3px;
+    color:#fff;
+    font-weight: 600;
+
+}
+.team_profile .work_together .contact-btn-section a span{
+
+}
+.team_profile .work_together .contact-btn-section a svg{
+    height: 10px;
+
+}
+
 .contact-us-page h1,h2{
     color: white;
     font-size: 48px;
@@ -2352,4 +2476,23 @@ height:100px
 .contact-us-page a{
     text-decoration: none;
     color: white;
+}
+/* .js-filter-grid-item {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+} */
+.browser-default.video-filter{
+    width: 160px;
+    margin: 1rem 1rem 3rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: rgb(47 30 26 / 0.1);
+    color:#927c75;
+    cursor: pointer;
+    outline: none;
+
+}
+.team-item.js-filter-grid-item{
+    max-width: 250px;
+    /* padding: 1rem; */
+    margin: 1rem;
 }

@@ -16,6 +16,9 @@ Route::get('/about-us', function () {
     $footer= Footer::Active()->first();
     return view('about_us')->with('footer',$footer);
 });
+Route::get('/team-profile', function () {
+    return view('team-profile');
+});
 Route::get('/search-result',[PropertyController::class,'search']);
 Route::get('/property-details',[PropertyController::class,'index'])
     ->name('property.show');

@@ -1,4 +1,7 @@
 @media(max-width:1199px) and (min-width:992px){
+    .team_profile .content .flex-container .col.flex-col .flex.buttons{
+        flex-wrap: wrap;
+    }
     .available_property .grid-container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -99,6 +102,30 @@
     html,
     body{
         overflow-x: hidden !important;
+    }
+    .team_profile .content .flex-container{
+        flex-direction: column;
+    }
+    .team_profile .work_together .title{
+        font-size: 33px;
+    }
+    .team_profile .work_together .contact-btn-section{
+        flex-wrap: wrap;
+    }
+    .team_profile .content .flex-container .col.img-container{
+        order:-1
+    }
+    .team_profile .content .flex-container .col.img-container img {
+        height: 465px;
+    }
+    .team_profile .content .flex-container .col.flex-col{
+        width: 94%;
+    }
+    .team_profile .content .flex-container .col.flex-col .flex.buttons{
+        flex-wrap: wrap;
+    }
+    .team_profile .content .flex-container .name {
+        font-size: 30px;
     }
     .about_form,
     .desc_section.sticky-component .flex-container {

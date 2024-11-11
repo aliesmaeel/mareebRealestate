@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('sections', function (Blueprint $table) {
             $table->id();
-            $table->string('name',55);
-            $table->string('phone',55);
-            $table->string('email',55);
-            $table->string('image',90);
-            $table->foreignId('section_id')->default(1)->constrained();
+            $table->string('name',90);
             $table->timestamps();
         });
     }
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('sections');
     }
 };
