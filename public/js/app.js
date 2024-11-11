@@ -393,3 +393,18 @@ $('.close-btn').on('click', function () {
         swiperInstance = null; 
     }
 });
+
+var $grid_isotope = $('.js-filter-grid').isotope({
+    itemSelector: '.js-filter-grid-item',
+    layoutMode: 'fitRows',
+    transitionDuration: '0.6s' // Smooth transition
+});
+
+// Trigger the initial filter, ensuring all items are shown or the correct items are shown
+$grid_isotope.isotope({ filter: '*' });  // '*' will show all items initially
+
+// Filter items on select change
+$('#section-filter').on('change', function () {
+    var filterValue = $(this).val();
+    $grid_isotope.isotope({ filter: '[data-section="' + filterValue + '"]' });
+});

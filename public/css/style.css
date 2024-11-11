@@ -1448,9 +1448,10 @@ color:#222
 .container.team .content .grid-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    /* gap: 2rem; */
     margin-bottom: 4rem;
-    row-gap: 0;
+    /* row-gap: 0; */
+    width:100%
 }
 .container.team .content .grid-container .col{
     width: 100%;
@@ -1464,6 +1465,7 @@ color:#222
 }
 .container.team .content .grid-container .img-container{
     width: 250px;
+    height:200px;
     position: relative;
     overflow: hidden;
 
@@ -2473,4 +2475,22 @@ height:100px
     text-decoration: none;
     color: white;
 }
+/* .js-filter-grid-item {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+} */
+.browser-default.video-filter{
+    width: 160px;
+    margin: 1rem 0 3rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: rgb(47 30 26 / 0.1);
+    color:#927c75;
+    cursor: pointer;
+    outline: none;
 
+}
+.team-item.js-filter-grid-item{
+    max-width: 250px;
+    /* padding: 1rem; */
+    margin: 1rem;
+}
