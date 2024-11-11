@@ -28,6 +28,10 @@ class TeamResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(55),
+                Forms\Components\TextInput::make('phone')
+                    ->required(),
+                Forms\Components\TextInput::make('email')
+                    ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->required(),
