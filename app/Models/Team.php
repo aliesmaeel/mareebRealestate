@@ -10,7 +10,7 @@ class Team extends Model
 {
     use HasFactory;
 
-    protected $fillable=['name','image'];
+    protected $fillable=['name','image','phone','email'];
 
     public function section(): BelongsTo
     {
