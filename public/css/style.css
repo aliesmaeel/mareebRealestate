@@ -1451,7 +1451,9 @@ color:#222
     /* gap: 2rem; */
     margin-bottom: 4rem;
     /* row-gap: 0; */
-    width:100%
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .container.team .content .grid-container .col{
     width: 100%;
@@ -2340,7 +2342,7 @@ height:100px
 .swiper-slide:hover .description {
     opacity: 1;
 }
- 
+
 
 
 .container.team_profile{
@@ -2418,7 +2420,7 @@ height:100px
 .team_profile .content .flex-container .bio-info .desc{
     color:#222;
     line-height: 1.9;
-    
+
 }
 .team_profile .work_together{
     background: rgb(47 30 26 / 0.1);
@@ -2474,7 +2476,7 @@ height:100px
 .contact-us-page a{
     text-decoration: none;
     color: white;
-} 
+}
 /* .js-filter-grid-item {
     transition: transform 0.4s ease, opacity 0.4s ease;
 } */

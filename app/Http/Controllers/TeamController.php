@@ -10,7 +10,7 @@ class TeamController extends Controller
 {
     public function  index () {
         $footer=\App\Models\Footer::Active()->first();
-        $teams=Team::all();
+        $teams=Team::with('section')->get();
         $sections=Section::all();
         return view('our_team')
             ->with('teams',$teams)

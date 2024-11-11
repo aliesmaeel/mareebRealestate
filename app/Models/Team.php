@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Team extends Model
 {
@@ -11,7 +12,8 @@ class Team extends Model
 
     protected $fillable=['name','image'];
 
-    public function section(){
+    public function section(): BelongsTo
+    {
         return $this->belongsTo(Section::class,'section_id');
     }
 }
