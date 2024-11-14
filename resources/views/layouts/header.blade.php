@@ -1,4 +1,29 @@
-<div class="header">
+<div class="header header_desktop">
+    <div class="content">
+        <div class="logo">
+            <a href="/">
+                <img src="{{asset('/images/logo.png')}}" alt="img-logo">
+            </a>
+        </div>
+        <div class="list_header">
+            <ul>
+                <a href="/">
+                    <li class="link">Home</li>
+                </a>
+                <a href="/contact-us">
+                    <li class="link">Contact</li>
+                </a>
+                <a href="/our-team">
+                    <li class="link">Our Team</li>
+                </a>
+                <a href="/about-us">
+                    <li class="link">About</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="header header_mobile">
     <div class="content">
         <div class="logo">
             <a href="/">

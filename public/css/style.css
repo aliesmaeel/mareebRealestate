@@ -2496,3 +2496,15 @@ height:100px
     /* padding: 1rem; */
     margin: 1rem;
 }
+.header_mobile{
+    display: none;
+}
+.header_desktop{
+    display: block;
+}
+.header_desktop .list_header ul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+}

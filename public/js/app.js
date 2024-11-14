@@ -132,9 +132,10 @@ function initializeSwipers(selector) {
 
     if (currentPage === '/') {
         header.css('background-color', 'transparent');
+       
 
         if (scrollTop > 50) {
-        header.css('background-color', 'rgb(61 46 42)');
+            header.css('background-color', 'rgb(61 46 42)');
         } else {
         header.css('background-color', 'transparent');
 
@@ -142,6 +143,8 @@ function initializeSwipers(selector) {
     }
     else {
         header.css('background-color', 'rgb(61, 46, 42)');
+       
+
     }
 
   }

@@ -255,6 +255,12 @@
     }
 }
 @media(max-width:767px){
+    .header_mobile{
+        display: block;
+    }
+    .header_desktop{
+        display: none;
+    }
     .popup-content {
         width: 100%;
         max-width: 100%;
