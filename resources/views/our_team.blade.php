@@ -14,7 +14,7 @@
         <div class="title">OUR TEAM</div>
 
         <select class="browser-default video-filter" id="section-filter">
-            <option value="all"  selected>All</option>
+            <option value="All"  selected>All</option>
             @foreach($sections as $section)
                 <option value="{{ $section->name }}">{{ $section->name }}</option>
             @endforeach

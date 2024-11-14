@@ -409,7 +409,7 @@ $grid_isotope.isotope({ filter: '*' });  // '*' will show all items initially
 // Filter items on select change
 $('#section-filter').on('change', function () {
     var filterValue = $(this).val();
-    if(filterValue==='all'){
+    if(filterValue==='All'){
         $grid_isotope.isotope({ filter: '*' });
     }else{
         $grid_isotope.isotope({ filter: '[data-section="' + filterValue + '"]' });
