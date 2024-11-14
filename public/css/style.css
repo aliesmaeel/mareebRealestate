@@ -2506,5 +2506,11 @@ height:100px
     display: flex;
     gap: 2rem;
     align-items: center;
+}
+.header_desktop .list_header ul li{
+    padding: 5px;
+}
 
+.header_desktop .list_header ul a :hover{
+    background-color: rgb(61, 46, 42);
 }
