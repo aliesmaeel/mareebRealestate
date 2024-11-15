@@ -54,11 +54,12 @@
     {{-- premium_properties --}}
     <div class="services">
         <div class="content" data-aos="fade-up" >
-            <div class="title">Services</div>
+            <div class="title">Properties We Manage</div>
             <div class="buttons">
                 <a href="#">Labor Camps </a>
                 <a href="#">Residential Buildings</a>
                 <a href="#">Commercial Floors</a>
+                <a href="#">Showrooms</a>
             </div>
             <div class="grid-container">
                 @include('components.service')
@@ -66,31 +67,31 @@
         </div>
     </div>
     {{-- explore_recent --}}
-    <div class="explore_recent">
-        <div class="content" data-aos="fade-up" >
-            <div class="title">Properties We Manage</div>
-            <div class="desc">
-                {{$home->what_we_do_section_text}}
-            </div>
-            <!-- Swiper -->
-            <div class="explore_recent_swiper ">
-                <div class="swiper-wrapper">
-                    @foreach($services as $service)
-                        <div class="swiper-slide" >
-                            <div class="our-services-container"
-                                 style="background-image: url({{asset('/storage/'.$service->image)}});"
-                            >{{$service->name}}</div>
-                            <div class="description">
-                                {!! $service->description !!}
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
+{{--    <div class="explore_recent">--}}
+{{--        <div class="content" data-aos="fade-up" >--}}
+{{--            <div class="title">Properties We Manage</div>--}}
+{{--            <div class="desc">--}}
+{{--                {{$home->what_we_do_section_text}}--}}
+{{--            </div>--}}
+{{--            <!-- Swiper -->--}}
+{{--            <div class="explore_recent_swiper ">--}}
+{{--                <div class="swiper-wrapper">--}}
+{{--                    @foreach($services as $service)--}}
+{{--                        <div class="swiper-slide" >--}}
+{{--                            <div class="our-services-container"--}}
+{{--                                 style="background-image: url({{asset('/storage/'.$service->image)}});"--}}
+{{--                            >{{$service->name}}</div>--}}
+{{--                            <div class="description">--}}
+{{--                                {!! $service->description !!}--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--                <div class="swiper-pagination"></div>--}}
+{{--            </div>--}}
 {{--            <a class="read-more" href="#">Recent Off Plan Project</a>--}}
-        </div>
-    </div>
+{{--        </div>--}}
+{{--    </div>--}}
     {{-- team section -------}}
     <div class="team_section">
         <div class="content" data-aos="fade-up" >
