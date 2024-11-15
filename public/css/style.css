@@ -489,6 +489,8 @@ display: none;
     position: relative;
     gap:3rem;
     padding: 1rem 0;
+    animation: infiniteScroll var(--scroll-duration) linear infinite;
+    will-change: transform;
 }
 .listining-section .item{
     width:250px;
@@ -497,6 +499,7 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0
 }
 .listining-section .items img{
     width:120px;
@@ -504,7 +507,14 @@ display: none;
     height: 70px;
     opacity: 0.4;
 }
-
+@keyframes infiniteScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 .services{
     width: 100%;
     margin:0rem 0 4rem

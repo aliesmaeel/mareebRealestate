@@ -64,26 +64,35 @@ $('.reset').click(function() {
     $('#' + hiddenInputId).val('');
 });
 
+// const $items = $('.items');
+// const itemWidth = $items.children().first().outerWidth(true);
+// const totalItems = $items.children().length;
+// $items.append($items.html());
+// $items.css({ left: 0 });
+// function animateItems() {
+//     $items.animate(
+//         { left: -itemWidth * totalItems },
+//         {
+//             duration: 40000,
+//             easing: 'linear',
+//             complete: function() {
+//                 $items.css({ left: 0 });
+//                 animateItems();
+//             }
+//         }
+//     );
+// }
+
+
 const $items = $('.items');
 const itemWidth = $items.children().first().outerWidth(true);
 const totalItems = $items.children().length;
+const totalWidth = itemWidth * totalItems;
 $items.append($items.html());
-$items.css({ left: 0 });
-function animateItems() {
-    $items.animate(
-        { left: -itemWidth * totalItems },
-        {
-            duration: 40000,
-            easing: 'linear',
-            complete: function() {
-                $items.css({ left: 0 });
-                animateItems();
-            }
-        }
-    );
-}
+const speed = 100;
+const duration = totalWidth / speed; 
+$items.css('--scroll-duration', `${duration}s`);
 
-animateItems();
 
 // Function to initialize Swipers dynamically
 function initializeSwipers(selector) {

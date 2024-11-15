@@ -46,7 +46,7 @@
     <div class="listining-section">
         <div class="content" data-aos="fade-up" >
             <div class="title">Sister Companies</div>
-            <div class="items">
+            <div class="items ">
                 @include('components.item')
             </div>
         </div>
