@@ -90,7 +90,7 @@ const totalItems = $items.children().length;
 const totalWidth = itemWidth * totalItems;
 $items.append($items.html());
 const speed = 100;
-const duration = totalWidth / speed; 
+const duration = totalWidth / speed;
 $items.css('--scroll-duration', `${duration}s`);
 
 
@@ -116,7 +116,7 @@ function initializeSwipers(selector) {
 
 
   initializeSwipers('.explore_recent_swiper');
-//   initializeSwipers('.team_swiper');
+   initializeSwipers('.team_swiper');
 
 
   document.querySelectorAll('.box-desc').forEach(function (desc) {
@@ -141,7 +141,7 @@ function initializeSwipers(selector) {
 
     if (currentPage === '/' ||  currentPage === '/our-team') {
         header.css('background-color', 'transparent');
-       
+
 
         if (scrollTop > 50) {
             header.css('background-color', 'rgb(61 46 42)');
@@ -152,7 +152,7 @@ function initializeSwipers(selector) {
     }
     else {
         header.css('background-color', 'rgb(61, 46, 42)');
-       
+
 
     }
 
@@ -336,7 +336,7 @@ const about_swiper = new Swiper('.about_swiper', {
     speed: 300,
 
   });
-  
+
 
 $(".first.toggle").on("click", function() {
     $(this).next(".second").toggleClass("show");
@@ -437,6 +437,6 @@ $('#section-filter').on('change', function () {
 
 });
 $('.down').on('click', function() {
-    var nextSection = $('#next-section').offset().top ; 
-    $('html, body').animate({ scrollTop: nextSection }, 400); 
+    var nextSection = $('#next-section').offset().top ;
+    $('html, body').animate({ scrollTop: nextSection }, 400);
 });
