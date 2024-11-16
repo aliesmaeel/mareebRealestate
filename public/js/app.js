@@ -116,7 +116,7 @@ function initializeSwipers(selector) {
 
 
   initializeSwipers('.explore_recent_swiper');
-  initializeSwipers('.team_swiper');
+//   initializeSwipers('.team_swiper');
 
 
   document.querySelectorAll('.box-desc').forEach(function (desc) {
@@ -139,7 +139,7 @@ function initializeSwipers(selector) {
     var currentPage = window.location.pathname;
 
 
-    if (currentPage === '/') {
+    if (currentPage === '/' ||  currentPage === '/our-team') {
         header.css('background-color', 'transparent');
        
 
@@ -325,7 +325,18 @@ const about_swiper = new Swiper('.about_swiper', {
     speed: 300,
 
   });
+  const senior_swiper = new Swiper('.senior_swiper.team_swiper', {
+    slidesPerView: 'auto',
+    navigation: {
+        nextEl: ".swiper-button-next.senior-next",
+        prevEl: ".swiper-button-prev.senior-prev",
+      },
+    freeMode: true,
+    effect: 'slide',
+    speed: 300,
 
+  });
+  
 
 $(".first.toggle").on("click", function() {
     $(this).next(".second").toggleClass("show");
@@ -424,4 +435,8 @@ $('#section-filter').on('change', function () {
         $grid_isotope.isotope({ filter: '[data-section="' + filterValue + '"]' });
     }
 
+});
+$('.down').on('click', function() {
+    var nextSection = $('#next-section').offset().top ; 
+    $('html, body').animate({ scrollTop: nextSection }, 400); 
 });
