@@ -731,6 +731,9 @@ display: none;
     cursor: pointer;
 
 }
+.swiper-slide .read-more{
+    border:none !important;
+}
 
 .read-more:hover{
     color:white;
@@ -1511,7 +1514,7 @@ color:#222
     font-weight: 27;
     width: 90%;
     text-align: center;
-    
+
 }
 
 .container.team .content  .overlay{
@@ -2637,7 +2640,7 @@ height:100px
 }
 .senior_manager .swiper-button-next,
 .senior_manager .swiper-button-prev{
-  
+
     top: 27rem !important;
 
 }
@@ -2651,7 +2654,7 @@ height:100px
 
 }
 .senior_manager .swiper-button-next{
-    left: 85px !important; 
+    left: 85px !important;
 }
 .senior_manager .swiper-button-prev:after{
     content: '';
@@ -2664,7 +2667,7 @@ height:100px
     height: 61px;
     bottom: -13rem;
     background-size: contain;
-   
+
 }
 .container.team .last-content{
     width:100%;
@@ -2678,7 +2681,7 @@ height:100px
     align-items: center;
     position: relative;
     padding: 3rem 0;
-   
+
 
 
 }
