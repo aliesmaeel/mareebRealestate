@@ -13,7 +13,7 @@
 <div class="container home-page">
     <div style="position:relative;height: 100vh;">
         <video autoplay muted playsinline loop class="video-banner video-desktop">
-            <source src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/video/web_new.mp4" type="video/mp4"></source>
+            <source src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/video/meerab.mp4" type="video/mp4"></source>
         </video>
         <video autoplay muted playsinline loop class="video-banner video-mobile">
             <source src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/video/mobile_new.mp4" type="video/mp4"></source>
