@@ -494,18 +494,23 @@ display: none;
 }
 .listining-section .item{
     width:250px;
-    border-right: 1px solid #000;
+
     padding-right: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0
+    flex-shrink: 0;
+    height: 170px;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .listining-section .items img{
-    width:120px;
+    width:220px;
     object-fit: contain;
-    height: 70px;
+    height: 90px;
     opacity: 0.8;
+
 }
 @keyframes infiniteScroll {
     0% {
