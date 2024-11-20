@@ -10,14 +10,20 @@
                 <a href="/">
                     <li class="link">Home</li>
                 </a>
-                <a href="/contact-us">
-                    <li class="link">Contact</li>
+                <a href="/">
+                    <li class="link">Properties</li>
                 </a>
                 <a href="/our-team">
                     <li class="link">Our Team</li>
                 </a>
+                <a href="/our-team">
+                    <li class="link">Our Clients</li>
+                </a>
                 <a href="/about-us">
-                    <li class="link">About</li>
+                    <li class="link">About Us</li>
+                </a>
+                <a href="/contact-us">
+                    <li class="link">Contact Us</li>
                 </a>
             </ul>
         </div>
@@ -47,14 +53,20 @@
             <a href="/">
                 <li class="link">Home</li>
             </a>
-            <a href="/contact-us">
-                <li class="link">Contact</li>
+            <a href="/">
+                <li class="link">Properties</li>
             </a>
             <a href="/our-team">
                 <li class="link">Our Team</li>
             </a>
+            <a href="/our-team">
+                <li class="link">Our Clients</li>
+            </a>
             <a href="/about-us">
-                <li class="link">About</li>
+                <li class="link">About Us</li>
+            </a>
+            <a href="/contact-us">
+                <li class="link">Contact Us</li>
             </a>
             {{-- <a href="#">
                 <li class="link">About</li>
