@@ -93,30 +93,30 @@
 {{--        </div>--}}
 {{--    </div>--}}
     {{-- team section -------}}
-    <div class="team_section">
-        <div class="content" data-aos="fade-up" >
-            <div class="title">OUR TEAM</div>
-            <hr>
-            <div class="desc">
-                {{$home->our_team_section_text}}
-            </div>
-            <!-- Swiper -->
-            <div class="team_swiper ">
-                <div class="swiper-wrapper">
-                    @foreach($teams as $team)
-                        <div class="swiper-slide">
-                            <img src="{{asset('/storage/'.$team->image)}}">
-                            <div class="name">{{$team->name}}</div>
-                            <a class="read-more" href="#">view profile</a>
-                        </div>
-                    @endforeach
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <a class="read-more" href="#">Meet Our Team</a>
+{{--    <div class="team_section">--}}
+{{--        <div class="content" data-aos="fade-up" >--}}
+{{--            <div class="title">OUR TEAM</div>--}}
+{{--            <hr>--}}
+{{--            <div class="desc">--}}
+{{--                {{$home->our_team_section_text}}--}}
+{{--            </div>--}}
+{{--            <!-- Swiper -->--}}
+{{--            <div class="team_swiper ">--}}
+{{--                <div class="swiper-wrapper">--}}
+{{--                    @foreach($teams as $team)--}}
+{{--                        <div class="swiper-slide">--}}
+{{--                            <img src="{{asset('/storage/'.$team->image)}}">--}}
+{{--                            <div class="name">{{$team->name}}</div>--}}
+{{--                            <a class="read-more" href="#">view profile</a>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--                <div class="swiper-pagination"></div>--}}
+{{--            </div>--}}
+{{--            <a class="read-more" href="#">Meet Our Team</a>--}}
 
-        </div>
-    </div>
+{{--        </div>--}}
+{{--    </div>--}}
     {{-- blogs section --}}
     <div class="blogs_section">
         <div class="content" data-aos="fade-up" >
