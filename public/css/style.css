@@ -27,13 +27,7 @@
 
 }
 
-@font-face {
-    font-family: 'Montissart';
-    font-style: black;
-    font-display: black;
-    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
 
-}
 
 *{
     font-family:'Poppins-Regular' ;
@@ -442,7 +436,7 @@ display: none;
 }
 .about-section .content .text-content.col-flex .title{
     font-size: 36px;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     font-weight: 600;
 }
 .about-section .content .text-content.col-flex .bold{
@@ -479,7 +473,7 @@ display: none;
     margin: 3rem auto;
     width:90%;
     text-align: center;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
 }
 
 
@@ -536,7 +530,7 @@ display: none;
     font-weight: 600;
     width:100%;
     text-align: center;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
 }
 .services .content .buttons{
     display: flex;
@@ -641,10 +635,10 @@ display: none;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
 }
 .font-title{
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
 }
 .team_section hr{
     width: 217px;
@@ -1276,7 +1270,7 @@ display: none;
     color: #F0ECE5;
     font-size: 34px;
     padding: 0.5rem 0;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     position: relative;
 }
 .container.contact-us .content .col .desc{
@@ -1476,7 +1470,7 @@ color:#222
     text-transform: uppercase;
     color:#000000;
     font-size: 35px;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     margin: 0rem 1rem 3rem;
 }
 .container.team .content .grid-container{
@@ -1602,14 +1596,14 @@ color:#222
 .container.about_us .content .first_section .grid-container .title{
     font-size: 37px;
     letter-spacing: 5px;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     font-weight: 500;
 
 }
 .container.about_us .content .first_section .title.p-10{
     font-size: 37px;
     letter-spacing: 5px;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     font-weight: 500;
     padding: 2rem 0 3rem;
     width: 90%;
@@ -1670,7 +1664,7 @@ color:#222
 }
 
 .desc_section.sticky-component .col.text .title {
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     letter-spacing: 4px;
     font-size: 56px;
     width: 90%;
@@ -1734,11 +1728,11 @@ color:#222
     padding: 0;
     border: 1px solid #927c75;
     padding: 2rem;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
 
 }
 .desc_section.sticky-component .col.text.order-1 q{
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     line-height: 1.5;
 }
 
@@ -1749,7 +1743,7 @@ color:#222
 }
 
 .num-heading{
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     font-size: 25px;
     position: relative;
 }
@@ -1808,7 +1802,7 @@ color:#222
     font-size: 3.2rem;
     letter-spacing: 5px;
     color: #927c75;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     line-height: 1.7;
     font-weight: 600;
     opacity: 0.8;
@@ -1866,7 +1860,7 @@ height:100px
 }
 .available_property .title{
     font-size: 36px;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     font-weight: 600;
     width: 90%;
     margin: 0 auto;
@@ -1912,7 +1906,7 @@ height:100px
 .price_property{
     color:#222 ;
     width:90%;
-    font-family: 'Montissart';
+    font-family: 'Theseasons';
     font-weight: 600;
 }
 .flex.location_property{
