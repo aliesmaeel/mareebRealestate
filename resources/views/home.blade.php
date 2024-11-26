@@ -37,8 +37,8 @@
                     Read More
                  </a>
             </div>
-            <div class="img-container" style="box-shadow: 1px 2px 9px 1px #3d2e2a">
-                <img src="{{asset('/storage').'/'.$home->about_section_image}}">
+            <div class="img-container" >
+                <img style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="{{asset('/storage').'/'.$home->about_section_image}}">
             </div>
         </div>
     </div>
