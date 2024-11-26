@@ -37,7 +37,7 @@
                     Read More
                  </a>
             </div>
-            <div class="img-container">
+            <div class="img-container" style="box-shadow: 1px 2px 9px 1px #3d2e2a">
                 <img src="{{asset('/storage').'/'.$home->about_section_image}}">
             </div>
         </div>
@@ -127,7 +127,8 @@
             <div class="boxes">
                 <div class="grid-container ">
                     <div class="col box">
-                        <div class="img-container">
+                        <div class="img-container" >
+
                             <a href="#">
                                 <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Blog/xSVAK0KUZOhYosjkeXeGHLcwRJhmNjHHHqCTtEQ4.webp">
                             </a>
