@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\PropertyController;
@@ -24,3 +25,5 @@ Route::get('/property-details',[PropertyController::class,'index'])
     ->name('property.show');
 
 Route::get('/all-countries', [CountryController::class, 'getCountries']);
+Route::get('/blogs', [BlogController::class, 'index']);
+Route::get('/blogs/{slug}', [BlogController::class, 'blog'])->name('get_blog_details');
