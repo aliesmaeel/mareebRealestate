@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title',90)->nullable();
             $table->string('url')->nullable();
             $table->string('slug',40)->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->integer('order')->nullable();
             $table->timestamps();
         });

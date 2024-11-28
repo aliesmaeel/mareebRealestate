@@ -41,10 +41,10 @@ class BlogResource extends Resource
 
                 Forms\Components\TextInput::make('slug')
                     ->maxLength(40)
-                    ->required()->unique(Blog::class, 'slug'),
+                    ->unique(Blog::class, 'slug', ignoreRecord: true),
 
-                Forms\Components\RichEditor::make('description')
-                    ->maxLength(191),
+
+                Forms\Components\RichEditor::make('description'),
 
                 Forms\Components\TextInput::make('order')
                     ->numeric(),

@@ -12,10 +12,13 @@ class BlogController extends Controller
 
         $blogs=Blog::get();
         $footer=Footer::Active()->first();
-        return view('blogs',compact('blogs','footer'));
+        return view('blogs.allBlogs',compact('blogs','footer'));
     }
 
     public function blog(Request $request){
-        dd($request->slug);
+        $blog=Blog::where('slug',$request->slug)->first();
+        $footer=Footer::Active()->first();
+        return view('blogs.blog',compact('blog','footer'));
+
     }
 }
