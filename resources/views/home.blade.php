@@ -31,8 +31,7 @@
                 <div class="title">ABOUT Meerab</div>
 
                 <div class="desc">
-                   {{-- {!! $home->about_section_text !!} --}}
-                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci reprehenderit quam esse accusantium sint placeat, vitae libero vel earum velit facilis modi laudantium ad blanditiis, officia nobis error, doloribus voluptas.
+                   {!! $home->about_section_text !!}
                  </div>
                  <a href="#">
                     Read More
@@ -42,8 +41,8 @@
             <div class="img-container">
                 <!-- Image Section -->
                 <div class="flex-col">
-                    {{-- <img style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="{{asset('/storage').'/'.$home->about_section_image}}"> --}}
-               <img  class="img-about" style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="https://savoirproperties.com/images/IMG_1882.jpeg">
+                    <img  class="img-about" style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="{{asset('/storage').'/'.$home->about_section_image}}">
+              
                 </div>
               
                 <!-- Swiper Section -->
@@ -74,8 +73,8 @@
             <div class="title">Sister Companies</div>
             <div class="marquee_container">
                 <div class="items marquee" data-speed="1">
-                    {{-- @include('components.item')
-                 --}}
+                    @include('components.item')
+                
                    
                 </div>
             </div>
@@ -93,7 +92,7 @@
                 <a href="#">Showrooms</a>
             </div>
             <div class="grid-container">
-                {{-- @include('components.service') --}}
+                @include('components.service')
             </div>
         </div>
     </div>
@@ -153,7 +152,7 @@
         <div class="content" data-aos="fade-up" >
             <div class="title font-title">Blogs</div>
             <div class="desc">
-                {{-- {{$home->blogs_section_text}} --}}
+                {{$home->blogs_section_text}}
             </div>
             <div class="boxes">
                 <div class="grid-container ">
