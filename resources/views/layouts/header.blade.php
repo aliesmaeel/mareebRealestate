@@ -22,12 +22,13 @@
                 <a href="/about-us">
                     <li class="link">About Us</li>
                 </a>
+                <a href="/blogs">
+                    <li class="link">Blogs</li>
+                </a>
                 <a href="/contact-us">
                     <li class="link">Contact Us</li>
                 </a>
-                <a href="#">
-                    <li class="link">Blogs</li>
-                </a>
+
             </ul>
         </div>
     </div>
@@ -68,12 +69,14 @@
             <a href="/about-us">
                 <li class="link">About Us</li>
             </a>
+            <a href="/blogs">
+                <li class="link">Blogs</li>
+            </a>
+
             <a href="/contact-us">
                 <li class="link">Contact Us</li>
             </a>
-            <a href="#">
-                <li class="link">Blogs</li>
-            </a>
+
             {{-- <a href="#">
                 <li class="link">About</li>
             </a>

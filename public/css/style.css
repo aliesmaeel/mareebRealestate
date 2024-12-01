@@ -203,7 +203,7 @@ a{
     padding-bottom: 1rem;
     width: 95%;
     /* font-weight: 600; */
-   
+
 
 }
 .search-realestate .input-search svg{
@@ -480,10 +480,12 @@ display: none;
 }
 .swiper-container-about .swiper-slide{
     width:200px;
-    margin-right:1rem
+    margin-right:1rem;
+    opacity: 0.7;
 }
 .swiper-container-about .swiper-slide:hover{
     cursor: grab;
+    opacity: 1;
 }
 .about-section .content .img-container .flex-col{
     display: flex;

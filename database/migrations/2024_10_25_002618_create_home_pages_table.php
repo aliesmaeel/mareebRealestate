@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('video_section_web',255)->nullable();
             $table->string('video_section_mobile',255)->nullable();
             $table->text('about_section_text');
-            $table->string('about_section_image',255);
             $table->text('what_we_do_section_text');
             $table->text('our_team_section_text');
             $table->text('blogs_section_text');

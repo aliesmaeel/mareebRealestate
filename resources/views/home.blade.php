@@ -37,34 +37,29 @@
                     Read More
                  </a>
             </div>
-          
+
             <div class="img-container">
                 <!-- Image Section -->
                 <div class="flex-col">
-                    <img  class="img-about" style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="{{asset('/storage').'/'.$home->about_section_image}}">
-              
+                    <img  class="img-about" style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="{{asset('/storage').'/'.$home->images->first()->url}}">
+
                 </div>
-              
+
                 <!-- Swiper Section -->
                 <div class="swiper-container-about">
                   <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://savoirproperties.com/images/IMG_1882.jpeg" alt="Slide 1">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://images.goyzer.com/uf/5023/unit/2922/Bedroom-1-.jpg?group=5023" alt="Slide 2">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://savoirproperties.com/images/IMG_1882.jpeg" alt="Slide 3">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://images.goyzer.com/uf/5023/unit/2922/Bedroom-1-.jpg?group=5023" alt="Slide 4">
-                        </div>
+                      @foreach($home->images as $image)
+
+                          <div class="swiper-slide">
+                              <img src="{{asset('/storage/'.$image->url)}}" alt="Slide 1">
+                          </div>
+                      @endforeach
+
                   </div>
-                 
+
                 </div>
               </div>
-              
+
         </div>
     </div>
     {{-- listing-syndicattion --}}
@@ -74,11 +69,9 @@
             <div class="marquee_container">
                 <div class="items marquee" data-speed="1">
                     @include('components.item')
-                
-                   
                 </div>
             </div>
-          
+
         </div>
     </div>
     {{-- premium_properties --}}

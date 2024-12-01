@@ -70,7 +70,7 @@ const itemWidth = $items.children().first().outerWidth(true);
 const totalItems = $items.children().length;
 const totalWidth = itemWidth * totalItems;
 $items.append($items.html());
-const speed = 100;
+const speed = 200;
 const duration = totalWidth / speed;
 $items.css('--scroll-duration', `${duration}s`);
 
@@ -82,7 +82,7 @@ const swiperAbout = new Swiper('.swiper-container-about', {
         delay: 2000,
         disableOnInteraction: false,
       },
-  
+
   });
 
 
