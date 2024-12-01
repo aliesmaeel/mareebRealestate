@@ -78,17 +78,14 @@ const swiperAbout = new Swiper('.swiper-container-about', {
     slidesPerView: 'auto',
     effect: 'slide',
     speed: 500,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
   
   });
 
-// const mainImage_About = document.querySelector('.flex-col .img-about'); 
-// const swiper_Images_About = document.querySelectorAll('.swiper-container-about .swiper-slide img'); 
 
-// swiper_Images_About.forEach(image => {
-//     image.addEventListener('click', () => {
-//         mainImage_About.src = image.src; 
-//     });
-// });
 const $mainImageAbout = $('.flex-col .img-about');
 
 $('.swiper-container-about .swiper-slide img').on('click', function () {

@@ -190,7 +190,7 @@ a{
     top: 60%;
     /* left: 13%; */
     font-size: 46px;
-    color: white;
+    color: #ffffff;
     width: 85%;
     margin-left: 6%;
     margin-right: 6%;
@@ -199,10 +199,11 @@ a{
     font-weight: bold;
 }
 .city-names{
-    font-size: 30px;
+    font-size: 43px;
     padding-bottom: 1rem;
     width: 95%;
-    text-shadow: 2px 2px black;
+    /* font-weight: 600; */
+   
 
 }
 .search-realestate .input-search svg{
@@ -469,6 +470,7 @@ display: none;
     height:120px;
     width:200px;
     object-fit: cover;
+    border-radius: 11px;
 }
 .swiper-container-about{
     margin: 2rem 0;
