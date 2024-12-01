@@ -1,4 +1,7 @@
 @media(max-width:1199px) and (min-width:992px){
+    .logo img {
+        width: 221px;
+    }
     .team_profile .content .flex-container .col.flex-col .flex.buttons{
         flex-wrap: wrap;
     }
@@ -98,10 +101,23 @@
     }
 }
 @media(max-width:991px){
+    .city-names{
+        font-size: 25px;
+    }
+    .logo img {
+        width: 183px;
+        height: 63px;
+    }
    
     html,
     body{
         overflow-x: hidden !important;
+    }
+    .header_mobile{
+        display: block;
+    }
+    .header_desktop{
+        display: none;
     }
     .team_profile .content .flex-container{
         flex-direction: column;
@@ -274,12 +290,7 @@
     .container.team .last-content .flex-container .col img{
         width:320px
     }
-    .header_mobile{
-        display: block;
-    }
-    .header_desktop{
-        display: none;
-    }
+
     .popup-content {
         width: 100%;
         max-width: 100%;

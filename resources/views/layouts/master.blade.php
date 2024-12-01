@@ -12,6 +12,9 @@
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fixed-sticky/0.1.7/fixedsticky.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2.2.2/dist/flickity.min.css">
+
     <link rel="stylesheet" href="/css/style.css?v={{ time() }}">
     <link rel="stylesheet" href="/css/respo.css?v={{ time() }}">
     <link rel="stylesheet" href="/css/swiper-bundle.min.css?v={{ time() }}">
@@ -26,7 +29,10 @@
     @yield('footer')
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fixed-sticky/0.1.7/fixedsticky.min.js"></script> --}}
     <script src="{{asset('js/jquery-3.6.1.min.js')}}"></script>
+ 
     <script src="{{asset('js/swiper-bundle.min.js')}}"></script>
+
+   
     <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
     <script src="https://gist.github.com/DmytroLisitsyn/1c31186e5b66f1d6c52da6b5c70b12ad.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>

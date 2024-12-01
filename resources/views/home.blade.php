@@ -19,7 +19,7 @@
             <source src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/video/mobile_new.mp4" type="video/mp4"></source>
         </video>
         <div class="search-realestate">
-            {{-- <div class="city-names">Search Luxury Homes In <span id="city-name">MMM</span></div> --}}
+            <div class="city-names">Find Your Dream Property in Dubai's Best Areas</div>
             @include('components.seachProperty')
         </div>
     </div>
@@ -37,18 +37,47 @@
                     Read More
                  </a>
             </div>
-            <div class="img-container" >
-                <img style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="{{asset('/storage').'/'.$home->about_section_image}}">
-            </div>
+          
+            <div class="img-container">
+                <!-- Image Section -->
+                <div class="flex-col">
+                    <img style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="{{asset('/storage').'/'.$home->about_section_image}}">
+                </div>
+              
+                <!-- Swiper Section -->
+                <div class="swiper-container-about">
+                  <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://savoirproperties.com/images/IMG_1882.jpeg" alt="Slide 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.goyzer.com/uf/5023/unit/2922/Bedroom-1-.jpg?group=5023" alt="Slide 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://savoirproperties.com/images/IMG_1882.jpeg" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.goyzer.com/uf/5023/unit/2922/Bedroom-1-.jpg?group=5023" alt="Slide 4">
+                        </div>
+                  </div>
+                 
+                </div>
+              </div>
+              
         </div>
     </div>
     {{-- listing-syndicattion --}}
     <div class="listining-section">
         <div class="content" data-aos="fade-up" >
             <div class="title">Sister Companies</div>
-            <div class="items ">
-                @include('components.item')
+            <div class="marquee_container">
+                <div class="items marquee" data-speed="1">
+                    @include('components.item')
+                
+                   
+                </div>
             </div>
+          
         </div>
     </div>
     {{-- premium_properties --}}

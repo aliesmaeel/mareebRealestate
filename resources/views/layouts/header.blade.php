@@ -25,6 +25,9 @@
                 <a href="/contact-us">
                     <li class="link">Contact Us</li>
                 </a>
+                <a href="#">
+                    <li class="link">Blogs</li>
+                </a>
             </ul>
         </div>
     </div>
@@ -67,6 +70,9 @@
             </a>
             <a href="/contact-us">
                 <li class="link">Contact Us</li>
+            </a>
+            <a href="#">
+                <li class="link">Blogs</li>
             </a>
             {{-- <a href="#">
                 <li class="link">About</li>
