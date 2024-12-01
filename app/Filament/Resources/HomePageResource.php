@@ -34,9 +34,13 @@ class HomePageResource extends Resource
 
                 Forms\Components\RichEditor::make('about_section_text')->required(),
 
-                Forms\Components\FileUpload::make('about_section_image')
-                    ->image()
-                    ->required(),
+                Forms\Components\Repeater::make('images')
+                ->relationship('images')
+                ->schema([
+                    Forms\Components\FileUpload::make('url')
+                    ->directory('homepage-images')
+                        ->required(),
+                ]),
                 Forms\Components\Textarea::make('what_we_do_section_text')
                     ->required()
                     ->columnSpanFull(),
@@ -63,7 +67,6 @@ class HomePageResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\ImageColumn::make('about_section_image'),
                 Tables\Columns\IconColumn::make('active')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')

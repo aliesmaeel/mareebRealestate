@@ -12,8 +12,14 @@ use Illuminate\Http\Request;
 class HomePageController extends Controller
 {
     public function index(){
-        $home=HomePage::Active()->first();
-        $sisterCompanies=SisterCompany::all();
+        $home=HomePage::Active()->with('images')->first();
+        $sisterCompanies = SisterCompany::all();
+        $repeatedSisterCompanies = collect();
+        for ($i = 0; $i < 10; $i++) {
+            $repeatedSisterCompanies = $repeatedSisterCompanies->merge($sisterCompanies);
+        }
+        $sisterCompanies = $repeatedSisterCompanies;
+
         $teams=Team::all();
         $services=Services::all();
         $footer=Footer::Active()->first();

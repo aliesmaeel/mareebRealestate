@@ -11,7 +11,6 @@ protected $fillable= [
  'video_section_web',
 'video_section_mobile',
 'about_section_text',
-'about_section_image',
 'what_we_do_section_text',
 'our_team_section_text',
 'blogs_section_text',
@@ -22,5 +21,11 @@ protected $fillable= [
     {
         return $query->where('active',true);
     }
+
+    public function images()
+    {
+        return $this->hasMany(HomePageImage::class, 'homepage_id');
+    }
+
 
 }

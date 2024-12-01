@@ -70,15 +70,15 @@ a{
 .header .content{
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 0.5rem 0;
     align-items: center;
 
 }
 .logo img{
-    width: 206px;
-    height: 67px;
+    width: 269px;
+    height: 100px;
     filter: brightness(4.5);
     object-fit: cover;
     position: relative;
@@ -190,7 +190,7 @@ a{
     top: 60%;
     /* left: 13%; */
     font-size: 46px;
-    color: white;
+    color: #ffffff;
     width: 85%;
     margin-left: 6%;
     margin-right: 6%;
@@ -199,8 +199,12 @@ a{
     font-weight: bold;
 }
 .city-names{
-    display: flex;
-    gap: 0.8rem;
+    font-size: 43px;
+    padding-bottom: 1rem;
+    width: 95%;
+    /* font-weight: 600; */
+
+
 }
 .search-realestate .input-search svg{
     width: 17px;
@@ -458,7 +462,36 @@ display: none;
     color:#222
 }
 .about-section .content .img-container img{
-    width:100%
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.about-section .content .img-container .swiper-container-about img{
+    height:120px;
+    width:200px;
+    object-fit: cover;
+    border-radius: 11px;
+}
+.swiper-container-about{
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.swiper-container-about .swiper-slide{
+    width:200px;
+    margin-right:1rem;
+    opacity: 0.7;
+}
+.swiper-container-about .swiper-slide:hover{
+    cursor: grab;
+    opacity: 1;
+}
+.about-section .content .img-container .flex-col{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap:1rem
 }
 .listining-section {
     overflow: hidden;
@@ -1188,6 +1221,15 @@ display: none;
     gap: 0.3rem;
     border-radius: 20px;
 }
+.whatsapp-fixed svg:hover {
+    transform: scale(1.1);
+}
+.whatsapp-fixed svg {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 .over-text-hide{
     overflow: hidden;
     display: -webkit-box;
@@ -2534,11 +2576,12 @@ height:100px
 }
 .header_desktop .list_header ul{
     display: flex;
-    gap: 2rem;
+    /* gap: 2rem; */
+    padding: 0;
     align-items: center;
 }
 .header_desktop .list_header ul li{
-    padding: 5px;
+    padding: 0 15px;
 }
 
 .header_desktop .list_header ul a :hover{
@@ -2557,6 +2600,7 @@ height:100px
     object-fit: cover;
 }
 .banner_team .title_banner{
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;

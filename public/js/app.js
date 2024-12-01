@@ -64,35 +64,33 @@ $('.reset').click(function() {
     $('#' + hiddenInputId).val('');
 });
 
-// const $items = $('.items');
-// const itemWidth = $items.children().first().outerWidth(true);
-// const totalItems = $items.children().length;
-// $items.append($items.html());
-// $items.css({ left: 0 });
-// function animateItems() {
-//     $items.animate(
-//         { left: -itemWidth * totalItems },
-//         {
-//             duration: 40000,
-//             easing: 'linear',
-//             complete: function() {
-//                 $items.css({ left: 0 });
-//                 animateItems();
-//             }
-//         }
-//     );
-// }
-
 
 const $items = $('.items');
 const itemWidth = $items.children().first().outerWidth(true);
 const totalItems = $items.children().length;
 const totalWidth = itemWidth * totalItems;
 $items.append($items.html());
-const speed = 100;
+const speed = 200;
 const duration = totalWidth / speed;
 $items.css('--scroll-duration', `${duration}s`);
 
+const swiperAbout = new Swiper('.swiper-container-about', {
+    slidesPerView: 'auto',
+    effect: 'slide',
+    speed: 500,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+
+  });
+
+
+const $mainImageAbout = $('.flex-col .img-about');
+
+$('.swiper-container-about .swiper-slide img').on('click', function () {
+    $mainImageAbout.attr('src', $(this).attr('src'));
+});
 
 // Function to initialize Swipers dynamically
 function initializeSwipers(selector) {
