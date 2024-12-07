@@ -1510,10 +1510,11 @@ color:#222
 }
 .container.team .content .title{
     text-transform: uppercase;
-    color:#000000;
+    color: #000000;
     font-size: 35px;
     font-family: 'Theseasons';
-    margin: 0rem 1rem 3rem;
+    margin: 8rem 1rem 3rem;
+    text-align: center;
 }
 .container.team .content .grid-container{
     display: grid;
@@ -1521,7 +1522,7 @@ color:#222
     /* gap: 2rem; */
     margin-bottom: 4rem;
     /* row-gap: 0; */
-    width:90%;
+    width:100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -2566,24 +2567,43 @@ height:100px
     text-decoration: none;
     color: white;
 }
-/* .js-filter-grid-item {
+/* .filter_teams_items {
     transition: transform 0.4s ease, opacity 0.4s ease;
 } */
+ .btn_section_filter{
+    border: 1px solid #5A5A5A;
+    border-radius: 4px;
+    padding: 5px 7px;
+    font-weight: 800;
+ }
+ .container.team .content .desc_team{
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+
+ }
 .browser-default.video-filter{
-    width: 160px;
-    margin: 1rem 1rem 3rem;
-    border-radius: 5px;
+    width: 70%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    /* border-radius: 5px; */
     padding: 0.5rem;
-    background-color: rgb(47 30 26 / 0.1);
+    /* background-color: rgb(47 30 26 / 0.1); */
     color:#927c75;
     cursor: pointer;
     outline: none;
 
 }
-.team-item.js-filter-grid-item{
-    max-width: 250px;
+.team-item.filter_teams_items{
+    max-width: 100%;
     /* padding: 1rem; */
-    margin: 1rem;
+    margin: 0.5rem;
 }
 .header_mobile{
     display: none;
