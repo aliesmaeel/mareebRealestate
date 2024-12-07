@@ -25,9 +25,7 @@
                 <div class="grid-container js-filter-grid">
                     @foreach($teams as $team)
                         <div class="team-item filter_teams_items" data-section="{{ $team->section->name }}">
-                            <a href="#">
                             @include('components.team')
-                            </a>
                         </div>
                     @endforeach
                 </div>
