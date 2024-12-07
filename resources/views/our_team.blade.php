@@ -11,12 +11,12 @@
 
     <div class="container team">
         <div class="content">
-            <div class="title">Meet Our Expert Team</div>
+            <div class="title" style="font-weight: bold">Meet Our Expert Team</div>
             <div class="desc_team">
                Each team member bring a unique skill set to Provident Dubai . We use those skills to provide you with the best possible Estate Agent service.
             </div>
             <div class="browser-default video-filter" id="section-filter">
-               
+                <div class="btn_section_filter">All</div>
                 @foreach($sections as $section)
                     <div class="btn_section_filter">{{ $section->name }}</div>
                 @endforeach
