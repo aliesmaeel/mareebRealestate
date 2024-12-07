@@ -142,14 +142,14 @@ function initializeSwipers(selector) {
 
 
         if (scrollTop > 50) {
-            header.css('background-color', 'rgb(61 46 42)');
+            header.css('background-color', 'rgb(86, 81, 83)');
         } else {
         header.css('background-color', 'transparent');
 
         }
     }
     else {
-        header.css('background-color', 'rgb(61, 46, 42)');
+        header.css('background-color', 'rgb(86, 81, 83)');
 
 
     }
@@ -426,15 +426,15 @@ $('.close-btn').on('click', function () {
 
 // Filter items on select change
 $('#section-filter > div').on('click', function () {
-    var filterValue = $(this).text().trim(); 
+    var filterValue = $(this).text().trim();
     if (filterValue === 'All') {
-        $('.filter_teams_items').fadeIn(); 
+        $('.filter_teams_items').fadeIn();
     } else {
         $('.filter_teams_items').each(function () {
             if ($(this).data('section') === filterValue) {
                 $(this).fadeIn();
             } else {
-                $(this).fadeOut(); 
+                $(this).fadeOut();
             }
         });
     }
