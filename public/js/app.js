@@ -137,7 +137,7 @@ function initializeSwipers(selector) {
     var currentPage = window.location.pathname;
 
 
-    if (currentPage === '/' ||  currentPage === '/our-team') {
+    if (currentPage === '/') {
         header.css('background-color', 'transparent');
 
 
@@ -415,24 +415,29 @@ $('.close-btn').on('click', function () {
     }
 });
 
-var $grid_isotope = $('.js-filter-grid').isotope({
-    itemSelector: '.js-filter-grid-item',
-    layoutMode: 'fitRows',
-    transitionDuration: '0.6s' // Smooth transition
-});
+// var $grid_isotope = $('.js-filter-grid').isotope({
+//     itemSelector: '.filter_teams_items',
+//     layoutMode: 'fitRows',
+//     transitionDuration: '0.6s' // Smooth transition
+// });
 
 // Trigger the initial filter, ensuring all items are shown or the correct items are shown
-$grid_isotope.isotope({ filter: '*' });  // '*' will show all items initially
+// $grid_isotope.isotope({ filter: '*' });  // '*' will show all items initially
 
 // Filter items on select change
-$('#section-filter').on('change', function () {
-    var filterValue = $(this).val();
-    if(filterValue==='All'){
-        $grid_isotope.isotope({ filter: '*' });
-    }else{
-        $grid_isotope.isotope({ filter: '[data-section="' + filterValue + '"]' });
+$('#section-filter > div').on('click', function () {
+    var filterValue = $(this).text().trim(); 
+    if (filterValue === 'All') {
+        $('.filter_teams_items').fadeIn(); 
+    } else {
+        $('.filter_teams_items').each(function () {
+            if ($(this).data('section') === filterValue) {
+                $(this).fadeIn();
+            } else {
+                $(this).fadeOut(); 
+            }
+        });
     }
-
 });
 $('.down').on('click', function() {
     var nextSection = $('#next-section').offset().top ;
