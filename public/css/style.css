@@ -1295,7 +1295,7 @@ display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:1rem;
+
     position: relative;
 
 
@@ -1690,6 +1690,7 @@ color:#222
     background-blend-mode: lighten;
     z-index: -1;
     top: 27%;
+    opacity: 0.5;
 
 }
 .desc_section.sticky-component .col.text {
@@ -2537,13 +2538,29 @@ height:100px
 
 .contact-us-page h1,h2{
     color: white;
-    font-size: 48px;
+    font-size: 42px;
     position: relative;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-weight: normal;
 }
+
+.contact-us-page h3{
+    color: white;
+    font-size: 32px;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 4px;
+    font-weight: normal;
+}
+
 .contact-us-page p{
+    width: 80%;
     color: white;
     position: relative;
     text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 .contact-us-page a{
     text-decoration: none;
