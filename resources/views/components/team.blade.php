@@ -1,7 +1,7 @@
 <div class="col flex-col">
 
     <div class="img-container">
-        <img src="{{$team->image}}">
+        <img src="{{asset('/storage/'.$team->image)}}">
         <div class="overlay">
             <a href="#">View Profile</a>
         </div>
