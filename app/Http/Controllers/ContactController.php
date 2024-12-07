@@ -11,6 +11,7 @@ class ContactController extends Controller
     public function index () {
         $footer= Footer::Active()->first();
         $contactus=ContactPage::Active()->first();
+
         return view('contact_us')
             ->with('contactus',$contactus)
             ->with('footer',$footer);

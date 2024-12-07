@@ -9,18 +9,13 @@
 {{-- main page --}}
 @section('content')
 <div class="container about_us">
-    <div class="content"> 
+    <div class="content">
         <div class="first_section" >
             <div class="grid-container">
                 <div class="col">
-                    <div class="title">Who We Are</div>
+                    <div class="title">About Us</div>
                     <div class="desc">
-                        With four decades of experience, our luxury boutique real estate agency is dedicated to setting a
-                         new benchmark for service and expertise in the realm of upscale properties in Dubai. Understanding 
-                         the distinct needs and preferences of our clients, we provide personalized solutions that consistently 
-                         surpass expectations. Leveraging our profound knowledge of the local market and an extensive network,
-                          we present a
-                         carefully curated selection of exclusive properties epitomizing luxury living.
+                        As a leading real estate brokerage firm, Meerab Properties has been a trusted name in Dubai for over a decade. We specialize in connecting clients with a wide range of properties, including well-designed labor camps, stylish residential buildings, and prime commercial spaces. Our goal is to help you find the ideal property that meets your specific needs and preferences.
                     </div>
                 </div>
                 <div class="col parent_img">
@@ -28,39 +23,36 @@
                         <img src="https://savoirproperties.com/public/images/career22.jpg">
                     </div>
                 </div>
+                <div class="title">Our Vision</div>
                 <div class="col col-2">
-                    Our commitment extends beyond transactions, focusing on cultivating enduring
-                     relationships anchored in trust, integrity, and transparency. Recognizing that a real 
-                     estate journey is a collaborative experience, our dedication ensures a seamless and 
-                     immensely rewarding process. With over 40 years of experience and a track record exceeding
-                      1 billion in overall property sales, we stand as a testament to our unwavering commitment to 
-                      excellence in luxury real estate services in Dubai. Providing a real estate experience that 
-                    defies the conventional and invites you to discover the extraordinary.
+                    Meerab Properties is committed to being a premier real estate brokerage
+                    firm in the UAE. We strive to provide exceptional service and help clients
+                    discover properties that enhance their quality of life. Our vision is to foster
+                    a thriving community by offering diverse, comfortable, and secure living and working
+                    environments that cater to the evolving needs of our clients.
                 </div>
               </div>
-              <div class="title p-10">Savoir. Beyond Excellence</div>
+            <div class="title p-10">Meerab Properties SLOGAN</div>
+
         </div>
         <div class="scroll-container">
             <div class="desc_section sticky-component">
                 <div class="flex-container">
                     <div class="col text fixedsticky" data-aos="fade-right">
-                        <div class="title">Our Core Values</div>
+                        <div class="title">Core Values</div>
                     </div>
                     <div class="sticky-content" data-aos="fade-lrft">
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>1.</span>
-                                Knowledge
+                                Customer Satisfaction
                             </div>
                             <div class="desc">
-                                In our real estate domain, knowledge is not just information; it is power.
-                                At Savoir Privé Properties, we empower our clients with the information they
-                                need to make the smartest choices, recognizing that knowledge is the key to success.
-                            </div>
+                                Our clients are at the center of everything we do. We are committed to providing exceptional service and exceeding their expectations.                             </div>
                             <div class="about_swiper ">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide img-container">
-                                        
+
                                         <img src="https://savoirproperties.com/public/images/IMG_1882.jpeg">
                                     </div>
                                     <div class="swiper-slide img-container">
@@ -72,15 +64,10 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>2.</span>
-                                Passion
+                                Quality
                             </div>
                             <div class="desc">
-                                We firmly believe that genuine passion is the driving force
-                                behind transformative change. At Savoir Privé Properties, we wholeheartedly
-                                commit ourselves to creating a positive influence in the lives of our clients.
-                                Our motivation is humble yet powerful – to 
-                                change our clients' world for the better through unwavering passion.
-                            </div>
+                                We deliver high-quality properties and services that meet the highest industry standards                            </div>
                             <div class="btn-container">
                                 <a href="#">
                                     Meet Our Team
@@ -101,12 +88,12 @@
                 <div class="flex-container">
                     <div class="col text order-1 fixedsticky" data-aos="fade-left">
                         <div class="title ">
-                            
-                        <q > To be successful in real estate, you must always and consistently
-                            put your clients’ best interests first. When you do, your personal
-                            needs will be realized beyond your greatest expectations.</q >
+
+                        <q > In the real estate business you learn more about people
+                            and you learn more about community issues, you learn more
+                            about life, you learn more about the impact of government,
+                            probably than any other profession that I know of.” Jhonny Isakson</q >
                             <br><br>
-                            Anthony Hitt
 
                         </div>
                     </div>
@@ -114,12 +101,10 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>3.</span>
-                                Trust 
+                                Integrity
                             </div>
                             <div class="desc">
-                            
-                                At SAVOIR we do not have clients, we have partners. This is a healthy
-                                relationship based on trust and mutual understanding. Trust is what leads us to success.
+                                We conduct our business with honesty, transparency, and ethical principles.
                             </div>
                             <div class="about_swiper ">
                                 <div class="swiper-wrapper">
@@ -132,17 +117,14 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>4.</span>
-                                Excellence  
+                                Innovation
                             </div>
                             <div class="desc">
-                                The synergy of knowledge and experience culminates in excellence,
-                                and that is precisely what we stand for at Savoir Privé Properties. Our commitment is 
-                                to provide excellence in every facet of our work. As wisdom and hands-on expertise converge, a
-                                new echelon of quality defines our distinctive approach to the realm of real estate.
+                                We embrace new technologies and innovative solutions to stay ahead and offer our clients the best possible experience.
                             </div>
-                            
+
                         </div>
-                    
+
                         <!-- Additional .col.flex-col sections -->
                     </div>
                 </div>
@@ -159,7 +141,7 @@
                 @include('components.form')
             </div>
         </div>
-        
+
     </div>
 </div>
 @endsection
