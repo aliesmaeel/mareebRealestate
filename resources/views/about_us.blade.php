@@ -15,21 +15,18 @@
                 <div class="col">
                     <div class="title">About Us</div>
                     <div class="desc">
-                        As a leading real estate brokerage firm, Meerab Properties has been a trusted name in Dubai for over a decade. We specialize in connecting clients with a wide range of properties, including well-designed labor camps, stylish residential buildings, and prime commercial spaces. Our goal is to help you find the ideal property that meets your specific needs and preferences.
+                        {{$aboutus['about-us']}}
                     </div>
                 </div>
                 <div class="col parent_img">
                     <div class="img-container">
-                        <img src="https://savoirproperties.com/public/images/career22.jpg">
+                        <img src="{{asset('/storage').'/'.$aboutus['about-us-image']}}">
                     </div>
                 </div>
                 <div class="title">Our Vision</div>
                 <div class="col col-2">
-                    Meerab Properties is committed to being a premier real estate brokerage
-                    firm in the UAE. We strive to provide exceptional service and help clients
-                    discover properties that enhance their quality of life. Our vision is to foster
-                    a thriving community by offering diverse, comfortable, and secure living and working
-                    environments that cater to the evolving needs of our clients.
+                    {{$aboutus['our-vision']}}
+
                 </div>
               </div>
             <div class="title p-10">Meerab Properties SLOGAN</div>
@@ -48,16 +45,16 @@
                                 Customer Satisfaction
                             </div>
                             <div class="desc">
-                                Our clients are at the center of everything we do. We are committed to providing exceptional service and exceeding their expectations.                             </div>
+                                {{$aboutus['customer-satisfaction']}}
+                            </div>
                             <div class="about_swiper ">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide img-container">
 
-                                        <img src="https://savoirproperties.com/public/images/IMG_1882.jpeg">
-                                    </div>
-                                    <div class="swiper-slide img-container">
-                                        <img src="https://savoirproperties.com/public/images/career2.jpg">
-                                    </div>
+                            @foreach($aboutus['customer-satisfaction-images'] as $image)
+                            <div class="swiper-slide img-container">
+                                <img src="{{asset('/storage').'/'.$image['image']}}" alt="img-logo">
+                            </div>
+                            @endforeach
                                 </div>
                             </div>
                         </div>
@@ -67,19 +64,22 @@
                                 Quality
                             </div>
                             <div class="desc">
-                                We deliver high-quality properties and services that meet the highest industry standards                            </div>
+                                {{$aboutus['quality']}}
+                            </div>
                             <div class="btn-container">
                                 <a href="#">
                                     Meet Our Team
                                 </a>
                             </div>
-                            <div class="about_swiper ">
-                                <div class="swiper-wrapper">
+                        <div class="about_swiper ">
+                            <div class="swiper-wrapper">
+                                @foreach($aboutus['quality-images'] as $image)
                                     <div class="swiper-slide img-container">
-                                        <img src="https://savoirproperties.com/public/images/passion.jpeg">
+                                        <img src="{{asset('/storage').'/'.$image['image']}}">
                                     </div>
-                                </div>
+                                @endforeach
                             </div>
+                        </div>
                         </div>
                         <!-- Additional .col.flex-col sections -->
                     </div>
@@ -104,13 +104,15 @@
                                 Integrity
                             </div>
                             <div class="desc">
-                                We conduct our business with honesty, transparency, and ethical principles.
+                                {{$aboutus['integrity']}}
                             </div>
                             <div class="about_swiper ">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide img-container">
-                                        <img src="https://savoirproperties.com/public/images/career2.jpg">
-                                    </div>
+                                    @foreach($aboutus['integrity-images'] as $image)
+                                        <div class="swiper-slide img-container">
+                                            <img src="{{asset('/storage').'/'.$image['image']}}">
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -120,7 +122,7 @@
                                 Innovation
                             </div>
                             <div class="desc">
-                                We embrace new technologies and innovative solutions to stay ahead and offer our clients the best possible experience.
+                                {{$aboutus['innovation']}}
                             </div>
 
                         </div>
