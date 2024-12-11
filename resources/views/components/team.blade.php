@@ -7,5 +7,5 @@
         </div>
     </div>
     <a class="name" href="#">{{$team->name}}</a>
-   {{$team->section->name}}
+    <p style="width: 90%;text-align: left">{{$team->section->name}}</p>
 </div>
