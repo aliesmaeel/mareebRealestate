@@ -29,7 +29,7 @@
 
                 </div>
               </div>
-            <div class="title p-10">Meerab Properties SLOGAN</div>
+            <div class="title p-10">Meerab Properties Trust the Experts, Trust Meerab.</div>
 
         </div>
         <div class="scroll-container">
