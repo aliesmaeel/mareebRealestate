@@ -1342,7 +1342,7 @@ display: none;
     flex-direction: column;
 }
 .container.contact-us .content .col form{
-    width:90%;
+    width:600px;
     margin:0 auto
 }
 .container.contact-us .content .col form .desc-form{
