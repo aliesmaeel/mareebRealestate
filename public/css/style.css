@@ -20,13 +20,20 @@
 
 }
 @font-face {
-    font-family: 'Le-Jour-Serif';
+    font-family: 'Le Jour Serif';
     font-style: black;
     font-display: black;
-    src: url('../fonts/Le-Jour-Serif.ttf') format('truetype');
+    src: url('../fonts/Le Jour Serif.ttf') format('truetype');
 
 }
 
+@font-face {
+    font-family: 'Rufina';
+    font-style: black;
+    font-display: black;
+    src: url('../fonts/Rufina-Regular.ttf') format('truetype');
+
+}
 
 
 *{
@@ -1614,12 +1621,17 @@ color:#222
 .container.about_us .content .first_section .grid-container{
     width: 90%;
     margin: 0rem auto;
-    padding: 3rem 0 0;
+    padding:5rem 0 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem;
+    max-width: 1300px;
 
 
+}
+.desc_section.sticky-component .flex-container,
+.about_form{
+    max-width: 1300px;
 }
 .container.about_us{
     position: relative;
@@ -1637,43 +1649,56 @@ color:#222
     align-items: end;
 }
 .container.about_us .content .first_section .grid-container .img-container{
-    width: 90%;
-    height: 90%;
+
+    width: 94%;
+    height: 100%;
+
     object-fit: cover;
 
 
 }
 .container.about_us .content .first_section .grid-container .img-container img{
-    width:100%
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    max-width: 699px;
+
 }
 .container.about_us .content .first_section .grid-container .title{
     font-size: 37px;
     letter-spacing: 5px;
     font-family: 'Theseasons';
     font-weight: 500;
+    color:#58595B
 
 }
 .container.about_us .content .first_section .title.p-10{
     font-size: 37px;
-    letter-spacing: 5px;
-    font-family: 'Theseasons';
+    letter-spacing: 2px;
+    font-family: 'normal';
     font-weight: 500;
+    color:#8c8a8a;
     padding: 2rem 0 3rem;
     width: 90%;
     margin: 0 auto;
     text-align: center;
 }
 .container.about_us .content .first_section .grid-container .desc{
-    font-size: 18px;
-    letter-spacing: 2px;
-    line-height: 1.5;
+    font-size: 22px;
+    /* letter-spacing: 2px; */
+    line-height: 1.8;
+    font-family: 'serif';
+    color:#58595B;
 
 }
+
 .container.about_us .content .first_section .grid-container .col.col-2{
     grid-column: span 2;
-    font-size: 18px;
-    letter-spacing: 2px;
-    line-height: 1.5;
+    font-size: 22px;
+    
+    color: #58595B;
+    font-family: 'serif';
+    line-height: 1.8;
 
 }
 .container.about_us .content .first_section{
@@ -1722,7 +1747,8 @@ color:#222
     letter-spacing: 4px;
     font-size: 56px;
     width: 90%;
-
+    color:#58595B;
+    font-weight: 400;
     padding: 1rem;
 }
 
@@ -1760,12 +1786,12 @@ color:#222
     background-color: rgb(47 30 26 / 0.2);
     /* opacity: 0.6; */
     border: 1px solid rgb(47 30 26);
-    padding: 2rem 0rem;
+    padding: 2.5rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-    max-width: 450px;
+    max-width: 500px;
 
 }
 
@@ -1810,8 +1836,8 @@ color:#222
     bottom: -10px;
     left: 0;
 }
-.num-heading span{
-     font-family: "le jour serif",serif;
+.num-heading span{ 
+     /* font-family: "le jour serif"; */
      color:rgb(86, 81, 83);
      font-size: 60px;
      padding-right: 0.6rem;
@@ -1826,6 +1852,9 @@ color:#222
 .desc_section.sticky-component .col.flex-col .desc{
     padding: 25px 0;
     word-spacing: 5px;
+    color:#58595B;
+    font-family: 'serif';
+    font-size: 20px;
 }
 .about_swiper{
     overflow: hidden;
@@ -1836,9 +1865,19 @@ color:#222
     padding: 0.5rem 0.3rem;
     width: 184px;
     text-align: center;
+    transition:all 0.3s ease-in-out
+}
+.desc_section.sticky-component .btn-container:hover{
+    background-color:rgb(86, 81, 83);
+    color:#fff
+}
+.desc_section.sticky-component .btn-container:hover a{
+    
+    color:#fff
 }
 .desc_section.sticky-component .btn-container a{
     color:rgb(86, 81, 83);
+    font-weight: 600;
     text-transform: uppercase;
 }
 .about_form{
@@ -1852,6 +1891,10 @@ color:#222
 .about_form .flex-col{
     width:50%
 }
+.phone_number::placeholder, .country_field::placeholder{
+    font-family: 'serif';
+    font-size: 20px;
+}
 .about_form .flex-col .title{
     font-size: 3.2rem;
     letter-spacing: 5px;
@@ -1862,7 +1905,8 @@ color:#222
     opacity: 0.8;
 }
 .about_form .flex-col .desc{
-    width:80%
+    width:80%;
+    font-family: 'serif';
 }
 .about_form .desc-form{
     display: none;

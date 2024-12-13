@@ -9,7 +9,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .desc_section.sticky-component .col.text.order-1 {
-        max-width: 386px;
+        max-width: 410px;
         padding: 1.5rem 0rem;
     }
     .container.team .content .grid-container{
@@ -62,7 +62,7 @@
     .desc_section.sticky-component .col.text.order-1{
         max-width: 600px;
         width:600px;
-        padding: 3rem 0rem;
+        padding: 3.5rem 0rem;
         position: relative;
         top: 0;
         left: 50%;
@@ -172,7 +172,8 @@
         
     }
     .container.about_us .content .first_section .grid-container .img-container{
-        width:100%
+        width:100%;
+        text-align: center;
     }
     .container.contact-us .content{
         flex-wrap: wrap;
