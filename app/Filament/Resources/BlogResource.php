@@ -40,7 +40,6 @@ class BlogResource extends Resource
                     }),
 
                 Forms\Components\TextInput::make('slug')
-                    ->maxLength(40)
                     ->unique(Blog::class, 'slug', ignoreRecord: true)
                 ->required(),
 
