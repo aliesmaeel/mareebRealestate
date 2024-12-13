@@ -77,8 +77,8 @@ a{
 
 }
 .logo img{
-    width: 269px;
-    height: 90px;
+    width: 250px;
+    height: 80px;
     filter: brightness(4.5);
     object-fit: cover;
     position: relative;
@@ -996,7 +996,7 @@ display: none;
 .footer .subscribe input.email{
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    width: 135px;
+    width: 90%;
 
 }
 .footer .flex-row.social-icons{
@@ -1037,7 +1037,7 @@ display: none;
     gap:2rem
 }
 .footer .content .grid-container .col form{
-    padding-top: 2rem;
+    padding-top: 0rem;
 }
 .video-mobile{
     display: none;
@@ -2558,7 +2558,7 @@ height:100px
 
 .contact-us-page h3{
     color: white;
-    font-size: 32px;
+    font-size: 28px;
     position: relative;
     margin-top: 25px;
     margin-bottom: 4px;
