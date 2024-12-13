@@ -1500,7 +1500,7 @@ color:#222
     width:100%;
 }
 .container.team .content{
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -1538,7 +1538,7 @@ color:#222
 }
 .container.team .content .grid-container .img-container{
     width: 100%;
-    height:280px;
+    height:300px;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
