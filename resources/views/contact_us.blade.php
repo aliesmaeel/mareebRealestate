@@ -7,7 +7,7 @@
 @endsection
 <style>
     .container.contact-us .content .col:first-child{
-        background-image: url({{asset('/storage/'.$contactus->image)}});
+        background-image: url({{asset('/storage/'.$contact->image)}});
     }
     .contact-us-page h1,h2,h3{
         font-family: Theseasons !important;
@@ -21,7 +21,7 @@
     <div class="content">
         <div class="col">
 
-         {!! $contactus->description_text !!}
+         {!! $contact->description_text !!}
             <div class="info social">
                 <div class="title" style="font-size: 24px">Follow us on social media</div>
                 <div>

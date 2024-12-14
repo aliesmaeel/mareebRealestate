@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactPage;
 use App\Models\Footer;
 use App\Models\HomePage;
 use App\Models\Services;
@@ -23,12 +24,13 @@ class HomePageController extends Controller
         $teams=Team::all();
         $services=Services::all();
         $footer=Footer::Active()->first();
-
+        $contact=ContactPage::Active()->first();
         return view('home')
             ->with('home',$home)
             ->with('footer',$footer)
             ->with('teams',$teams)
             ->with('services',$services)
-            ->with('sisterCompanies',$sisterCompanies);
+            ->with('sisterCompanies',$sisterCompanies)
+            ->with('contact',$contact);
     }
 }

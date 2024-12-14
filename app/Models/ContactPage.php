@@ -11,6 +11,8 @@ class ContactPage extends Model
         'image',
         'description_text',
         'active',
+        'email',
+        'phone'
     ];
 
     public function scopeActive($query)

@@ -34,6 +34,7 @@ class ContactPageResource extends Resource
                     ->image()
                     ->required(),
                 Forms\Components\RichEditor::make('description_text')->required(),
+
                 Forms\Components\Toggle::make('active')
                     ->required()->rules([
                         fn (): \Closure => function (string $attribute, $value, \Closure $fail) use ($form) {
@@ -43,7 +44,15 @@ class ContactPageResource extends Resource
                                 Contact Page Please Go And Deactivate Any Other Contact Page');
                             }
                         }
-                    ])->default(0)
+                    ])->default(0),
+                Forms\Components\TextInput::make('email')
+                    ->required()
+                    ->label('Email Globally')
+                    ->maxWidth(22),
+                Forms\Components\TextInput::make('phone')
+                    ->required()
+                    ->label('Phone Globally')
+                    ->maxLength(55),
 
             ]);
     }

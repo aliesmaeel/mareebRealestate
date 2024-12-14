@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name',55);
             $table->string('image',255);
             $table->text('description_text');
+            $table->string('email',255);
+            $table->string('phone',255);
             $table->boolean('active')->default(0);
             $table->timestamps();
         });

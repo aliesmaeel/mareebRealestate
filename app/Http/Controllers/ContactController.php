@@ -10,10 +10,10 @@ class ContactController extends Controller
 {
     public function index () {
         $footer= Footer::Active()->first();
-        $contactus=ContactPage::Active()->first();
+        $contact=ContactPage::Active()->first();
 
         return view('contact_us')
-            ->with('contactus',$contactus)
+            ->with('contact',$contact)
             ->with('footer',$footer);
     }
 }

@@ -92,9 +92,6 @@ a{
     position: fixed;
     transition: all 0.3s ease-in-out;
     z-index: 11111;
-
-
-
 }
 .header .content{
     display: flex;
@@ -969,11 +966,11 @@ display: none;
     font-family: 'Optima';
 }
 .over-text-hide{
-    
+
     font-family: 'Optima';
 }
 .list-footer li div{
-    font-family: 'Optima';
+    font-family: 'Rufina';
 }
 .agent_unit .row .flex-col .price{
     color: rgb(86, 81, 83);
@@ -1051,16 +1048,18 @@ display: none;
 }
 .terms.flex{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: relative;
     padding-top: 1rem;
     color: #bdbcbc;
     font-weight: 600;
+
 }
 .terms.flex a{
     color: #bdbcbc;
     font-weight: 600;
+    font-family:'Rufina' !important;
 }
 .terms.flex::before{
     position: absolute;
@@ -1597,11 +1596,12 @@ color:#222
 
 }
 .container.team .content .name{
-    font-size: 22px;
+    font-size: 18px;
     color: #002e53;
     font-weight: 27;
     width: 90%;
     text-align: left;
+
 
 }
 .img-container {
@@ -2912,7 +2912,7 @@ height:100px
     font-weight: 400;
     text-transform: capitalize;
     position: relative;
-    top: -1rem;
+    top: 0rem;
 }
 .container.search-result .search-realestate form{
     /* background: rgba(0, 0, 0, 0.6);
