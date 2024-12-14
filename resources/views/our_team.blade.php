@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Teams')
+@section('title', 'Our Team')
 {{-- header --}}
 @section('header')
     @include('layouts.header')
