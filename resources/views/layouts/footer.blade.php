@@ -142,9 +142,7 @@
                 <a href="#">
                     <div >Privacy Policy</div>
                 </a>
-                <a href="#">
-                    <div >Privacy Policy</div>
-                </a>
+
             </div>
         </div>
     </div>

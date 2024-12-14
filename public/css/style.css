@@ -105,8 +105,8 @@ a{
 
 }
 .logo img{
-    width: 269px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
     filter: brightness(4.5);
     object-fit: cover;
     position: relative;
@@ -1038,7 +1038,7 @@ display: none;
 .footer .subscribe input.email{
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    width: 135px;
+    width: 90%;
 
 }
 .footer .flex-row.social-icons{
@@ -1079,7 +1079,7 @@ display: none;
     gap:2rem
 }
 .footer .content .grid-container .col form{
-    padding-top: 2rem;
+    padding-top: 0rem;
 }
 .video-mobile{
     display: none;
@@ -1384,7 +1384,7 @@ display: none;
     flex-direction: column;
 }
 .container.contact-us .content .col form{
-    width:90%;
+    width:600px;
     margin:0 auto
 }
 .container.contact-us .content .col form .desc-form{
@@ -1545,7 +1545,7 @@ color:#222
     width:100%;
 }
 .container.team .content{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -1564,7 +1564,8 @@ color:#222
 .container.team .content .grid-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 2rem; */
+    gap: 1rem;
+    row-gap:2rem;
     margin-bottom: 4rem;
     /* row-gap: 0; */
     width:100%;
@@ -1577,45 +1578,54 @@ color:#222
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-
+    gap: 5px;
 
 }
 .container.team .content .grid-container .img-container{
-    width: 250px;
-    height:200px;
+    width: 100%;
+    height:300px;
     position: relative;
     overflow: hidden;
+    border-radius: 8px;
 
 }
 .container.team .content .grid-container .img-container img{
     max-width: 100%;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 
 }
 .container.team .content .name{
-    font-size: 27px;
-    color: #000;
+    font-size: 22px;
+    color: #002e53;
     font-weight: 27;
     width: 90%;
-    text-align: center;
+    text-align: left;
 
 }
+.img-container {
+    position: relative;
+    overflow: hidden; /* Prevents overflow of the child elements */
+}
 
-.container.team .content  .overlay{
+.img-container .overlay {
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(61,46,42,0.3);
+    background-color: rgba(61, 46, 42, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: left 0.5s ease;
+    transition: left 0.5s ease; /* Smooth transition for the movement */
 }
+
+.img-container:hover .overlay {
+    left: 0; /* Moves the overlay into view */
+}
+
 .container.team .content .overlay div {
     position: relative;
     z-index: 2;
@@ -1623,17 +1633,17 @@ color:#222
 }
 
 .container.team .content .overlay a {
-    color: rgba(61,46,42);
+    color: rgba(61, 46, 42);
     background-color: white;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
     cursor: pointer;
     position: relative;
-
 }
+
 
 .container.team .content .grid-container .overlay a:hover {
     /* opacity: 0.9; */
@@ -1677,8 +1687,10 @@ color:#222
     align-items: end;
 }
 .container.about_us .content .first_section .grid-container .img-container{
+
     width: 94%;
     height: 100%;
+
     object-fit: cover;
 
 
@@ -2628,7 +2640,7 @@ height:100px
 
 .contact-us-page h3{
     color: white;
-    font-size: 32px;
+    font-size: 28px;
     position: relative;
     margin-top: 25px;
     margin-bottom: 4px;
@@ -2690,6 +2702,8 @@ height:100px
     max-width: 100%;
     /* padding: 1rem; */
     margin: 0.5rem;
+    border: 0.1px solid #f0f0f0;
+    border-radius: 8px;
 }
 .header_mobile{
     display: none;

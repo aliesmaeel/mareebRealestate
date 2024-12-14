@@ -16,9 +16,7 @@
                 <a href="/our-team">
                     <li class="link">Our Team</li>
                 </a>
-                <a href="/our-team">
-                    <li class="link">Our Clients</li>
-                </a>
+
                 <a href="/about-us">
                     <li class="link">About Us</li>
                 </a>
@@ -63,9 +61,7 @@
             <a href="/our-team">
                 <li class="link">Our Team</li>
             </a>
-            <a href="/our-team">
-                <li class="link">Our Clients</li>
-            </a>
+
             <a href="/about-us">
                 <li class="link">About Us</li>
             </a>
