@@ -32,6 +32,7 @@
 
                 <div class="desc">
                    {!! $home->about_section_text !!}
+                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit sapiente cumque pariatur adipisci quasi illo exercitationem officiis est deleniti quia! Ipsa voluptatem doloribus adipisci aliquam magnam exercitationem repellendus distinctio expedita.
                  </div>
                  <a href="#">
                     Read More
