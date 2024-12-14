@@ -26,9 +26,9 @@
 
     .blur-overlay {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
         background-color: rgb(255 255 255 / .2);
         backdrop-filter: blur(20px);
         text-align: center;
