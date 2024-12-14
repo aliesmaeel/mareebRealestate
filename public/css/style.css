@@ -73,13 +73,14 @@ a{
     z-index: 11111;
 
 
+
 }
 .header .content{
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
-    padding: 0.5rem 0;
+    padding: 0.1rem 0;
     align-items: center;
 
 }
@@ -434,7 +435,6 @@ display: none;
     background-position: center;
     position: relative;
     backdrop-filter: blur(5px);
-    background-color: rgba(255,255,255,0.6);
     background-blend-mode: lighten;
 }
 
@@ -2681,6 +2681,7 @@ height:100px
 }
 .header_desktop .list_header ul li{
     padding: 0 15px;
+    font-family: Rufina Serif;
 }
 
 .header_desktop .list_header ul a :hover{

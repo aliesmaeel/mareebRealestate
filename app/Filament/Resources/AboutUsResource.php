@@ -31,6 +31,8 @@ class AboutUsResource extends Resource
                 Forms\Components\FileUpload::make('about-us-image'),
                 Forms\Components\Textarea::make('our-vision')
                     ->columnSpanFull(),
+                Forms\Components\Textarea::make('trust-heading')
+                    ->columnSpanFull(),
                 Forms\Components\Textarea::make('customer-satisfaction')
                     ->columnSpanFull(),
                 Forms\Components\Repeater::make('customer-satisfaction-images')

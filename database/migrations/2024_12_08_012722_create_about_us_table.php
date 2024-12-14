@@ -16,6 +16,7 @@ return new class extends Migration
             $table->text('about-us')->nullable();
             $table->string('about-us-image',200)->nullable();
             $table->text('our-vision')->nullable();
+            $table->text('trust-heading')->nullable();
             $table->text('customer-satisfaction')->nullable();
             $table->text('quality')->nullable();
             $table->text('integrity')->nullable();

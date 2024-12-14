@@ -14,11 +14,11 @@
             <div class="grid-container">
                 <div class="col">
                     <div class="title">About Us</div>
-                    <div class="desc">
+                    <div class="desc" data-aos="fade-right">
                         {{$aboutus['about-us']}}
                     </div>
                 </div>
-                <div class="col parent_img">
+                <div class="col parent_img" data-aos="fade-right">
                     <div class="img-container">
                         <img src="{{asset('/storage').'/'.$aboutus['about-us-image']}}">
                     </div>
@@ -29,7 +29,7 @@
 
                 </div>
               </div>
-            <div class="title p-10">Meerab Properties Trust the Experts, Trust Meerab.</div>
+            <div class="title p-10">{{$aboutus['trust-heading']}}</div>
 
         </div>
         <div class="scroll-container">
