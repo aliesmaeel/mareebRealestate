@@ -16,7 +16,11 @@ Route::get('/our-team',[TeamController::class,'index']);
 Route::get('/about-us', function () {
     $footer= Footer::Active()->first();
     $aboutUs=\App\Models\AboutUs::first();
-    return view('about_us')->with('footer',$footer)->with('aboutus',$aboutUs);
+    $contact=\App\Models\ContactPage::Active()->first();
+    return view('about_us')
+        ->with('footer',$footer)
+        ->with('contact',$contact)
+        ->with('aboutus',$aboutUs);
 });
 Route::get('/team-profile', function () {
     return view('team-profile');
