@@ -18,6 +18,7 @@ class PropertyController extends Controller
     public function search(){
 
         $footer=Footer::Active()->first();
-        return view('search_result')->with('footer',$footer);
+        $contact=ContactPage::Active()->first();
+        return view('search_result')->with('footer',$footer)->with('contact',$contact);
     }
 }

@@ -20,7 +20,7 @@ class HomePageResource extends Resource
 {
     protected static ?string $model = HomePage::class;
     protected static ?string $navigationIcon = 'heroicon-o-home-modern';
-
+    protected static ?string $navigationGroup='Pages';
     protected static ?string $pluralLabel = 'Home Page';
     protected static ?string $navigationLabel='Home Page';
 

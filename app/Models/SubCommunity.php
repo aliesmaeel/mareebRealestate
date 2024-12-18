@@ -12,4 +12,10 @@ class SubCommunity extends Model
 
         return $this->belongsTo(Community::class,'community_id');
     }
+    public function properties()
+    {
+        return $this->hasMany(Property::class);
+    }
+
+
 }

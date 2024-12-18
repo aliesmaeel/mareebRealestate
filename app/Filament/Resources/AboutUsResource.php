@@ -18,7 +18,7 @@ class AboutUsResource extends Resource
     protected static ?string $model = AboutUs::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationGroup='Pages';
     protected static ?string $pluralLabel = 'About Us';
     protected static ?string $navigationLabel='About Us';
 

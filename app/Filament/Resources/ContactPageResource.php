@@ -18,7 +18,7 @@ class ContactPageResource extends Resource
     protected static ?string $model = ContactPage::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
-
+    protected static ?string $navigationGroup='Pages';
     protected static ?string $pluralLabel = 'Contact Page';
     protected static ?string $navigationLabel='Contact Page';
 

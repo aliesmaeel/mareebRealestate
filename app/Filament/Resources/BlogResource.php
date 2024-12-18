@@ -16,7 +16,7 @@ use Filament\Forms\Set;
 class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
-
+    protected static ?string $navigationGroup='Pages';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
 
