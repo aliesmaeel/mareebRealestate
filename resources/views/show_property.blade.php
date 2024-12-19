@@ -4,7 +4,14 @@
 @section('header')
     @include('layouts.header')
 @endsection
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    @media screen and (min-width: 1600px) {
+        .container {
+            max-width: 1416px;
+        }
+    }
+</style>
 {{-- main page --}}
 @section('content')
 <div class="swiper-popup" style="display: none;">
@@ -12,47 +19,25 @@
         <span class="close-btn">&times;</span>
         <div class="swiper-container-popup">
             <div class="swiper-wrapper">
-                {{-- <div class="swiper-slide">
-                    <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
-
-                </div> --}}
-
             </div>
-            <!-- Swiper navigation buttons -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
     </div>
 </div>
-<div class="show_property container">
+
+<div class="show_property">
     <div style="position:relative; height: 100vh;">
         <div class="flex_banner">
-            <div class=" rest">
-                <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
-            </div>
-            <div class="rest">
-                <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
-            </div>
-            <div class="rest">
-                <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
-            </div>
-            <div class="rest">
-                <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
-            </div>
-            <div class="rest">
-                <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
-            </div>
-            <div class="rest">
-                <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
-            </div>
-            <div class="rest">
-                <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
-            </div>
-            <div class="rest">
-                <img src="https://cms.savoirproperties.com/storage//images/default.jpg" >
-            </div>
+
+            @foreach($property->propertyImages as $image)
+                <div class=" rest">
+                    <img src="{{asset('/storage').'/'.$image->image }}">
+                </div>
+
+            @endforeach
             <div  class=" show-more">
-                 <img src="https://images.goyzer.com/uf/5023/unit/3015/LA-CAPITAL-Beach-Vista-Tower-1-02132024-105002.jpg?group=5023%27">
+                 <img src="{{asset('/storage').'/'.$property->image}}">
 
                  <div class="overlay">
                     <div>Show More</div>
@@ -63,15 +48,15 @@
     </div>
     <!-- Popup for Swiper -->
 
-    <div class="property-page">
-        <div class="content">
+    <div class="property-page container">
+        <div class=" content">
             <div class="col boxes">
-                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
-                <div class="price title">AED 720,000</div>
+                <div class="title">{{$property->title}}</div>
+                <div class="price title">AED {{$property->price}}</div>
                 <div class="box">
-                    <div class="category">Apartment in <a href="#">Rent</a></div>
+                    <div class="category">{{$property->type}} <a href="#">Rent</a></div>
                     <div class="flex flex-between">
-                        <div>Beach Vista Tower 1, Dubai Harbour, Dubai</div>
+                        <div>{{$property->title}}, {{$property->community->name}}, {{$property->city}}</div>
                         <div class="flex flex-start">
                             <div>
                                 <svg class="svg-inline--fa fa-eye-slash" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye-slash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
@@ -113,40 +98,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="box desc">
-                    <div class="title">Description</div>
-                    <div class="">
-                        Savoir Prive Properties presents this Stunning 4-Bedroom Apartment for rent!
-                        Experience coastal luxury in this high-floor, four-bedroom apartment for rent at Emaar Beachfront. Spanning 2,343 sq. ft., this spacious residence offers unparalleled views of the iconic Palm Jumeirah and breathtaking beach vistas from every room, ideal for those who appreciate both elegance and serenity.
-                    </div>
-                    <div>
-                        Property Features:
-                        <ul>
-                            <li>4 Bedrooms: Spacious layout for family living and hosting</li>
-                            <li>4 Bedrooms: Spacious layout for family living and hosting</li>
-                            <li>4 Bedrooms: Spacious layout for family living and hosting</li>
-                            <li>4 Bedrooms: Spacious layout for family living and hosting</li>
-                            <li>4 Bedrooms: Spacious layout for family living and hosting</li>
-                            <li>4 Bedrooms: Spacious layout for family living and hosting</li>
-                        </ul>
-
-                    </div>
-                    <div>
-                        About Emaar Beachfront:
-                    </div>
-                    <div>
-                        Emaar Beachfront is a prestigious, gated community that offers a perfect blend of seaside living
-                        with urban convenience. Residents enjoy private beach access, landscaped parks, and upscale dining and retail options just steps away. The building features state-of-the-art amenities, including an infinity pool,
-                        fully-equipped gym, and direct beach access, ensuring a five-star lifestyle right at home.
-                    </div>
-                    <div>
-                        Location Highlights:
-                    </div>
-                    <div>
-                        Emaar Beachfront is a prestigious, gated community that offers a perfect blend of seaside living
-                        with urban convenience. Residents enjoy private beach access, landscaped parks, and upscale dining and retail options just steps away. The building features state-of-the-art amenities, including an infinity pool,
-                        fully-equipped gym, and direct beach access, ensuring a five-star lifestyle right at home.
-                    </div>
+                <div class="box desc" >
+                {!! $property->description !!}
                 </div>
                 <div class="box address">
                     <div class="first toggle">
@@ -156,8 +109,8 @@
                         </div>
                     </div>
                     <div class="second hidden">
-                        <div>City:Dubai</div>
-                        <div>Country:Country</div>
+                        <div>City: {{$property->city}}</div>
+                        <div>Country: {{$property->country ?? 'UAE'}}</div>
                     </div>
                 </div>
                 <div class="box details">
@@ -168,11 +121,8 @@
                         </div>
                     </div>
                     <div class="second hidden">
-                        <div>Price: AED 720,000</div>
-                        <div>Property Size: 2,343 ft<sup>2</sup></div>
-                        <div>Bedrooms: 4</div>
-                        <div>Bedrooms: 4</div>
-                        <div>Bedrooms: 4</div>
+                        <div>Price: AED {{$property->price}}</div>
+                        <div>Property Size: {{$property->size}} ft<sup>2</sup></div>
                     </div>
                 </div>
                 <div class="box map">
@@ -183,28 +133,36 @@
                         </div>
                     </div>
                     <div class="second hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7226.5199115667965!2d55.139887973812904!3d25.093060177778085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b94465c8dd3%3A0xfa51bb0fa36e936f!2sDubai%20Harbour!5e0!3m2!1sen!2sus!4v1730541240984!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        <iframe
+                            src="https://www.google.com/maps?q={{$property->latitude}},{{$property->longitude}}&hl=es;z=14&output=embed"
+                            width="100%"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
                         </iframe>
+
                     </div>
                 </div>
             </div>
-            <div class="col" id="primary">
+            <div class="" id="primary">
                 <div class="agent_unit">
                     <a href="#" class="img_container">
-                        <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Agent/BL3KVA6yQZpSiiTtd60nsxjC9VNtvbaI5ZnRzSYG.jpg">
+
+                        <img src="{{asset('/storage/').'/'.$property->agent->image}}">
                     </a>
                     <a href="#" class="name">
-                        Nain Mendoza
+                        {{$property->agent->name}}
                     </a>
                     <a href="#" class="agent_position">
-                        Senior Global Real Estate Advisor
+                        {{$property->agent->position}}
                     </a>
                     <div class="agent_detail">
                         <svg class="svg-inline--fa fa-mobile" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
                             <path fill="#927c75" d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z">
                                 </path>
                             </svg>
-                        <a href="#">+971 528770591</a>
+                        <a href="#">{{$property->agent->phone}}</a>
                     </div>
 
                     <div class="agent_detail">
@@ -212,46 +170,32 @@
                             <path fill="#927c75" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z">
                             </path>
                         </svg>
-                        <a href="#">nain@savoirproperties.com</a>
+                        <a href="#">{{$property->agent->email}}</a>
                     </div>
                     <div class="agent_detail">
                         <svg class="svg-inline--fa fa-whatsapp" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
                             <path fill="#927c75" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
                             </path>
                         </svg>
-                        <a href="#">+971 528770591</a>
+                        <a href="#">{{$property->agent->phone}}</a>
                     </div>
                 </div>
 
                 <div class="agent_unit">
-                  <div class="title">Property for Sale</div>
-                  <a href="#">
-                    <div class="row">
-                        <img src="https://images.goyzer.com/uf/5023/unit/3000/GCS00694-Edit.jpg?group=5023">
-                        <div>
-                            <div class="over-text-hide">Stunning Palm Views | Upgraded</div>
-                            <div class="price">AED 38,000,000</div>
-                        </div>
-                     </div>
-                  </a>
-                  <a href="#">
-                    <div class="row">
-                        <img src="https://images.goyzer.com/uf/5023/unit/3000/GCS00694-Edit.jpg?group=5023">
-                        <div>
-                            <div class="over-text-hide">Stunning Palm Views | Upgraded</div>
-                            <div class="price">AED 38,000,000</div>
-                        </div>
-                     </div>
-                  </a>
-                  <a href="#">
-                    <div class="row">
-                        <img src="https://images.goyzer.com/uf/5023/unit/3000/GCS00694-Edit.jpg?group=5023">
-                        <div>
-                            <div class="over-text-hide">Stunning Palm Views | Upgraded</div>
-                            <div class="price">AED 38,000,000</div>
-                        </div>
-                     </div>
-                  </a>
+                  <div class="title">Related Properties</div>
+                    @foreach($relatedProperties as $property)
+                        <a href="{{route('property.show',['slug'=>$property->slug])}}" >
+                            <div  style="display: flex;gap: 15px;padding: 2rem 0.9rem">
+                                <img width="118px" src="{{asset('/storage').'/'.$property->image}}">
+                                <div>
+                                    <div class="over-text-hide">{{$property->title}}</div>
+                                    <div class="price">AED {{$property->price}}</div>
+                                </div>
+                            </div>
+                        </a>
+
+                    @endforeach
+
 
                 </div>
             </div>

@@ -26,7 +26,8 @@ Route::get('/team-profile', function () {
     return view('team-profile');
 });
 Route::get('/search-result',[PropertyController::class,'search']);
-Route::get('/property-details',[PropertyController::class,'index'])
+Route::get('/search-result/{type}',[PropertyController::class,'getpropertybytype']);
+Route::get('/property-details/{slug}',[PropertyController::class,'index'])
     ->name('property.show');
 
 Route::get('/all-countries', [CountryController::class, 'getCountries']);

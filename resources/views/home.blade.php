@@ -80,10 +80,10 @@
         <div class="content" data-aos="fade-up" >
             <div class="title">Properties We Manage</div>
             <div class="buttons">
-                <a href="#">Labor Camps </a>
-                <a href="#">Residential Buildings</a>
-                <a href="#">Commercial Floors</a>
-                <a href="#">Showrooms</a>
+                <a href="/search-result/laborcamp">Labor Camps </a>
+                <a href="/search-result/residentialbuilding">Residential Buildings</a>
+                <a href="/search-result/commercialfloors">Commercial Floors</a>
+                <a href="/search-result/showrooms">Showrooms</a>
             </div>
             <div class="grid-container">
                 @include('components.service')

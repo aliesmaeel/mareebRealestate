@@ -22,12 +22,9 @@
             </div>
             <div style="display:flex;justify-content:center;align-items:center">
                 <div class="grid-container">
-                    @include('components.property')
-                    @include('components.property')
-                    @include('components.property')
-                    @include('components.property')
-                    @include('components.property')
-                    @include('components.property')
+                    @foreach($properties as $property)
+                        @include('components.property')
+                    @endforeach
                 </div>
             </div>
         </div>
