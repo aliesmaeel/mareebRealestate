@@ -49,7 +49,6 @@ class PropertyResource extends Resource
                     ->required(),
 
                 Forms\Components\Textarea::make('title')
-                    ->live()
                     ->afterStateUpdated(function (Forms\Get $get, Forms\Set $set, ?string $operation, ?string $old, ?string $state, ?Model $record) {
                         if ($operation === 'edit') {
                             return;
@@ -60,9 +59,10 @@ class PropertyResource extends Resource
                             $set('slug', Str::slug($state));
                         }
                     })
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->lazy(),
                 Forms\Components\TextInput::make('slug')
-                    ->maxLength(191),
+                    ->maxLength(191)->required(),
 
                 Forms\Components\TextInput::make('permit_number')
                     ->maxLength(191),
