@@ -10,7 +10,7 @@
                 <a href="/">
                     <li class="link">Home</li>
                 </a>
-                <a href="/">
+                <a href="/properties">
                     <li class="link">Properties</li>
                 </a>
                 <a href="/our-team">

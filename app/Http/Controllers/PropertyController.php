@@ -9,6 +9,21 @@ use Illuminate\Http\Request;
 
 class PropertyController extends Controller
 {
+
+    public function allproperties(){
+        $properties = Property::Active()
+            ->with('propertyImages', 'amenities', 'agent', 'community', 'subCommunity')
+            ->get()
+            ->groupBy('type');
+
+
+
+        $contact=ContactPage::Active()->first();
+        $footer=Footer::Active()->first();
+        return view('all_properties',
+            compact('properties','footer','contact'));
+    }
+
     public function index(Request $request){
 
         $footer=Footer::Active()->first();

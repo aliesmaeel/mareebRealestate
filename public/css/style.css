@@ -2006,6 +2006,12 @@ height:100px
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+    justify-items: right;
+    width: 90%;
+    margin-left: auto;
+}
+.available_property h3{
+    color: #565153;
 }
 .available_property_swiper{
    position: relative;
@@ -2020,6 +2026,7 @@ height:100px
     object-fit: cover;
 }
 .available_property .grid-container .card{
+    width: 350px;
     max-width: 350px;
     display: flex;
     flex-direction: column;

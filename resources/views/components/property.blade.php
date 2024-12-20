@@ -1,4 +1,5 @@
 <div class="card">
+
     <a href="{{route('property.show',['slug' => $property->slug])}}" class="available_property_swiper">
         <div class="swiper-wrapper">
             @foreach($property->propertyImages as $image)

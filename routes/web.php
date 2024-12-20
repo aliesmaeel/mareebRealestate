@@ -30,6 +30,8 @@ Route::get('/search-result/{type}',[PropertyController::class,'getpropertybytype
 Route::get('/property-details/{slug}',[PropertyController::class,'index'])
     ->name('property.show');
 
+Route::get('/properties',[PropertyController::class,'allproperties']);
+
 Route::get('/all-countries', [CountryController::class, 'getCountries']);
 Route::get('/blogs', [BlogController::class, 'index']);
 Route::get('/blogs/{slug}', [BlogController::class, 'blog'])->name('get_blog_details');
