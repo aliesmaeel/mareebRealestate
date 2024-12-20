@@ -27,7 +27,7 @@
 </div>
 
 <div class="show_property">
-    <div style="position:relative; height: 100vh;">
+    <div style="position:relative; height: 80%;">
         <div class="flex_banner">
 
             @foreach($property->propertyImages as $image)
@@ -108,7 +108,7 @@
                             <img src="/images/arrow.png" class="toggle-arrow">
                         </div>
                     </div>
-                    <div class="second hidden">
+                    <div class="second show">
                         <div>City: {{$property->city}}</div>
                         <div>Country: {{$property->country ?? 'UAE'}}</div>
                     </div>
@@ -120,7 +120,7 @@
                             <img src="/images/arrow.png" class="toggle-arrow">
                         </div>
                     </div>
-                    <div class="second hidden">
+                    <div class="second show">
                         <div>Price: AED {{$property->price}}</div>
                         <div>Property Size: {{$property->size}} ft<sup>2</sup></div>
                     </div>
@@ -132,7 +132,7 @@
                             <img src="/images/arrow.png" class="toggle-arrow">
                         </div>
                     </div>
-                    <div class="second hidden">
+                    <div class="second show">
                         <iframe
                             src="https://www.google.com/maps?q={{$property->latitude}},{{$property->longitude}}&hl=es;z=14&output=embed"
                             width="100%"

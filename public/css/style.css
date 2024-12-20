@@ -1582,7 +1582,7 @@ color:#222
 
 }
 .container.team .content .grid-container .img-container{
-    width: 100%;
+    width: 280px;
     height:300px;
     position: relative;
     overflow: hidden;
@@ -2302,18 +2302,18 @@ height:100px
     padding: 0 0 0.4rem;
     border-radius: 6px;
     margin-bottom: 2rem;
-    width: 360px;
+    width: 280px;
 
 }
 .agent_unit .img_container{
     width: 100%;
 }
 .agent_unit .img_container img{
-    width: 100%;
     object-fit: cover;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    height: 400px;
+    width: 280px;
+    height: 300px;
 }
 .agent_unit .name{
     color: #222;
@@ -2372,10 +2372,9 @@ height:100px
 }
 .flex_banner {
     display: grid;
-    height: 85%;
+    height: 100%;
     position: relative;
     grid-template-columns: 50% 25% 25%;
-    top: 80px;
 }
 
 .flex_banner .first {
