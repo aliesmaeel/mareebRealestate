@@ -30,19 +30,27 @@
     <div style="position:relative; height: 80%;">
         <div class="flex_banner">
 
+            <div class=" rest">
+                <img src="{{asset('/storage').'/'.$property->image }}">
+            </div>
+
             @foreach($property->propertyImages as $image)
                 <div class=" rest">
                     <img src="{{asset('/storage').'/'.$image->image }}">
                 </div>
 
-            @endforeach
-            <div  class=" show-more">
-                 <img src="{{asset('/storage').'/'.$property->image}}">
+            @if($loop->iteration == count($property->propertyImages))
+                    <div  class=" show-more">
+                        <img src="{{asset('/storage').'/'.$property->image}}">
 
-                 <div class="overlay">
-                    <div>Show More</div>
-                 </div>
-            </div>
+                        <div class="overlay">
+                            <div>Show More</div>
+                        </div>
+                    </div>
+
+            @endif
+
+            @endforeach
 
         </div>
     </div>

@@ -31,7 +31,7 @@ class AllPropertyResource extends Resource
                         'residentialbuilding' => 'Residential Building',
                         'commercialbuilding' => 'Commercial Building',
                         'showroom' => 'Showroom',
-                    ])->unique('all_properties', 'type'),
+                    ])->unique(AllProperty::class, 'type', ignoreRecord: true),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->required(),
