@@ -41,7 +41,7 @@
         margin: 0;
         font-size: 24px;
         color: white;
-        font-family: 'Optima' !important;
+        font-family: 'Theseasons' !important;
         font-weight: bold;
     }
     .overlay a {
@@ -84,7 +84,7 @@
         <div class="available_property">
             <div class="content">
                 <section>
-                    <h1>Show Projects</h1>
+                    <h1 style="font-family: Theseasons">Our Properties</h1>
                     <div class="global-projects">
                         @foreach($properties as $property)
 
@@ -92,7 +92,7 @@
                                     <img src="{{asset('/storage/').'/'.$property?->image}}" alt="Bulgaria">
                                     <div class="overlay">
                                         <h2>{{strtoupper($property->type)}}</h2>
-                                        <a href="{{$property->url}}">Show Projects</a>
+                                        <a href="{{$property->url}}">Show Properties</a>
                                     </div>
                                 </div>
                         @endforeach

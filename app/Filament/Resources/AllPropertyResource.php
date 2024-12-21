@@ -27,10 +27,10 @@ class AllPropertyResource extends Resource
                     ->required()
                     /// type should be unique in his table
                     ->options([
-                        'laborcamp' => 'Labour Camp',
-                        'residentialbuilding' => 'Residential Building',
-                        'commercialbuilding' => 'Commercial Building',
-                        'showroom' => 'Showroom',
+                        'LABOR CAMPS' => 'LABOR CAMPS',
+                        'RESIDENTIAL BUILDINGS' => 'RESIDENTIAL BUILDINGS',
+                        'COMMERCIAL BUILDINGS' => 'COMMERCIAL BUILDINGS',
+                        'SHOWROOMS' => 'SHOWROOMS',
                     ])->unique(AllProperty::class, 'type', ignoreRecord: true),
                 Forms\Components\FileUpload::make('image')
                     ->image()
