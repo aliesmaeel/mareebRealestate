@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AllProperty;
 use App\Models\ContactPage;
 use App\Models\Footer;
 use App\Models\Property;
@@ -11,15 +12,10 @@ class PropertyController extends Controller
 {
 
     public function allproperties(){
-        $properties = Property::Active()
-            ->with('propertyImages', 'amenities', 'agent', 'community', 'subCommunity')
-            ->get()
-            ->groupBy('type');
-
-
-
+        $properties = AllProperty::all();
         $contact=ContactPage::Active()->first();
         $footer=Footer::Active()->first();
+
         return view('all_properties',
             compact('properties','footer','contact'));
     }

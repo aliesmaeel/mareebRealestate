@@ -5,7 +5,73 @@
 @section('header')
     @include('layouts.header')
 @endsection
+<style>
+    .global-projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .project-card {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .project-card img {
+        width: 100%;
+        height: 370px;
+        display: block;
+    }
+    .project-card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+
+
+    .overlay h2 {
+        margin: 0;
+        font-size: 24px;
+        color: white;
+        font-family: 'Optima' !important;
+        font-weight: bold;
+    }
+    .overlay a {
+        color: #fff !important;
+        font-family: 'Optima';
+        border: none;
+        background-color: transparent;
+        border-radius: 0;
+        margin-top: 10px;
+        padding: 0; /* Start with zero padding */
+        text-decoration: none;
+        width: fit-content;
+        font-size: 14px;
+        line-height: 14px;
+        overflow: hidden;
+        height: 0;
+        display: flex;
+        align-items: center;
+        transition: height 0.4s ease-in-out, padding 0.4s ease-in-out, border 0.4s ease-in-out;
+    }
+
+    .project-card:hover .overlay a {
+        height: 45px;
+        padding: 0px 20px; /* Smoothly transition padding */
+        border: 1px solid #fff; /* Include border in transition */
+    }
+
+
+
+</style>
 {{-- main page --}}
 @section('content')
     <div class="container search-result">
@@ -17,24 +83,21 @@
         </div>
         <div class="available_property">
             <div class="content">
-                <div class="title" style="text-align: center">
-                    Available Properties
-                </div>
-                <div style="display: flex; justify-content: center; align-items: center">
-                    <div class="available_property">
-                        @foreach($properties as $type => $groupedProperties)
-                            <div>
-                                <h3>{{ $type }}</h3> <!-- Display the type (e.g., Labor Camps) -->
-                                <div class="grid-container">
-                                    @foreach ($groupedProperties as $property)
-                                        @include('components.property') <!-- Include your property card -->
-                                    @endforeach
+                <section>
+                    <h1>Show Projects</h1>
+                    <div class="global-projects">
+                        @foreach($properties as $property)
+
+                                <div class="project-card">
+                                    <img src="{{asset('/storage/').'/'.$property?->image}}" alt="Bulgaria">
+                                    <div class="overlay">
+                                        <h2>{{strtoupper($property->type)}}</h2>
+                                        <a href="{{$property->url}}">Show Projects</a>
+                                    </div>
                                 </div>
-                            </div>
                         @endforeach
                     </div>
-                </div>
-
+                </section>
             </div>
         </div>
     </div>
