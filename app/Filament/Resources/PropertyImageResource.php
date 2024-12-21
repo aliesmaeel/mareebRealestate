@@ -52,7 +52,12 @@ class PropertyImageResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                //filter for the slug of the property
+                Tables\Filters\SelectFilter::make('property_id')
+                    ->relationship('property', 'slug')
+                    ->label('Property')
+                    ->searchable()
+                    ->multiple(),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
