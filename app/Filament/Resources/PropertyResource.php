@@ -6,6 +6,7 @@ use App\Filament\Resources\PropertyResource\Pages;
 use App\Filament\Resources\PropertyResource\RelationManagers;
 use App\Models\Property;
 use Cheesegrits\FilamentGoogleMaps\Fields\Map;
+use Filament\Facades\Filament;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,6 +15,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 class PropertyResource extends Resource
@@ -181,6 +183,15 @@ class PropertyResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\BulkAction::make('activate')
+                        ->label('Mark as Active')
+                        ->icon('heroicon-o-check-circle')
+                        ->action(function (Collection $records): void {
+                            $recordIds = $records->pluck('id')->toArray();
+                            Property::whereIn('id', $recordIds)->update(['active' => true]);
+
+                        }),
+
                 ]),
             ]);
     }
@@ -200,4 +211,6 @@ class PropertyResource extends Resource
             'edit' => Pages\EditProperty::route('/{record}/edit'),
         ];
     }
+
+
 }
