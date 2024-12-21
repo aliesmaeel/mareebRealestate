@@ -2966,3 +2966,57 @@ height:100px
 
 
 }
+
+#schedule_meeting{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.contact-me{
+    color: #222;
+    font-weight: 600;
+    font-size: 19px !important;
+    padding: 1rem 0.8rem;
+}
+
+#agent_contact_name, #agent_user_email, #agent_phone, #agent_comment{
+
+    padding: 9px 0 9px 9px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    -webkit-appearance: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-bottom: 15px;
+    border-radius: 0;
+    color: #000!important;
+}
+
+#agent_contact_name:focus,
+#agent_user_email:focus,
+#agent_phone:focus,
+#agent_comment:focus{
+
+    box-shadow: none !important;
+    border-color: #000 !important;
+}
+
+.agent_submit_class{
+    width: 100% !important;
+    border-radius: 0 !important;
+    padding: 8px 34px !important;
+    line-height: 2 !important;
+    text-transform: capitalize !important;
+    display: inline-block !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    color: white;
+    background-color: black;
+}
+
+textarea:focus{
+    box-shadow: none !important;
+    border-color: #000 !important;
+}

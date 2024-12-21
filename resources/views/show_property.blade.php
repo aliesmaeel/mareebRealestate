@@ -182,6 +182,85 @@
                 </div>
 
                 <div class="agent_unit">
+                    <div style="padding: 0 0.8rem">
+                    <div class="contact-me">Contact Me</div>
+
+                    <div id="schedule_meeting" onclick="display3()">Schedule a showing?</div>
+                    <form method="post" action="https://savoirproperties.com/sendtxtmailproperty" enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="Zfd2we9RA4WGLFOHmak7hIIWY9joQYWxJnthOrKN">
+                        <div id="schedule" hidden="">
+                            <input type="text" id="datepicker" name="day" class="form-control" placeholder="Day">
+
+                            <select class="form-control form-select" aria-label="Default select example" name="schedule_hour" id="schedule_hour">
+                                <option value="0">Time</option>
+                                <option value="7:00">7:00</option>
+                                <option value="7:15">7:15</option>
+                                <option value="7:30">7:30</option>
+                                <option value="7:45">7:45</option>
+                                <option value="8:00">8:00</option>
+                                <option value="8:15">8:15</option>
+                                <option value="8:30">8:30</option>
+                                <option value="8:45">8:45</option>
+                                <option value="9:00">9:00</option>
+                                <option value="9:15">9:15</option>
+                                <option value="9:30">9:30</option>
+                                <option value="9:45">9:45</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:15">10:15</option>
+                                <option value="10:30">10:30</option>
+                                <option value="10:45">10:45</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:15">11:15</option>
+                                <option value="11:30">11:30</option>
+                                <option value="11:45">11:45</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:15">12:15</option>
+                                <option value="12:30">12:30</option>
+                                <option value="12:45">12:45</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:15">13:15</option>
+                                <option value="13:30">13:30</option>
+                                <option value="13:45">13:45</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:15">14:15</option>
+                                <option value="14:30">14:30</option>
+                                <option value="14:45">14:45</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:15">15:15</option>
+                                <option value="15:30">15:30</option>
+                                <option value="15:45">15:45</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:15">16:15</option>
+                                <option value="16:30">16:30</option>
+                                <option value="16:45">16:45</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:15">17:15</option>
+                                <option value="17:30">17:30</option>
+                                <option value="17:45">17:45</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:15">18:15</option>
+                                <option value="18:30">18:30</option>
+                                <option value="18:45">18:45</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:15">19:15</option>
+                                <option value="19:30">19:30</option>
+                                <option value="19:45">19:45</option>
+                            </select>
+                        </div>
+                        <input name="name" id="agent_contact_name" type="text" placeholder="Your Name" aria-required="true" class="form-control">
+                        <input type="text" name="email" class="form-control" id="agent_user_email" aria-required="true" placeholder="Your Email">
+                        <input type="text" name="phone" class="form-control" id="agent_phone" placeholder="Your Phone">
+                        <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">I'm interested in  [ Available Now | Single Row | Close to Golf Club]         </textarea>
+                        <input hidden="" type="text" value="VI3108" name="ref_number">
+                        <input type="submit" class="wpresidence_button agent_submit_class " id="agent_submit" value="Send Email">
+                        <input name="prop_id" type="hidden" id="agent_property_id" value="29022">
+                        <input name="prop_id" type="hidden" id="agent_id" value="27830">
+                        <input type="hidden" name="contact_ajax_nonce" id="agent_property_ajax_nonce" value="9337cfcd6e">
+                    </form>
+                    </div>
+                </div>
+
+                <div class="agent_unit">
                   <div class="title">Related Properties</div>
                     @foreach($relatedProperties as $property)
                         <a href="{{route('property.show',['slug'=>$property->slug])}}" >
