@@ -27,16 +27,11 @@
     @yield('header')
     @yield('content')
     @yield('footer')
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fixed-sticky/0.1.7/fixedsticky.min.js"></script> --}}
     <script src="{{asset('js/jquery-3.6.1.min.js')}}"></script>
- 
     <script src="{{asset('js/swiper-bundle.min.js')}}"></script>
-
-   
-    {{-- <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script> --}}
     <script src="https://gist.github.com/DmytroLisitsyn/1c31186e5b66f1d6c52da6b5c70b12ad.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="{{asset('js/app.js?v=0.8')}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/aos.js')}}"></script>
     <script>
         AOS.init();

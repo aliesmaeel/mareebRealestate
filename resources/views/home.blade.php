@@ -20,7 +20,7 @@
         </video>
         <div class="search-realestate">
             <div class="city-names">Find Your Dream Property in Dubai's Best Areas</div>
-            @include('components.seachProperty')
+            @include('components.searchProperty')
         </div>
     </div>
     {{-- about --}}

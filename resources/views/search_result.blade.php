@@ -12,7 +12,7 @@
     <div style="position:relative;height: 100vh;">
         <img src="https://cms.savoirproperties.com/storage//images/default.jpg" class="img_desktop">
         <div class="search-realestate">
-            @include('components.seachProperty')
+            @include('components.searchProperty')
         </div>
     </div>
     <div class="available_property">
@@ -22,7 +22,7 @@
             </div>
             <div style="display:flex;justify-content:center;align-items:center">
                 <div class="grid-container">
-                    @foreach($properties as $property)
+                    @foreach($searchResults as $property)
                         @include('components.property')
                     @endforeach
                 </div>

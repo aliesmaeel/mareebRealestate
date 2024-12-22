@@ -34,7 +34,7 @@ class PropertyResource extends Resource
                         'Labour Camp' => 'Labour Camp',
                         'Residential Building' => 'Residential Building',
                         'Commercial Floors' => 'Commercial Floors',
-                        'Showroom' => 'Showrooms',
+                        'Showrooms' => 'Showrooms',
                         'Apartment/Flat' => 'Apartment/Flat',
                         'Duplex' => 'Duplex',
                         'Land/Plot' => 'Land/Plot',

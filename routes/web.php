@@ -25,7 +25,9 @@ Route::get('/about-us', function () {
 Route::get('/team-profile', function () {
     return view('team-profile');
 });
+Route::post('/',[PropertyController::class,'search'])->name('searchProperty');
 Route::get('/search-result',[PropertyController::class,'search']);
+
 Route::get('/search-result/{type}',[PropertyController::class,'getpropertybytype']);
 Route::get('/property-details/{slug}',[PropertyController::class,'index'])
     ->name('property.show');

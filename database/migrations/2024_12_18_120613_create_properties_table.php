@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug', 191)->nullable();
             $table->text('title')->nullable();
             $table->string('permit_number')->nullable();
-            $table->string('price')->nullable();
+            $table->decimal('price', 10, 2)->nullable();
             $table->string('city')->default('Dubai')->nullable();
             $table->foreignId('community_id')->constrained();
             $table->text('description')->nullable();

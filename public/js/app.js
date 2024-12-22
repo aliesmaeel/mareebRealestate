@@ -21,27 +21,41 @@ $('.icon-list svg').on('click', function(event) {
     }
 });
 function updateHiddenInputAndActiveClass(groupName, hiddenInputId) {
-
-    $('.group-options.' + groupName + ' input[type="radio"]').each(function() {
+    // Initialize active class based on pre-checked checkboxes
+    $('.group-options.' + groupName + ' input[type="checkbox"]').each(function() {
         if ($(this).prop('checked')) {
             $(this).closest('.option').addClass('active');
         }
     });
 
-    $('.group-options.' + groupName + ' .option .custom-radio').click(function() {
-        var selectedValue = $(this).data('value');
-        $('#' + hiddenInputId).val(selectedValue);
-        $('.group-options.' + groupName + ' .option').removeClass('active');
-        $(this).closest('.option').addClass('active');
-        $(this).find('input[type="radio"]').prop('checked', true);
+    // Attach event listener for custom checkboxes
+    $('.group-options.' + groupName + ' .option .custom-checkbox').off('click').on('click', function() {
+        var $checkbox = $(this).siblings('input[type="checkbox"]');
+        var isChecked = $checkbox.prop('checked');
+
+        // Toggle checkbox state
+        $checkbox.prop('checked', !isChecked);
+
+        // Toggle active class
+        $(this).closest('.option').toggleClass('active', !isChecked);
+
+        // Update hidden input with selected values
+        var selectedValues = [];
+        $('.group-options.' + groupName + ' .option input[type="checkbox"]:checked').each(function() {
+            selectedValues.push($(this).val());
+        });
+
+        $('#' + hiddenInputId).val(selectedValues.join(','));
     });
 }
 
-updateHiddenInputAndActiveClass('interest-group', 'interestd_status');
+// Call the function for each group
+updateHiddenInputAndActiveClass('interest-group', 'interested_status');
 updateHiddenInputAndActiveClass('property-group', 'property_status');
 updateHiddenInputAndActiveClass('property-type', 'property_type');
 updateHiddenInputAndActiveClass('bedroom-group', 'bedrooms');
 updateHiddenInputAndActiveClass('bathroom-group', 'bathroom');
+
 $('.options-selected').click(function() {
     var $currentAbs = $(this).next('.abs');
     $('.abs').not($currentAbs).slideUp(200);
