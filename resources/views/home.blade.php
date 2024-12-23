@@ -150,52 +150,36 @@
             </div>
             <div class="boxes">
                 <div class="grid-container ">
-                    <div class="col box">
-                        <div class="img-container" >
+                    @foreach($blogs1 as $blog)
+                        <div class="col box">
+                            <div class="img-container" >
 
-                            <a href="#">
-                                <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Blog/xSVAK0KUZOhYosjkeXeGHLcwRJhmNjHHHqCTtEQ4.webp">
-                            </a>
-                       </div>
-                        <div class="box-title">
-                            Key Real Estate Trends Shaping the Market in 2024
-                        </div>
-                        <div class="box-desc">
-                            Key Real Estate Trends Shaping the Market in Dubai a city renowned for its opulence and rapid development continues to capture the imagination of investors and homebuyers from around the
-                        </div>
-                        <a class="read" href="#">Read More</a>
+                                <a href="{{route('get_blog_details',['slug'=>$blog->slug])}}">
+                                    <img src="{{asset('/storage').'/'.$blog->url}}">
+                                </a>
+                            </div>
+                            <div class="box-title">
+                                {{$blog->title}}
+                            </div>
+                            <div class="box-desc">
+                                {!! $blog->description !!}
+                            </div>
+                            <a class="read" href="{{route('get_blog_details',['slug'=>$blog->slug])}}">Read More</a>
 
-                    </div>
-                    <div class="col box">
-                        <div class="img-container">
-                            <a href="#">
-                                <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Blog/jtXB2exBQl344oPRx2RYtRWDX0jJyULvSpBjZZk0.jpg">
-                            </a>
                         </div>
-                        <div class="box-title">
-                            Key Real Estate Trends Shaping the Market in 2024
-                        </div>
-                        <div class="box-desc">
-                            Dubai Green Spine The World rsquo s Greenest Highway Dubai a city synonymous with innovation and grandeur is poised to achieve a new milestone in urban sustainability with the Dubai
-                        </div>
-                        <a class="read" href="#">Read More</a>
+                    @endforeach
 
-                    </div>
                     <div class="col third">
-                        <a class="img-container" href="#">
-                            <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Blog/on2fSfTjdLU1usOZi6LEmuocbq7jOniCF5OZMKtp.jpg">
-                            <div class="overlay">
-                                <div class="title">Balancing Innovation with Expertise</div>
-                                <div class="desc">Balancing Innovation with Expertise In the bustling landscape of Dubai</div>
-                            </div>
-                        </a>
-                        <a class="img-container" href="#">
-                            <img src="https://savoirbucket.s3.eu-north-1.amazonaws.com/storage/image/Blog/TSa3MQb5vMGjcGnAMrea03w46SKfIImYi1iz6Lvx.jpg">
-                            <div class="overlay">
-                                <div class="title">Why Choose Real Estate Agents in Dubai?</div>
-                                <div class="desc">Why Choose Real Estate Agents in Dubai Dubai s real</div>
-                            </div>
-                        </a>
+                        @foreach($blogs2 as $blog)
+                            <a class="img-container" href="{{route('get_blog_details',['slug'=>$blog->slug])}}">
+                                <img src="{{asset('/storage').'/'.$blog->url}}" alt="img-blog">
+                                <div class="overlay">
+                                    <div class="title">{{\Illuminate\Support\Str::words($blog->title,8)}}</div>
+                                    <div class="desc">{!!  \Illuminate\Support\Str::words($blog->description,10) !!}</div>
+                                </div>
+                            </a>
+                        @endforeach
+
                     </div>
                 </div>
             </div>

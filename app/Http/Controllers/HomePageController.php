@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Community;
 use App\Models\ContactPage;
 use App\Models\Footer;
@@ -30,6 +31,10 @@ class HomePageController extends Controller
         $communitiesId = Property::Active()->get()->pluck('community_id')->unique();
         $communities = Community::whereIn('id',$communitiesId)->get();
         $propertyTypes=$this->getPropertyTypes();
+        $blogs = Blog::orderBy('order','asc')->take(4)->get();
+        //split blogs into two blogs
+        $blogs1 = $blogs->splice(0,2);
+        $blogs2 = $blogs;
 
         return view('home')
             ->with('home',$home)
@@ -39,6 +44,8 @@ class HomePageController extends Controller
             ->with('services',$services)
             ->with('sisterCompanies',$sisterCompanies)
             ->with('communities',$communities)
+            ->with('blogs1',$blogs1)
+            ->with('blogs2',$blogs2)
             ->with('contact',$contact);
     }
 
