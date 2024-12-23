@@ -16,9 +16,11 @@ class PropertyController extends Controller
         $properties = AllProperty::all();
         $contact=ContactPage::Active()->first();
         $footer=Footer::Active()->first();
-
+        $communitiesId = Property::Active()->get()->pluck('community_id')->unique();
+        $communities = Community::whereIn('id',$communitiesId)->get();
+        $propertyTypes=$this->getPropertyTypes();
         return view('all_properties',
-            compact('properties','footer','contact'));
+            compact('properties','footer','contact','communities','propertyTypes'));
     }
 
     public function index(Request $request){
