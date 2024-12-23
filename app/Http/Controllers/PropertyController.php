@@ -112,14 +112,18 @@ class PropertyController extends Controller
                 $type='Showroom';
                 break;
         }
-        $properties= Property::Active()
+        $searchResults= Property::Active()
             ->with('propertyImages','amenities','agent','community','subCommunity')
             ->where('type',$type)
             ->get();
+        $communitiesId = Property::Active()->get()->pluck('community_id')->unique();
+        $communities = Community::whereIn('id',$communitiesId)->get();
+        $propertyTypes=$this->getPropertyTypes();
+
         $contact=ContactPage::Active()->first();
         $footer=Footer::Active()->first();
         return view('search_result',
-            compact('properties','type','footer','contact'));
+            compact('searchResults','type','footer','contact','communities','propertyTypes'));
 
     }
 
