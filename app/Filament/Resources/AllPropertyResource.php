@@ -29,7 +29,7 @@ class AllPropertyResource extends Resource
                     ->options([
                         'LABOR CAMPS' => 'LABOR CAMPS',
                         'RESIDENTIAL BUILDINGS' => 'RESIDENTIAL BUILDINGS',
-                        'COMMERCIAL BUILDINGS' => 'COMMERCIAL BUILDINGS',
+                        'COMMERCIAL SPACES' => 'COMMERCIAL SPACES',
                         'SHOWROOMS' => 'SHOWROOMS',
                     ])->unique(AllProperty::class, 'type', ignoreRecord: true),
                 Forms\Components\FileUpload::make('image')

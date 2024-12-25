@@ -32,7 +32,6 @@
 
                 <div class="desc">
                    {!! $home->about_section_text !!}
-                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit sapiente cumque pariatur adipisci quasi illo exercitationem officiis est deleniti quia! Ipsa voluptatem doloribus adipisci aliquam magnam exercitationem repellendus distinctio expedita.
                  </div>
                  <a href="#">
                     Read More
@@ -63,6 +62,25 @@
 
         </div>
     </div>
+
+        <section class="services_section">
+            <h2 class="services_heading">Our Services</h2>
+            <div class="services_cards">
+                @foreach($services as $service)
+                    <div class="service_card">
+                        <img src="{{asset('/storage').'/'.$service->image}}" alt="{{$service->title}}" class="service_image">
+                        <h3 class="service_title">{{$service->title}}</h3>
+                        <p class="service_description">
+                            {!! $service->description !!}
+                        </p>
+                    </div>
+
+                @endforeach
+
+
+            </div>
+        </section>
+
     {{-- listing-syndicattion --}}
     <div class="listining-section">
         <div class="content" data-aos="fade-up" >
@@ -82,7 +100,7 @@
             <div class="buttons">
                 <a href="/search-result/laborcamp">Labor Camps </a>
                 <a href="/search-result/residentialbuilding">Residential Buildings</a>
-                <a href="/search-result/commercialfloors">Commercial Floors</a>
+                <a href="/search-result/commercialspaces">Commercial Spaces</a>
                 <a href="/search-result/showrooms">Showrooms</a>
             </div>
             <div class="grid-container">
@@ -90,58 +108,7 @@
             </div>
         </div>
     </div>
-    {{-- explore_recent --}}
-{{--    <div class="explore_recent">--}}
-{{--        <div class="content" data-aos="fade-up" >--}}
-{{--            <div class="title">Properties We Manage</div>--}}
-{{--            <div class="desc">--}}
-{{--                {{$home->what_we_do_section_text}}--}}
-{{--            </div>--}}
-{{--            <!-- Swiper -->--}}
-{{--            <div class="explore_recent_swiper ">--}}
-{{--                <div class="swiper-wrapper">--}}
-{{--                    @foreach($services as $service)--}}
-{{--                        <div class="swiper-slide" >--}}
-{{--                            <div class="our-services-container"--}}
-{{--                                 style="background-image: url({{asset('/storage/'.$service->image)}});"--}}
-{{--                            >{{$service->name}}</div>--}}
-{{--                            <div class="description">--}}
-{{--                                {!! $service->description !!}--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    @endforeach--}}
-{{--                </div>--}}
-{{--                <div class="swiper-pagination"></div>--}}
-{{--            </div>--}}
-{{--            <a class="read-more" href="#">Recent Off Plan Project</a>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-    {{-- team section -------}}
-{{--    <div class="team_section">--}}
-{{--        <div class="content" data-aos="fade-up" >--}}
-{{--            <div class="title">OUR TEAM</div>--}}
-{{--            <hr>--}}
-{{--            <div class="desc">--}}
-{{--                {{$home->our_team_section_text}}--}}
-{{--            </div>--}}
-{{--            <!-- Swiper -->--}}
-{{--            <div class="team_swiper ">--}}
-{{--                <div class="swiper-wrapper">--}}
-{{--                    @foreach($teams as $team)--}}
-{{--                        <div class="swiper-slide">--}}
-{{--                            <img src="{{asset('/storage/'.$team->image)}}">--}}
-{{--                            <div class="name">{{$team->name}}</div>--}}
-{{--                            <a class="read-more" href="#">view profile</a>--}}
-{{--                        </div>--}}
-{{--                    @endforeach--}}
-{{--                </div>--}}
-{{--                <div class="swiper-pagination"></div>--}}
-{{--            </div>--}}
-{{--            <a class="read-more" href="#">Meet Our Team</a>--}}
 
-{{--        </div>--}}
-{{--    </div>--}}
-    {{-- blogs section --}}
     <div class="blogs_section">
         <div class="content" data-aos="fade-up" >
             <div class="title font-title">Blogs</div>

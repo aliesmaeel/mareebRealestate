@@ -33,7 +33,7 @@ class PropertyResource extends Resource
                     ->options([
                         'Labour Camp' => 'Labour Camp',
                         'Residential Building' => 'Residential Building',
-                        'Commercial Floors' => 'Commercial Floors',
+                        'Commercial Spaces' => 'Commercial Spaces',
                         'Showrooms' => 'Showrooms',
                         'Apartment/Flat' => 'Apartment/Flat',
                         'Duplex' => 'Duplex',

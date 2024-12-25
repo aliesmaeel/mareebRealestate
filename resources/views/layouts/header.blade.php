@@ -13,6 +13,15 @@
                 <a href="/properties">
                     <li class="link">Properties</li>
                 </a>
+                <div class="dropdown">
+                    <a>Our Services</a>
+                    <div class="dropdown-content">
+                        <a href="#option1">Property Management</a>
+                        <a href="#option2">Real Estate</a>
+                        <a href="#option3">Holidays Homes</a>
+                    </div>
+                </div>
+
                 <a href="/our-team">
                     <li class="link">Our Team</li>
                 </a>

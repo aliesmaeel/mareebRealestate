@@ -25,7 +25,8 @@ class HomePageController extends Controller
         $sisterCompanies = $repeatedSisterCompanies;
 
         $teams=Team::all();
-        $services=Services::all();
+        $services=Services::get()->take(3);
+
         $footer=Footer::Active()->first();
         $contact=ContactPage::Active()->first();
         $communitiesId = Property::Active()->get()->pluck('community_id')->unique();
@@ -35,6 +36,9 @@ class HomePageController extends Controller
         //split blogs into two blogs
         $blogs1 = $blogs->splice(0,2);
         $blogs2 = $blogs;
+
+        $propertiesWeManage = Property::Active()->where('featured',1)
+            ->get()->take(4);
 
         return view('home')
             ->with('home',$home)
@@ -46,6 +50,8 @@ class HomePageController extends Controller
             ->with('communities',$communities)
             ->with('blogs1',$blogs1)
             ->with('blogs2',$blogs2)
+            ->with('propertiesWeManage',$propertiesWeManage)
+            ->with('services',$services)
             ->with('contact',$contact);
     }
 
