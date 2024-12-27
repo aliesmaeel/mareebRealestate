@@ -23,7 +23,7 @@
 
          {!! $contact->description_text !!}
             <div class="info social">
-                <div class="title" style="font-size: 24px">Follow us on social media</div>
+                <div class="title" style="font-size: 24px;letter-spacing: 2px">Follow us on social media</div>
                 <div>
                     <a href="#">
                         <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">

@@ -28,19 +28,19 @@
     <div class="about-section">
         <div class="content" data-aos="fade-up" >
             <div class="text-content col-flex" >
-                <div class="title">ABOUT Meerab</div>
+                <div class="title" data-aos="fade-right">About Meerab</div>
 
-                <div class="desc">
+                <div class="desc" data-aos="fade-right">
                    {!! $home->about_section_text !!}
                  </div>
-                 <a href="#">
+                 <a href="#" data-aos="fade-right">
                     Read More
                  </a>
             </div>
 
             <div class="img-container">
                 <!-- Image Section -->
-                <div class="flex-col">
+                <div class="flex-col" >
                     <img  class="img-about" style="box-shadow: 1px 2px 9px 1px #3d2e2a" src="{{asset('/storage').'/'.$home->images->first()->url}}">
 
                 </div>
@@ -63,8 +63,8 @@
         </div>
     </div>
 
-        <section class="services_section">
-            <h2 class="services_heading">Our Services</h2>
+        <section class="services_section listining-section" id="services_section">
+            <div class="title" style="">Our Services</div>
             <div class="services_cards">
                 @foreach($services as $service)
                     <div class="service_card">
@@ -94,9 +94,9 @@
         </div>
     </div>
     {{-- premium_properties --}}
-    <div class="services">
+    <div class="services listining-section">
         <div class="content" data-aos="fade-up" >
-            <div class="title">Properties We Manage</div>
+            <div class="title" data-aos="fade-right">Properties We Manage</div>
             <div class="buttons">
                 <a href="/search-result/laborcamp">Labor Camps </a>
                 <a href="/search-result/residentialbuilding">Residential Buildings</a>

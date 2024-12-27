@@ -27,11 +27,11 @@
     </div>
     <div class="input-field countries">
         <div class="city_name">
-            <img src="/images/arabic_flag.png" class="flag" id="selected-flag-country"> 
+            <img src="/images/arabic_flag.png" class="flag" id="selected-flag-country">
             <img src="/images/arrow.png" id="arrow">
         </div>
         <input class="country_field" type="text" name="country_field" placeholder="Location">
-        <input type="hidden" name="country" id="location-input" value="Emirates"> 
+        <input type="hidden" name="country" id="location-input" value="Emirates">
         <div class="dropdown_country">
             <!-- Countries will be populated here dynamically -->
         </div>

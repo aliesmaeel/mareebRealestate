@@ -13,12 +13,12 @@
                 <a href="/properties">
                     <li class="link">Properties</li>
                 </a>
-                <div class="dropdown">
+                <div class="dropdown-header">
                     <a>Our Services</a>
                     <div class="dropdown-content">
-                        <a href="#option1">Property Management</a>
-                        <a href="#option2">Real Estate</a>
-                        <a href="#option3">Holidays Homes</a>
+                        <a href="#services_section">Property Management</a>
+                        <a href="#services_section">Real Estate</a>
+                        <a href="#services_section">Holidays Homes</a>
                     </div>
                 </div>
 

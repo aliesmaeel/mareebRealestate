@@ -42,7 +42,7 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>1.</span>
-                                Customer Satisfaction
+                                CUSTOMER SATISFACATION
                             </div>
                             <div class="desc">
                                 {{$aboutus['customer-satisfaction']}}
@@ -61,16 +61,12 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>2.</span>
-                                Quality
+                                QUALITY
                             </div>
                             <div class="desc">
                                 {{$aboutus['quality']}}
                             </div>
-                            <div class="btn-container">
-                                <a href="#">
-                                    Meet Our Team
-                                </a>
-                            </div>
+
                         <div class="about_swiper ">
                             <div class="swiper-wrapper">
                                 @foreach($aboutus['quality-images'] as $image)
@@ -89,10 +85,8 @@
                     <div class="col text order-1 fixedsticky" data-aos="fade-left">
                         <div class="title ">
 
-                        <q > In the real estate business you learn more about people
-                            and you learn more about community issues, you learn more
-                            about life, you learn more about the impact of government,
-                            probably than any other profession that I know of.” Jhonny Isakson</q >
+                        <q > {{$aboutus['quote']}}
+                        </q >
                             <br><br>
 
                         </div>
@@ -101,7 +95,7 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>3.</span>
-                                Integrity
+                                INTEGRITY
                             </div>
                             <div class="desc">
                                 {{$aboutus['integrity']}}
@@ -119,7 +113,7 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>4.</span>
-                                Innovation
+                                INNOVATION
                             </div>
                             <div class="desc">
                                 {{$aboutus['innovation']}}

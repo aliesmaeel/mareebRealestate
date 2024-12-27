@@ -25,4 +25,6 @@ class BlogController extends Controller
         return view('blogs.blog',compact('blog','footer','contact'));
 
     }
+
+
 }

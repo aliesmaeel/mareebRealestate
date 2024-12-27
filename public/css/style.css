@@ -66,7 +66,7 @@ body{
 
 }
 html{
-    /* overflow-x: clip !important; */
+  scroll-behavior: smooth;
 }
 body, html {
     margin: 0;
@@ -229,6 +229,7 @@ a{
     padding-bottom: 1rem;
     width: 95%;
     /* font-weight: 600; */
+    font-family: 'Optima';
 
 
 }
@@ -1505,7 +1506,7 @@ color:#222
 }
 .input-field input[type='text'] + span{
     position: relative;
-    left: -7rem;
+    left: -13rem;
 
 }
 .input-field textarea{
@@ -1517,7 +1518,7 @@ color:#222
 }
 .input-field input[type='email'] + span{
     position: relative;
-    left: -4rem;
+    left: -10rem;
 
 }
 .input-field.submit{
@@ -1722,6 +1723,8 @@ color:#222
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 .container.about_us .content .first_section .grid-container .desc{
     font-size: 22px;
@@ -1878,9 +1881,10 @@ color:#222
 }
 .num-heading span{
      /* font-family: "le jour serif"; */
-     color:rgb(86, 81, 83);
+     color:hsl(14.59deg 24.5% 29.61%);
      font-size: 60px;
      padding-right: 0.6rem;
+    font-family: auto;
 
 }
 .desc_section.sticky-component .col.flex-col img{
@@ -2645,12 +2649,15 @@ height:100px
 }
 
 .contact-us-page h1,h2{
-    color: white;
-    font-size: 42px;
+    color: white !important;
+    font-size: 42px !important;
     position: relative;
     margin-top: 3px;
     margin-bottom: 3px;
     font-weight: normal;
+    font-family: 'Theseasons';
+    font-weight: 500 !important;
+    padding: 0 0 10px !important;
 }
 
 .contact-us-page h3{
@@ -2663,7 +2670,7 @@ height:100px
 }
 
 .contact-us-page p{
-    width: 80%;
+    width: 70%;
     color: white;
     position: relative;
     text-align: center;
@@ -3023,17 +3030,23 @@ textarea:focus{
 }
 
 
-.dropdown {
+.dropdown-header {
     position: relative;
     display: inline-block;
     background-color: transparent;
     border: none;
     color: white;
 }
-.dropdown a {
+.dropdown-header a {
     font-family: "Rufina Serif";
     font-size: 18px;
+    padding: 5px;
 }
+
+.dropdown-header a:hover {
+    background-color: rgb(61, 46, 42);
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -3043,7 +3056,7 @@ textarea:focus{
     z-index: 1;
     margin-top: 3px;
 }
-.dropdown:hover .dropdown-content {
+.dropdown-header:hover .dropdown-content {
     display: block;
 }
 .dropdown-content a {
@@ -3086,12 +3099,18 @@ textarea:focus{
     flex-wrap: wrap;
 }
 
+.services_cards h2{
+    color: white !important;
+    font-size: 21px !important;
+    padding: 0 0 10px;
+}
+
 .service_card {
-    background-color: #917b6f;
+    background-color: rgb(86, 81, 83);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
+    width: 330px;
     text-align: center;
     transition: transform 0.3s;
     color: white;

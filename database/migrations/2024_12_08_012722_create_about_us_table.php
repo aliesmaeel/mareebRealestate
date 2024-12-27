@@ -24,6 +24,7 @@ return new class extends Migration
             $table->json('customer-satisfaction-images')->nullable();
             $table->json('quality-images')->nullable();
             $table->json('integrity-images')->nullable();
+            $table->text('quote')->nullable();
 
             $table->timestamps();
         });

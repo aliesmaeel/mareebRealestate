@@ -65,6 +65,7 @@ class AboutUsResource extends Resource
                     ->default([]),
                 Forms\Components\Textarea::make('innovation')
                     ->columnSpanFull(),
+                Forms\Components\Textarea::make('quote')
             ]);
     }
 

@@ -17,7 +17,8 @@ use Illuminate\Database\Eloquent\Model;
         'integrity',
         'integrity-images',
         'innovation',
-        'trust-heading'
+        'trust-heading',
+        'quote',
     ];
 
         protected $casts = [
