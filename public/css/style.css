@@ -1252,7 +1252,8 @@ display: none;
     display: flex;
 }
 .icon-fixed .flex-col .flex-row a svg{
-    width:25px
+    width:25px;
+    color: white;
 }
 .icon-fixed .whatsapp-fixed{
     background-color: rgb(86, 81, 83);
