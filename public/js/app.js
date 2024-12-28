@@ -84,7 +84,7 @@ const itemWidth = $items.children().first().outerWidth(true);
 const totalItems = $items.children().length;
 const totalWidth = itemWidth * totalItems;
 $items.append($items.html());
-const speed = 800;
+const speed = 200;
 const duration = totalWidth / speed;
 $items.css('--scroll-duration', `${duration}s`);
 

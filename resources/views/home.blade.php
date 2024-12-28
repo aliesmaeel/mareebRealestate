@@ -64,7 +64,7 @@
     </div>
 
         <section class="services_section listining-section" id="services_section">
-            <div class="title" style="">Our Services</div>
+            <div class="title" style="margin-top: 0;margin-bottom: 4rem">Our Services</div>
             <div class="services_cards">
                 @foreach($services as $service)
                     <div class="service_card">

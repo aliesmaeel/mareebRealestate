@@ -543,7 +543,7 @@ display: none;
     position: relative;
     gap:3rem;
     padding: 1rem 0;
-    animation: infiniteScroll var(--scroll-duration) linear infinite;
+    animation: infiniteScroll 50s linear infinite;
     will-change: transform;
 }
 .listining-section .item{
@@ -571,7 +571,7 @@ display: none;
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-800%);
     }
 }
 .services{
@@ -1416,6 +1416,7 @@ display: none;
     width: 70%;
     margin: 0 auto 1rem;
     display: flex;
+    position: relative;
 }
 .input-field input{
     outline: none;
@@ -1506,8 +1507,8 @@ color:#222
     fill:rgb(86, 81, 83)
 }
 .input-field input[type='text'] + span{
-    position: relative;
-    left: -13rem;
+    position: absolute;
+    left: 56px;
 
 }
 .input-field textarea{
@@ -1518,8 +1519,8 @@ color:#222
     outline: none;
 }
 .input-field input[type='email'] + span{
-    position: relative;
-    left: -10rem;
+    position: absolute;
+    left: 110px;
 
 }
 .input-field.submit{
@@ -1720,7 +1721,6 @@ color:#222
     font-family: 'normal';
     font-weight: 500;
     color:#8c8a8a;
-    padding: 2rem 0 3rem;
     width: 90%;
     margin: 0 auto;
     text-align: center;
@@ -1748,8 +1748,7 @@ color:#222
 .container.about_us .content .first_section{
     position: relative;
     z-index: 11;
-    padding: 0rem 0 4rem;
-}
+    }
 .container.about_us .content{
     position: relative;
 }
@@ -3042,6 +3041,7 @@ textarea:focus{
     font-family: "Rufina Serif";
     font-size: 18px;
     padding: 5px;
+    color: white;
 }
 
 .dropdown-header a:hover {
@@ -3081,7 +3081,6 @@ textarea:focus{
 
 .services_section {
     text-align: center;
-    padding: 50px 20px;
     background-color: #f7f7f7;
 }
 
@@ -3096,7 +3095,7 @@ textarea:focus{
 .services_cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 35px;
     flex-wrap: wrap;
 }
 

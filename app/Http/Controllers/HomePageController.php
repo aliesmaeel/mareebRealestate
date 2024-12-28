@@ -19,7 +19,7 @@ class HomePageController extends Controller
         $home=HomePage::Active()->with('images')->first();
         $sisterCompanies = SisterCompany::all();
         $repeatedSisterCompanies = collect();
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             $repeatedSisterCompanies = $repeatedSisterCompanies->merge($sisterCompanies);
         }
         $sisterCompanies = $repeatedSisterCompanies;

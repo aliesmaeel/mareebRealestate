@@ -69,9 +69,22 @@
         border: 1px solid #fff; /* Include border in transition */
     }
 
-
-
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        @if($scrollToSection)
+
+        const sectionId = "{{$scrollToSection}}";
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        @endif
+    });
+</script>
+
+
 {{-- main page --}}
 @section('content')
     <div class="container search-result">
@@ -81,7 +94,8 @@
                 @include('components.searchProperty')
             </div>
         </div>
-        <div class="available_property">
+
+        <div class="available_property" id="available_property">
             <div class="content">
                 <section>
                     <h1 style="font-family: Theseasons">Our Properties</h1>

@@ -19,8 +19,11 @@ class PropertyController extends Controller
         $communitiesId = Property::Active()->get()->pluck('community_id')->unique();
         $communities = Community::whereIn('id',$communitiesId)->get();
         $propertyTypes=$this->getPropertyTypes();
+        $scrollToSection = 'available_property';
+
         return view('all_properties',
-            compact('properties','footer','contact','communities','propertyTypes'));
+            compact('properties','footer','contact','communities','propertyTypes'))
+            ->with('scrollToSection','available_property');
     }
 
     public function index(Request $request){

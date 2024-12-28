@@ -14,11 +14,11 @@
                     <li class="link">Properties</li>
                 </a>
                 <div class="dropdown-header">
-                    <a>Our Services</a>
+                    <a href="/">Our Services</a>
                     <div class="dropdown-content">
-                        <a href="#services_section">Property Management</a>
-                        <a href="#services_section">Real Estate</a>
-                        <a href="#services_section">Holidays Homes</a>
+                        <a href="/#services_section">Property Management</a>
+                        <a href="/#services_section">Real Estate</a>
+                        <a href="/#services_section">Holidays Homes</a>
                     </div>
                 </div>
 
