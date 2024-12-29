@@ -37,3 +37,4 @@ Route::get('/properties',[PropertyController::class,'allproperties']);
 Route::get('/all-countries', [CountryController::class, 'getCountries']);
 Route::get('/blogs', [BlogController::class, 'index']);
 Route::get('/blogs/{slug}', [BlogController::class, 'blog'])->name('get_blog_details');
+Route::post('/submit-email', [HomePageController::class, 'submitEmail'])->name('submit-email');

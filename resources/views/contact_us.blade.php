@@ -12,6 +12,9 @@
     .contact-us-page h1,h2,h3{
         font-family: Theseasons !important;
     }
+
+
+
 </style>
 {{-- main page --}}
 @section('content')

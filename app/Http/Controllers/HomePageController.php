@@ -77,4 +77,25 @@ class HomePageController extends Controller
         return $propertyTypes;
     }
 
+    public function submitEmail(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'message' => 'required|max:191',
+            'location' => 'required',
+        ]);
+
+        $email = new \App\Models\Email();
+        $email->name = $request->name;
+        $email->email = $request->email;
+        $email->phone = $request->country_code.' '.$request->phone;
+        $email->message = $request->message;
+        $email->location = $request->location;
+        $email->is_read = 0;
+        $email->save();
+        return redirect()->back()->with('success','Email submitted successfully');
+    }
+
+
 }
