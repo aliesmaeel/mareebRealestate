@@ -437,7 +437,7 @@ display: none;
 }
 .about-section{
     width: 100%;
-    margin: 8rem 0 3rem;
+    margin: 8rem 0 0rem;
 }
 .about-section .content{
     width: 80%;
@@ -523,7 +523,7 @@ display: none;
 .listining-section {
     overflow: hidden;
     width: 90%;
-    margin: 4rem auto 3rem;
+    margin: 1rem auto 3rem;
 }
 
 
