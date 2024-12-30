@@ -71,18 +71,7 @@
 
 </style>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        @if($scrollToSection)
 
-        const sectionId = "{{$scrollToSection}}";
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-        @endif
-    });
-</script>
 
 
 {{-- main page --}}

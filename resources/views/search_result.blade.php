@@ -6,6 +6,22 @@
     @include('layouts.header')
 @endsection
 
+
+<script>
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        @if($scrollToSection)
+
+        const sectionId = "{{$scrollToSection}}";
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        @endif
+    });
+</script>
+
 {{-- main page --}}
 @section('content')
 <div class="container search-result">
@@ -15,13 +31,14 @@
             @include('components.searchProperty')
         </div>
     </div>
-    <div class="available_property">
+    <div class="test" style="height: 50px" id="available_property"></div>
+    <div class="available_property"  style="min-height: 1000px">
         <div class="content">
             <div class="title">
                 Available Properties
             </div>
             <div style="display:flex;justify-content:center;align-items:center">
-                <div class="grid-container">
+                <div class="grid-container" >
                     @foreach($searchResults as $property)
                         @include('components.property')
                     @endforeach
