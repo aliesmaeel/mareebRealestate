@@ -36,13 +36,13 @@
             <div class="desc_section sticky-component">
                 <div class="flex-container">
                     <div class="col text fixedsticky" data-aos="fade-right">
-                        <div class="title">Core Values</div>
+                        <div class="title">Our Core Values</div>
                     </div>
                     <div class="sticky-content" data-aos="fade-lrft">
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>1.</span>
-                                CUSTOMER SATISFACATION
+                                INTEGRITY AND TRUST
                             </div>
                             <div class="desc">
                                 {{$aboutus['customer-satisfaction']}}
@@ -61,7 +61,7 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>2.</span>
-                                QUALITY
+                                CLIENT-CENTRIC EXCELLENCE
                             </div>
                             <div class="desc">
                                 {{$aboutus['quality']}}
@@ -95,7 +95,7 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>3.</span>
-                                INTEGRITY
+                                OPERATIONAL EXCELLENCE
                             </div>
                             <div class="desc">
                                 {{$aboutus['integrity']}}
@@ -113,7 +113,7 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>4.</span>
-                                INNOVATION
+                                RELIABLE SERVICE AND SUPPORT
                             </div>
                             <div class="desc">
                                 {{$aboutus['innovation']}}
