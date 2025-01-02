@@ -6,6 +6,7 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\TeamController;
 use App\Models\Footer;
+use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
 
@@ -17,7 +18,10 @@ Route::get('/about-us', function () {
     $footer= Footer::Active()->first();
     $aboutUs=\App\Models\AboutUs::first();
     $contact=\App\Models\ContactPage::Active()->first();
+    $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
+
     return view('about_us')
+        ->with('latestProperties',$latestProperties)
         ->with('footer',$footer)
         ->with('contact',$contact)
         ->with('aboutus',$aboutUs);

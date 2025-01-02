@@ -39,6 +39,7 @@ class HomePageController extends Controller
 
         $propertiesWeManage = Property::Active()->where('featured',1)
             ->get()->take(4);
+        $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
 
         return view('home')
             ->with('home',$home)
@@ -52,6 +53,7 @@ class HomePageController extends Controller
             ->with('blogs2',$blogs2)
             ->with('propertiesWeManage',$propertiesWeManage)
             ->with('services',$services)
+            ->with('latestProperties',$latestProperties)
             ->with('contact',$contact);
     }
 

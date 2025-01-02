@@ -14,7 +14,8 @@ protected $fillable= [
 'what_we_do_section_text',
 'our_team_section_text',
 'blogs_section_text',
-'active'
+'active',
+'speed',
 ];
 
     public function scopeActive($query)

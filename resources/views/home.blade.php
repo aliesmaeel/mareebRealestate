@@ -84,6 +84,7 @@
     {{-- listing-syndicattion --}}
     <div class="listining-section">
         <div class="content" data-aos="fade-up" >
+            <input type="hidden" id="speed" value="{{$home->speed}}">
             <div class="title">Sister Companies</div>
             <div class="marquee_container">
                 <div class="items marquee" data-speed="1">

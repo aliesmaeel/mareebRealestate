@@ -19,9 +19,10 @@ class PropertyController extends Controller
         $communitiesId = Property::Active()->get()->pluck('community_id')->unique();
         $communities = Community::whereIn('id',$communitiesId)->get();
         $propertyTypes=$this->getPropertyTypes();
+        $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
 
         return view('all_properties',
-            compact('properties','footer','contact','communities','propertyTypes'));
+            compact('properties','footer','latestProperties','contact','communities','propertyTypes'));
     }
 
     public function index(Request $request){
@@ -37,8 +38,10 @@ class PropertyController extends Controller
        //     ->where('community_id',$property->community_id)
             ->where('id','!=',$property->id)
             ->take(3)->get();
+        $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
 
         return view('show_property')
+            ->with('latestProperties',$latestProperties)
             ->with('contact',$contact)
             ->with('property',$property)
             ->with('relatedProperties',$relatedProperties)
@@ -65,10 +68,12 @@ class PropertyController extends Controller
         $communitiesId = Property::Active()->get()->pluck('community_id')->unique();
         $communities = Community::whereIn('id',$communitiesId)->get();
         $propertyTypes=$this->getPropertyTypes();
+        $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
 
         $footer=Footer::Active()->first();
         $contact=ContactPage::Active()->first();
         return view('search_result')
+            ->with('latestProperties',$latestProperties)
             ->with('footer',$footer)
             ->with('communities',$communities)
             ->with('propertyTypes',$propertyTypes)
@@ -124,10 +129,11 @@ class PropertyController extends Controller
         $contact=ContactPage::Active()->first();
         $footer=Footer::Active()->first();
         $scrollToSection = 'available_property';
+        $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
 
 
         return view('search_result',
-            compact('searchResults','type','footer',
+            compact('searchResults','latestProperties','type','footer',
                 'contact','communities','propertyTypes'))
             ->with('scrollToSection','available_property');
 

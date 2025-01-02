@@ -21,33 +21,18 @@
             <div class="col">
                 <div class="title">LATEST LISTINGS</div>
                 <div class="flex-col">
-                    <a href="#">
+                @foreach($latestProperties as $property)
+                    <a href="{{route('property.show', $property->id)}}">
                         <div class="row">
-                                <img alt="img-logo" src="https://images.goyzer.com/uf/5023/unit/3000/GCS00694-Edit.jpg?group=5023">
+                            <img alt="img-logo" src="{{asset('storage/'.$property->image)}}">
                             <div>
-                                <div class="over-text-hide">Stunning Palm Views | Upgraded</div>
-                                <div class="price">AED 38,000,000</div>
+                                <div class="over-text-hide">{{$property->title}}</div>
+                                <div class="price">AED {{$property->price}}</div>
                             </div>
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="row">
-                                <img alt="img-logo" src="https://images.goyzer.com/uf/5023/unit/2715/GCS07033.jpg?group=5023">
-                            <div>
-                                <div class="over-text-hide">Club Villa | Vacant | Near Club</div>
-                                <div class="price">AED 38,000,000</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="row">
-                                <img alt="img-logo" src="https://images.goyzer.com/uf/5023/unit/2971/GCS08878-Edit.jpg?group=5023">
-                            <div>
-                                <div class="over-text-hide">Stunning Palm Views | Upgraded</div>
-                                <div class="price">AED 38,000,000</div>
-                            </div>
-                        </div>
-                    </a>
+
+                @endforeach
                 </div>
             </div>
             <div class="col">
