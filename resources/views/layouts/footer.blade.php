@@ -22,7 +22,7 @@
                 <div class="title">LATEST LISTINGS</div>
                 <div class="flex-col">
                 @foreach($latestProperties as $property)
-                    <a href="{{route('property.show', $property->id)}}">
+                    <a href="{{route('property.show', $property->slug)}}">
                         <div class="row">
                             <img alt="img-logo" src="{{asset('storage/'.$property->image)}}">
                             <div>
