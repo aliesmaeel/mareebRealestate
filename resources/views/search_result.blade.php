@@ -11,7 +11,7 @@
 
 
     document.addEventListener('DOMContentLoaded', function() {
-        @if($scrollToSection)
+        @if(isset($scrollToSection))
 
         const sectionId = "{{$scrollToSection}}";
         const section = document.getElementById(sectionId);

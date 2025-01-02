@@ -84,7 +84,15 @@ const itemWidth = $items.children().first().outerWidth(true);
 const totalItems = $items.children().length;
 const totalWidth = itemWidth * totalItems;
 $items.append($items.html());
-const speed = document.getElementById('speed').value;
+
+const speedElement = document.getElementById('speed');
+const speed=500;
+if (speedElement) {
+    const speed = speedElement.value;
+} else {
+    const speed = 500; // Or some default value
+}
+
 const duration = totalWidth / speed;
 $items.css('--scroll-duration', `${duration}s`);
 
