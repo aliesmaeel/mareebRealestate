@@ -84,7 +84,7 @@
 
                     <div class="flex-row social-icons">
                         @foreach($socialMediaLinks as $link)
-                            <a style="width: 30px;height: 30px" href="{{$link->url}}" target="_blank">
+                            <a style="width: 30px;height: 30px" href="//{{$link->link}}" target="_blank">
                                 <img style="width: 60%;height: 100%" src="{{asset('storage/'.$link->image)}}" alt="social-media">
                             </a>
 

@@ -29,7 +29,7 @@
                 <div class="title" style="font-size: 24px;letter-spacing: 2px">Follow us on social media</div>
                 <div style="width: 100%; display: flex;justify-content: space-around">
             @foreach($socialMediaLinks as $link)
-                <a style="width: 30px;height: 30px" href="{{$link->link}}" target="_blank">
+                <a style="width: 30px;height: 30px" href="//{{$link->link}}" target="_blank">
                     <img style="width: 60%;height: 100%" src="{{asset('storage/'.$link->image)}}" alt="social-media">
                 </a>
 
