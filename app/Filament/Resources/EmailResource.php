@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Filament\Resources;
+use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
 use App\Filament\Resources\EmailResource\Pages;
 use App\Filament\Resources\EmailResource\RelationManagers;
 use App\Models\Email;
@@ -113,6 +114,9 @@ class EmailResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    FilamentExportBulkAction::make('export')
+
+
                 ]),
             ]);
     }
