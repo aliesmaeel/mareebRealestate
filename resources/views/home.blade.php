@@ -23,6 +23,30 @@
             @include('components.searchProperty')
         </div>
     </div>
+
+
+    <div class="popup hidden">
+        <div class="content">
+            <div class="img-container">
+                <img src="{{asset('images/list_with_us_copy.jpg')}}" alt="Leading Companies" loading="lazy">
+            </div>
+            <div class="text flex" >
+                <div class="title text-center">Ready to Sell?</div>
+                <div class="desc text-center">
+                    Hire a Multi-Award Winning Brokerage with a Global Network. Best SME Company - Cyprus. Among Best Agencies Globally. Global Tech Innovations. At What Price would You become a Seller?
+                </div>
+                <div class="btn" style="display:flex;justify-content: center">
+                    <a href="/about-us">Let’s Find Out!</a>
+                </div>
+            </div>
+            <div class="close-popup">
+                <img src="{{asset('images/close_icon.png')}}" alt="Close Icon" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+
+
     {{-- about --}}
     <div id="particles-js">
     <div class="about-section">

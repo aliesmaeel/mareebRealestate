@@ -465,3 +465,28 @@ $('.down').on('click', function() {
     var nextSection = $('#next-section').offset().top ;
     $('html, body').animate({ scrollTop: nextSection }, 400);
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const popup = document.querySelector('.popup');
+    const closeIcon = document.querySelector('.close-popup img');
+    const isPopupShown = localStorage.getItem('popupShown');
+
+    // Show the popup after 2 seconds
+    setTimeout(() => {
+        if (!isPopupShown) {
+            popup.classList.remove('hidden');
+        }
+    }, 2000);
+
+    // Close popup and save state in localStorage
+    closeIcon.addEventListener('click', function () {
+        popup.classList.add('hidden');
+        localStorage.setItem('popupShown', 'true');
+    });
+});
+
+
+// Modal logic
+
+

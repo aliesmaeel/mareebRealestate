@@ -8,8 +8,10 @@ use App\Models\ContactPage;
 use App\Models\Footer;
 use App\Models\HomePage;
 use App\Models\Property;
+use App\Models\Seo;
 use App\Models\Services;
 use App\Models\SisterCompany;
+use App\Models\SocialMedia;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -40,8 +42,11 @@ class HomePageController extends Controller
         $propertiesWeManage = Property::Active()->where('featured',1)
             ->get()->take(4);
         $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
-
+        $socialMediaLinks = SocialMedia::Active()->get();
+        $seo=Seo::where('page_name','home')->first();
         return view('home')
+            ->with('seo',$seo)
+            ->with('socialMediaLinks',$socialMediaLinks)
             ->with('home',$home)
             ->with('propertyTypes',$propertyTypes)
             ->with('footer',$footer)

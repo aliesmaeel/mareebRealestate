@@ -71,6 +71,7 @@ class Property extends Model
 
     public function propertyImages()
     {
+
         return $this->hasMany(PropertyImage::class);
     }
 

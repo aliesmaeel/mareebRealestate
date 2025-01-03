@@ -7,6 +7,8 @@ use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\TeamController;
 use App\Models\Footer;
 use App\Models\Property;
+use App\Models\Seo;
+use App\Models\SocialMedia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
 
@@ -19,8 +21,11 @@ Route::get('/about-us', function () {
     $aboutUs=\App\Models\AboutUs::first();
     $contact=\App\Models\ContactPage::Active()->first();
     $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
-
+    $socialMediaLinks = SocialMedia::Active()->get();
+    $seo=Seo::where('page_name','about')->first();
     return view('about_us')
+        ->with('seo',$seo)
+        ->with('socialMediaLinks',$socialMediaLinks)
         ->with('latestProperties',$latestProperties)
         ->with('footer',$footer)
         ->with('contact',$contact)

@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Meerab Properties  | @yield('title')</title>
     <link rel="icon" type="image/png" sizes="128x128" href="{{ asset('images/logo.ico') }}">
 
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fixed-sticky/0.1.7/fixedsticky.css" rel="stylesheet"> --}}
@@ -19,7 +18,9 @@
     <link rel="stylesheet" href="/css/respo.css?v={{ time() }}">
     <link rel="stylesheet" href="/css/swiper-bundle.min.css?v={{ time() }}">
     <link rel="stylesheet" href="/css/aos.css?v={{ time() }}">
-
+    <title>{{ $seo->meta_title ?? 'Default Title' }}</title>
+    <meta name="description" content="{{ $seo->meta_description ?? 'Meerab Real Estate' }}">
+    <meta name="keywords" content="{{ implode(', ', $seo->meta_keywords ?? []) }}">
 </head>
 
 <body>

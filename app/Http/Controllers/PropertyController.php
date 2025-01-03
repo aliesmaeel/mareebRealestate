@@ -7,6 +7,7 @@ use App\Models\Community;
 use App\Models\ContactPage;
 use App\Models\Footer;
 use App\Models\Property;
+use App\Models\SocialMedia;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
@@ -20,27 +21,35 @@ class PropertyController extends Controller
         $communities = Community::whereIn('id',$communitiesId)->get();
         $propertyTypes=$this->getPropertyTypes();
         $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
-
+        $socialMediaLinks = SocialMedia::Active()->get();
         return view('all_properties',
-            compact('properties','footer','latestProperties','contact','communities','propertyTypes'));
+            compact('socialMediaLinks','properties','footer','latestProperties','contact','communities','propertyTypes'));
     }
 
     public function index(Request $request){
 
         $footer=Footer::Active()->first();
         $contact=ContactPage::Active()->first();
+        // i want property with propertyimages but propertyimages should be ordered by order column ascending
         $property=Property::Active()
-            ->with('propertyImages','amenities','agent','community','subCommunity')
+            ->with(['propertyImages' => function($query){
+                $query->orderBy('order','asc');
+            },'amenities','agent','community','subCommunity'])
             ->where('slug',$request->slug)
             ->first();
+
+
+
         $relatedProperties=Property::Active()
             ->with('propertyImages','amenities','agent','community','subCommunity')
        //     ->where('community_id',$property->community_id)
             ->where('id','!=',$property->id)
             ->take(3)->get();
         $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
+        $socialMediaLinks = SocialMedia::Active()->get();
 
         return view('show_property')
+            ->with('socialMediaLinks',$socialMediaLinks)
             ->with('latestProperties',$latestProperties)
             ->with('contact',$contact)
             ->with('property',$property)
@@ -69,10 +78,12 @@ class PropertyController extends Controller
         $communities = Community::whereIn('id',$communitiesId)->get();
         $propertyTypes=$this->getPropertyTypes();
         $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
+        $socialMediaLinks = SocialMedia::Active()->get();
 
         $footer=Footer::Active()->first();
         $contact=ContactPage::Active()->first();
         return view('search_result')
+            ->with('socialMediaLinks',$socialMediaLinks)
             ->with('latestProperties',$latestProperties)
             ->with('footer',$footer)
             ->with('communities',$communities)
@@ -130,10 +141,11 @@ class PropertyController extends Controller
         $footer=Footer::Active()->first();
         $scrollToSection = 'available_property';
         $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
+        $socialMediaLinks = SocialMedia::Active()->get();
 
 
         return view('search_result',
-            compact('searchResults','latestProperties','type','footer',
+            compact('searchResults','socialMediaLinks','latestProperties','type','footer',
                 'contact','communities','propertyTypes'))
             ->with('scrollToSection','available_property');
 

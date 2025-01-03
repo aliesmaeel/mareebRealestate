@@ -31,6 +31,9 @@ class PropertyImageResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->required(),
+                Forms\Components\TextInput::make('order')
+                    ->numeric()
+                    ->required(),
             ]);
     }
 
@@ -42,6 +45,8 @@ class PropertyImageResource extends Resource
                     ->label('Property Slug')
                     ->sortable(),
                 Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('order')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
