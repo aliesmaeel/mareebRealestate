@@ -61,7 +61,7 @@
                         <div class="col flex-col">
                             <div class="num-heading">
                                 <span>2.</span>
-                                CLIENT CENTRIC EXCELLENCE
+                                CLIENT CENTRIC APPROACH
                             </div>
                             <div class="desc">
                                 {{$aboutus['quality']}}
