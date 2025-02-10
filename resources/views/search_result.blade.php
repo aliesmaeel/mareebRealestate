@@ -26,7 +26,7 @@
 @section('content')
 <div class="container search-result">
     <div style="position:relative;height: 100vh;">
-        <img src="https://cms.savoirproperties.com/storage//images/default.jpg" class="img_desktop">
+        <img src="{{asset('/storage/'.$setting->popup_image)}}" class="img_desktop">
         <div class="search-realestate">
             @include('components.searchProperty')
         </div>

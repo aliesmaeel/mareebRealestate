@@ -14,34 +14,7 @@
     </div>
 
     {{-- rent --}}
-    <div class="dropdown">
-        <div class="rent-option options-selected">
-            <div>Rent</div>
-            <img src="/images/arrow.png">
-        </div>
-        <div class="abs abs-rent">
-            <div class="flex col">
-                <div class="title">Interested to</div>
-                <div class="group-options interest-group">
-                    <div class="option">
-                        <div class="custom-radio" data-value="buy">Buy</div>
-                        <input type="radio" value="buy" name="interested_status" style="display: none;">
-                    </div>
-                    <div class="active option">
-                        <div class="custom-radio" data-value="rent">Rent</div>
-                        <input type="radio" value="rent" name="interested_status" style="display: none;">
-                    </div>
-                    <input type="hidden" id="interested_status">
-                </div>
-
-                <div class="reset_done">
-                    <div class="reset">Reset</div>
-                    <div class="done">Done</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <input type="hidden" value="rent" name="interested_status" style="display: none;">
     {{-- type --}}
     <div class="dropdown">
         <div class="type-option options-selected">
@@ -74,86 +47,7 @@
 
     </div>
      {{-- bedroom --}}
-     <div class="dropdown">
-        <div class="bedroom-option options-selected">
-            <div>Bedrooms</div>
-            <img src="/images/arrow.png">
 
-        </div>
-        <div class="abs abs-bedroom">
-            <div class="flex col">
-                <div class="title">Bedrooms</div>
-                <div class="group-options bedroom-group">
-                    <div class="option active">
-                        <div class="custom-radio" data-value="any">Any</div>
-                        <input type="radio" value="any" name="bedrooms" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="Studio">Studio</div>
-                        <input type="radio" value="Studio" name="bedrooms" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="1 Beds">1 Beds</div>
-                        <input type="radio" value="1 Beds" name="bedrooms" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="2 Beds">2 Beds</div>
-                        <input type="radio" value="2 Beds" name="bedrooms" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="2 Beds">2 Beds</div>
-                        <input type="radio" value="2 Beds" name="bedrooms" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="2 Beds">2 Beds</div>
-                        <input type="radio" value="2 Beds" name="bedrooms" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="2 Beds">2 Beds</div>
-                        <input type="radio" value="2 Beds" name="bedrooms" style="display: none;">
-                    </div>
-                    <input type="hidden" id="bedrooms">
-                </div>
-                <div class="title">Bathrooms</div>
-                <div class="group-options bathroom-group">
-                    <div class="option active">
-                        <div class="custom-radio" data-value="any">Any</div>
-                        <input type="radio" value="Any" name="bathroom" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="Studio">Studio</div>
-                        <input type="radio" value="Studio" name="bathroom" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="1 Beds">1 Beds</div>
-                        <input type="radio" value="1 Beds" name="bathroom" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="2 Beds">2 Beds</div>
-                        <input type="radio" value="2 Beds" name="bathroom" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="2 Beds">2 Beds</div>
-                        <input type="radio" value="2 Beds" name="bathroom" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="2 Beds">2 Beds</div>
-                        <input type="radio" value="2 Beds" name="bathroom" style="display: none;">
-                    </div>
-                    <div class=" option">
-                        <div class="custom-radio" data-value="2 Beds">2 Beds</div>
-                        <input type="radio" value="2 Beds" name="bathroom" style="display: none;">
-                    </div>
-                    <input type="hidden" id="bathroom">
-                </div>
-                <div class="reset_done">
-                    <div class="reset">Reset</div>
-                    <div class="done">Done</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
     {{-- price --}}
     <div class="dropdown">
         <div class="bedroom-option options-selected">

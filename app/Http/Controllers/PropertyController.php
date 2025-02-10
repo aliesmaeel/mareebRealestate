@@ -7,6 +7,7 @@ use App\Models\Community;
 use App\Models\ContactPage;
 use App\Models\Footer;
 use App\Models\Property;
+use App\Models\Setting;
 use App\Models\SocialMedia;
 use Illuminate\Http\Request;
 
@@ -79,11 +80,12 @@ class PropertyController extends Controller
         $propertyTypes=$this->getPropertyTypes();
         $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
         $socialMediaLinks = SocialMedia::Active()->get();
-
+        $setting=Setting::first();
         $footer=Footer::Active()->first();
         $contact=ContactPage::Active()->first();
         return view('search_result')
             ->with('socialMediaLinks',$socialMediaLinks)
+            ->with('setting',$setting)
             ->with('latestProperties',$latestProperties)
             ->with('footer',$footer)
             ->with('communities',$communities)
@@ -142,10 +144,10 @@ class PropertyController extends Controller
         $scrollToSection = 'available_property';
         $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
         $socialMediaLinks = SocialMedia::Active()->get();
-
+        $setting=Setting::first();
 
         return view('search_result',
-            compact('searchResults','socialMediaLinks','latestProperties','type','footer',
+            compact('searchResults','socialMediaLinks','setting','latestProperties','type','footer',
                 'contact','communities','propertyTypes'))
             ->with('scrollToSection','available_property');
 

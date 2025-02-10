@@ -28,12 +28,12 @@
     <div class="popup hidden">
         <div class="content">
             <div class="img-container">
-                <img src="{{asset('images/list_with_us_copy.jpg')}}" alt="Leading Companies" loading="lazy">
+                <img src="{{asset('storage/'.$setting->popup_image)}}" alt="Leading Companies" loading="lazy">
             </div>
             <div class="text flex" >
-                <div class="title text-center">Ready to Sell?</div>
+                <div class="title text-center">{{$setting->popup_heading}}</div>
                 <div class="desc text-center">
-                    Hire a Multi-Award Winning Brokerage with a Global Network. Best SME Company - Cyprus. Among Best Agencies Globally. Global Tech Innovations. At What Price would You become a Seller?
+                    {!! $setting->popup_text !!}
                 </div>
                 <div class="btn" style="display:flex;justify-content: center">
                     <a href="/about-us">Let’s Find Out!</a>

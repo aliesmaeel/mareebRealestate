@@ -10,9 +10,11 @@ use App\Models\HomePage;
 use App\Models\Property;
 use App\Models\Seo;
 use App\Models\Services;
+use App\Models\Setting;
 use App\Models\SisterCompany;
 use App\Models\SocialMedia;
 use App\Models\Team;
+use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -43,9 +45,11 @@ class HomePageController extends Controller
             ->get()->take(4);
         $latestProperties = Property::Active()->orderBy('created_at','desc')->get()->take(3);
         $socialMediaLinks = SocialMedia::Active()->get();
+        $setting=Setting::first();
         $seo=Seo::where('page_name','home')->first();
         return view('home')
             ->with('seo',$seo)
+            ->with('setting',$setting)
             ->with('socialMediaLinks',$socialMediaLinks)
             ->with('home',$home)
             ->with('propertyTypes',$propertyTypes)
